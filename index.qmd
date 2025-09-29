@@ -12,28 +12,10 @@ format:
 
 https://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage
 
-```{python}
-import altair as alt
+##Video Explicacion
 
-import pandas as pd
-
-df = pd.read_csv("datos.csv")
-
-# Convertir fechas, fechas inválidas se vuelven NaT
-df['eventDate'] = pd.to_datetime(df['eventDate'], errors='coerce')
-
-# Eliminar filas con fechas inválidas (NaT)
-df = df.dropna(subset=['eventDate'])
-
-print(df.head())
-
-```
+https://www.youtube.com/watch?v=zngtVqOHEoU
 
 
-
-
-###Subtitulo3
-
--lista
-    -elemento 1
-    -elemento 2
+Author:
+Cadena Paul
