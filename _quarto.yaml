@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs 
+  
+website:
+  title: "MingaFix Report"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      
+ 
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    fig-align: center
+    df-print: paged
+
+jupyter:
+  kernelspec:
+    name: ml1
+    language: python
+    display_name: "Python (ml1)"
+ 

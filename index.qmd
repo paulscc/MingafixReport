@@ -1,0 +1,39 @@
+---
+title: "Primer reporte Mingafix"
+jupyter: python3
+author: "Cadena Paul"
+date: "28-09-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+#Link App (movil)
+
+https://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage
+
+```{python}
+import altair as alt
+
+import pandas as pd
+
+df = pd.read_csv("datos.csv")
+
+# Convertir fechas, fechas inválidas se vuelven NaT
+df['eventDate'] = pd.to_datetime(df['eventDate'], errors='coerce')
+
+# Eliminar filas con fechas inválidas (NaT)
+df = df.dropna(subset=['eventDate'])
+
+print(df.head())
+
+```
+
+
+
+
+###Subtitulo3
+
+-lista
+    -elemento 1
+    -elemento 2
