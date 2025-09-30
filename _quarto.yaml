@@ -1,15 +1,16 @@
 project:
   type: website
-  output-dir: docs 
-  
+  output-dir: docs
+
 website:
   title: "MingaFix Report"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      
- 
+        text: Primer Reporte
+      - href: segundo.qmd
+        text: Segundo Reporte
+
 format:
   html:
     theme: cosmo
@@ -17,10 +18,11 @@ format:
     code-fold: true
     fig-align: center
     df-print: paged
+    mermaid: {}
+  # <-- debe ir aquí
 
 jupyter:
   kernelspec:
     name: ml1
     language: python
     display_name: "Python (ml1)"
- 

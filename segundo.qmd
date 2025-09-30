@@ -1,0 +1,165 @@
+---
+title: "Segundo reporte Mingafix"
+author: "Cadena Paul"
+date: "30-09-2025"
+jupyter: python3
+format: 
+  html:
+    embed-resources: true
+---
+
+# Diagrama de Arquitectura MINGAFIX
+
+```{mermaid}
+graph TB
+    subgraph Frontend["INTERFAZ DE USUARIO"]
+        A1["Flutter App iOS"]
+        A2["Flutter App Android"]
+        A3["Flutter Web Admin"]
+  end
+ subgraph Auth["AUTENTICACIÓN"]
+        B1["Firebase Authentication"]
+        B2["OAuth 2.0"]
+        B3["Phone Verification"]
+  end
+ subgraph Gateway["API GATEWAY"]
+        C1["API REST"]
+        C2["GraphQL"]
+        C3["WebSocket"]
+  end
+ subgraph Microservices["MICROSERVICIOS"]
+        D1["Servicio Usuarios"]
+        D2["Servicio Mingas"]
+        D3["Servicio Matching"]
+        D4["Servicio Notificaciones"]
+  end
+ subgraph Database["BASES DE DATOS"]
+        E1[("Firestore")]
+        E2[("Cloud Storage")]
+        E3[("Redis Cache")]
+        E4[("SQLite Local")]
+  end
+ subgraph External["SERVICIOS EXTERNOS"]
+        F1["Google Maps API"]
+        F2["Firebase Cloud Messaging"]
+        F3["Twilio SMS"]
+  end
+ subgraph Monitoring["ANALITICA"]
+        G1["Firebase Crashlytics"]
+        G2["Firebase Analytics"]
+        G3["Cloud Monitoring"]
+  end
+    A1 --> B1 & C1 & E4
+    A2 --> B1 & C1 & E4
+    A3 --> B1 & C1
+    B1 --> C1
+    B2 --> B1
+    B3 --> B1
+    C1 --> D1 & D2 & D3 & D4
+    C2 --> D1 & D2
+    C3 --> D4
+    D1 --> E1 & E2
+    D2 --> E1 & E2 & F1
+    D3 --> E1 & E3
+    D4 --> F2 & F3
+    A1 -.-> G1 & G2
+    A2 -.-> G1 & G2
+    A3 -.-> G2
+    D1 -.-> G3
+    D2 -.-> G3
+    D3 -.-> G3
+    D4 -.-> G3
+
+     A1:::frontend
+     A2:::frontend
+     A3:::frontend
+     B1:::auth
+     B2:::auth
+     B3:::auth
+     C1:::gateway
+     C2:::gateway
+     C3:::gateway
+     D1:::service
+     D2:::service
+     D3:::service
+     D4:::service
+     E1:::database
+     E2:::database
+     E3:::database
+     E4:::database
+     F1:::external
+     F2:::external
+     F3:::external
+     G1:::monitor
+     G2:::monitor
+     G3:::monitor
+    classDef frontend fill:#3b82f6,stroke:#1e40af,color:#fff
+    classDef auth fill:#10b981,stroke:#059669,color:#fff
+    classDef gateway fill:#8b5cf6,stroke:#6d28d9,color:#fff
+    classDef service fill:#f59e0b,stroke:#d97706,color:#fff
+    classDef database fill:#ef4444,stroke:#dc2626,color:#fff
+    classDef external fill:#06b6d4,stroke:#0891b2,color:#fff
+    classDef monitor fill:#ec4899,stroke:#db2777,color:#fff
+
+
+```
+
+#Link Arquitectura
+https://www.mermaidchart.com/play#pako:eNp9VN1u0zAUfhWrkxBIMLV21r8LpDRJo0rrD022gSgXTuK0FiGekpSBEC-AEEKMq90g7hAPwQ1vwhPwCNiJ08ZJSydFO9_5vuPP59h-1_JZQFrDVhixG3-Dkwy4o1UM0q23TvD1BowTFmckDp6vWn-_ffoBDH2hA9MCi6XlWDNXNya_b2er1guukT-9w7njaJtlJAH69TWgc0clwBpBj4OE0UAloQrpinhAD17RWFK4n6pHfZttcn9fPwP9wuW2JsYBY6PcGE2Ih1OSi0icUR9nlMUqURicCwKAp201JWwtNiwm4JIkNFTlNV82zsgNfptbu_sJ9MUE2LprXenPlJqG8CWSvKWumhFGbFHrybmaEDZ4VxzmvyTZ4dWn1E9YSpLX1Ccpp_-5-w6mE2M5d6zl5cSY1KZiChdOTqcMXKRbnFCWqhRYpUxpvMY1AlIIOPM3nKRStCplxrK8h_z_mKSH92HiDIuJ5W388guMdMdyxBE0dbe2B6vz_H4x4jRjCVm1HlSTUCSNiG0D4PA0XtcJSBCWJKApMLC_qac1kXaenNOMgHPm46jM1wxbb_iZjXGUG_74Gez6DaynrrWc1UyPReNtxtYR4S27TsU5UQmwem6LDUxJmuJ1vblj0X_3hka8tc7UOXIuWEz59rk2N3j7AUzns4k7X1pzpZitXBcjwekmesvvizpyWzGn820f4Ahb0vduccVc_myAR48e80sK7vEbwT-WJhPwWAJVEwU2KqrswlIrQ6SERkE2RQETig8SH1negNWsxIoCJcUsCli5K0kxYRXjn7FczUSVBJKYlmPjnIf2jTjloC2INtw3oQkiCcK9nTxGeytKjGqxto_ltPTOcDgM5ZtfYvAAhprYSGgxfzXLGNZipMaG4K-LN7KEYBNCDcgUQvmylRBsQqgJaQ3IErUC-cSUGDyAoQOY1sTGoh6RL0CJwQMYamK20L4qbkgJwSaE6pAf4TQ1SQjKgYCQRtHwBHl9GHYfplnCXpLhSYdobRw-9FnEkuFJGIY1tRiNVHba3qDf2SnbZ4Nud3BcKccjxX3vzK8s2w1gP_iPWM5DisOzAWl7O3Ew6PXa3ePisvtSTUKN__ZqH3bhf9Rl_6W63fW6wV7d7g86HjyuljMol_a1_mCwX9qDvV5PEYu_1vt_i5HBCg
+
+---
+
+
+## Documento explicativo
+
+
+---
+
+
+¿QUÉ HACE LA APP?
+Permite a ciudadanos reportar problemas urbanos (baches, luminarias rotas, basura, etc.) con fotos y ubicación. Las encargados reciben, gestionan y resuelven estos reportes. 
+
+
+El sistema es simple trabaja con varios servicios como Firebase para La BDD, y monitoreo de estos, con implementeacion de OAUTH 2.0 para login facil, APIs para servicios de la aplicacion(reportes, consultas, etc) y de terceros como Maps
+
+1. 🎨 FRONTEND (Apps)
+
+iOS/Android: Ciudadanos reportan incidentes con foto + GPS
+Web Admin: Funcionarios municipales gestionan reportes
+
+
+2.  AUTENTICACIÓN
+Firebase Auth: Login de usuarios
+OAuth 2.0: Login con Google/Facebook
+SMS: Verificación por código de teléfono (evita bots)
+
+3.  API GATEWAY (Puerta de entrada)
+REST: Crear/editar reportes (POST /api/reportes)
+GraphQL: Consultas complejas (estadísticas, filtros)
+WebSocket: Notificaciones en tiempo real
+
+4. MICROSERVICIOS (Lógica de negocio)
+Usuarios: Perfiles, historial, credibilidad
+Reportes: Crear incidentes, estados (pendiente→proceso→resuelto)
+Asignación: Distribuye reportes automáticamente por zona/tipo
+Notificaciones: Alerta a ciudadanos y funcionarios
+
+5. BASES DE DATOS
+Firestore: Guarda reportes, usuarios, comentarios (NoSQL en la nube)
+Cloud Storage: Almacena fotos/videos de incidentes
+Redis Cache: Acelera consultas frecuentes
+SQLite Local: Modo offline (crea reportes sin internet)
+
+6.  SERVICIOS EXTERNOS
+Google Maps: Ubicación exacta + mapas interactivos
+Firebase Cloud Messaging: Notificaciones push ("Tu reporte fue resuelto")
+Twilio SMS: Confirmaciones por mensaje de texto
+
+7.  ANALITICA
+Crashlytics: Detecta errores de la app
+Analytics: Estadísticas de uso (reportes/día, zonas críticas)
+Cloud Monitoring: Rendimiento de servidores
+---
+
+### Video Explicacion 
+https://youtu.be/VocYuBjjObc
