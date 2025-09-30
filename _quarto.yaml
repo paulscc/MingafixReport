@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Primer Reporte
       - href: segundo.qmd
-        text: Segundo Reporte
+        text: Reto 0-Arquitectura
 
 format:
   html:

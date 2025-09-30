@@ -1,5 +1,5 @@
 ---
-title: "Segundo reporte Mingafix"
+title: "Reto 0 Mingafix"
 author: "Cadena Paul"
 date: "30-09-2025"
 jupyter: python3
@@ -7,6 +7,8 @@ format:
   html:
     embed-resources: true
 ---
+![App](images/logo.png){width=25%}
+\n
 
 # Diagrama de Arquitectura MINGAFIX
 
@@ -163,3 +165,10 @@ Cloud Monitoring: Rendimiento de servidores
 
 ### Video Explicacion 
 https://youtu.be/VocYuBjjObc
+
+-------
+Author: Paul Cadena 
+-
+\n
+
+Github: https://github.com/paulscc

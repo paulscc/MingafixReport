@@ -8,6 +8,12 @@ format:
         embed-resources: true
 ---
 
+```{column width="100%"}
+
+![App](images/image.png){width=25%}
+
+```
+
 #Link App (movil)
 
 https://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage
