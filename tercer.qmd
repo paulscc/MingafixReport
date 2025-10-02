@@ -30,10 +30,16 @@ Permite que ciudadanos reporten problemas en su ciudad (baches, basura, luminari
 Producción: https://renderpi.onrender.com/  (En caso de inactividad la API se demorara en encenderse alrededor de 45s)
 
 
+Se puede usar Postman en este caso se usará Gitbash(simplemente usare los comandos y la comunicacion se realizará)
+
+![App](images/imageen.png){width=60%}
+
 PROBAR LA API (Paso a Paso)
 Paso 1: Verificar que funcione
-bashcurl http://localhost:5000/
-    Respuesta : {"status": "online", ...}
+bash 
+        curl  https://renderpi.onrender.com
+            
+            Respuesta : {"status": "online", ...}
 
 
  Crear un Reporte
@@ -51,7 +57,7 @@ foto: Imagen del problema (opcional)
 Ejemplo con foto desde tu celular:
 bash# Subir una foto
 
-curl -X POST http://localhost:5000/reportes \
+curl -X POST  https://renderpi.onrender.com/reportes \
   -F "categoria=bache" \
   -F "lat=-0.8131" \
   -F "lng=-77.7172" \
