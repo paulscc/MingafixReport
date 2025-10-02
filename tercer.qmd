@@ -1,0 +1,99 @@
+
+---
+title: "Reto 1: Ciudadana Basica"
+jupyter: python3
+author: "Cadena Paul"
+date: "02-10-2025"
+format: 
+    html:
+        embed-resources: true
+---
+MINGAFIX API v1.0 - REST + GraphQL 
+
+
+![App](images/images.png){width=50%}
+
+
+![App](images/imagen.png){width=40%}
+
+\n
+## Documentacion
+Api implementeda a traves de:
+    Backend: Render.com
+    BBD y Storage: Firebase
+    Consultas: Graphql
+
+Qué hace esta API?
+Permite que ciudadanos reporten problemas en su ciudad (baches, basura, luminarias rotas, etc.) usando su celular. Los funcionarios pueden ver estos reportes y darles tratamiento.
+
+¿Cómo usar la API?
+Producción: https://renderpi.onrender.com/  (En caso de inactividad la API se demorara en encenderse alrededor de 45s)
+
+
+PROBAR LA API (Paso a Paso)
+Paso 1: Verificar que funcione
+bashcurl http://localhost:5000/
+    Respuesta : {"status": "online", ...}
+
+
+ Crear un Reporte
+Para qué sirve: Un ciudadano reporta un problema (bache, basura, etc.)
+Endpoint: POST /reportes
+Qué necesitas enviar:
+
+categoria: Tipo de problema (bache, basura, luminaria, acera_rota)
+lat: Latitud (ubicación en el mapa)
+lng: Longitud (ubicación en el mapa)
+descripcion: Qué está pasando
+usuario_id: Quién está reportando
+foto: Imagen del problema (opcional)
+
+Ejemplo con foto desde tu celular:
+bash# Subir una foto
+
+curl -X POST http://localhost:5000/reportes \
+  -F "categoria=bache" \
+  -F "lat=-0.8131" \
+  -F "lng=-77.7172" \
+  -F "descripcion=Bache muy grande en la avenida" \
+  -F "usuario_id=juan123" \
+  -F "foto=@/ruta/a/foto.jpg"
+
+  Ejemplo usado de codigo en video:
+  curl -X POST https://renderpi.onrender.com/reportes \
+  -F "categoria=bache" \
+  -F "lat=-0.8131" \
+  -F "lng=-77.7172" \
+  -F "descripcion=Prueba test endpoint" \
+  -F "usuario_id=USER-ABC-001" \
+  -F "foto=@C:/Users/OneDrive/Escritorio/foto.jpg"
+
+  Límite de Reportes
+Regla: Solo puedes hacer 30 reportes por minuto
+¿Por qué? Para evitar spam y abusos
+
+    No Duplicados
+Regla: No puedes reportar el mismo problema 2 veces en 
+
+GRAPHQL (Consultas Avanzadas)
+Para qué sirve: Hacer consultas más complejas de forma más eficiente
+Endpoint: POST 
+
+ SOBRE LAS FOTOS
+Se guardan en Firebase Storage y esta direccion luego en la base de Datos con todos los registros de reportes
+
+
+\n
+
+
+### Github
+https://github.com/paulscc/RenderPi
+
+\n
+
+#### Video Explicacion
+https://youtu.be/czEOuxzFUsY
+\n
+
+Author:
+Cadena Paul

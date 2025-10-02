@@ -10,6 +10,8 @@ website:
         text: Primer Reporte
       - href: segundo.qmd
         text: Reto 0-Arquitectura
+      - href: tercer.qmd
+        text: Reto 1-API Ciudadana Básica
 
 format:
   html:
