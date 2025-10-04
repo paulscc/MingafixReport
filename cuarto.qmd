@@ -2,7 +2,7 @@
 title: "Reto 2 – Mapa Vivo Inicial"
 jupyter: python3
 author: "Cadena Paul"
-date: "04-10-2025"
+date: "10-04-2025"
 format: 
     html:
         embed-resources: true
@@ -10,7 +10,7 @@ format:
 
 
 
-![App](images/logo.png){width=25%}
+![App](images/logo.png){width=50%}
 
 
 
@@ -151,6 +151,12 @@ m.save(map_file)
 <!-- Mostrar el mapa embebido -->
 <iframe src="mapas/mapa.html" width="100%" height="600px" style="border:none;"></iframe>
 
-```{python}
 
-```
+## Video Explicativo
+https://youtu.be/e2oQPsmCcAs
+
+
+### Author
+
+    Paul Cadena
+ 
