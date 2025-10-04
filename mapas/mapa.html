@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9e547fdfa73fe248982d21c4a6a671da {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<script>
+function mostrarCategoria() {
+    var seleccion = document.getElementById('categoria-select').value;
+    var capas = document.getElementsByClassName('leaflet-control-layers-selector');
+    for (var i = 0; i < capas.length; i++) {
+        var label = capas[i].nextSibling.innerText.trim();
+        capas[i].checked = (label === seleccion);
+        capas[i].click();
+    }
+}
+</script>
+
+<div style="position: fixed; top: 10px; left: 50px; z-index: 1000; background: white; padding: 10px;">
+    <label for="categoria-select"><strong>Filtrar por categoría:</strong></label>
+    <select id="categoria-select" onchange="mostrarCategoria()">
+        <option disabled selected>-- Seleccione una categoría --</option>
+        <option value="accidente">Accidente</option><option value="alumbrado">Alumbrado</option><option value="bache">Bache</option><option value="basura">Basura</option><option value="fuga">Fuga</option><option value="hueco">Hueco</option><option value="semaforo">Semaforo</option>
+    </select>
+</div>
+    
+            <div class="folium-map" id="map_9e547fdfa73fe248982d21c4a6a671da" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9e547fdfa73fe248982d21c4a6a671da = L.map(
+                "map_9e547fdfa73fe248982d21c4a6a671da",
+                {
+                    center: [-0.2204, -78.5105],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e795e6da4d0a96581e4304dd314cfe87 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e795e6da4d0a96581e4304dd314cfe87.addTo(map_9e547fdfa73fe248982d21c4a6a671da);
+        
+    
+            var feature_group_9ab72f19ea188aa2df5d62603e778e23 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_0dd8c047f58d23cd80cf8a6dc0026cd1 = L.marker(
+                [-0.2204, -78.5105],
+                {
+}
+            ).addTo(feature_group_9ab72f19ea188aa2df5d62603e778e23);
+        
+    
+            var icon_957c428c5c77b4458559f876df4b7d50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ded9c5a6cea112493ca68e274dc10e83 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9c693a3ae6382ef5af2341683bdfd66 = $(`<div id="html_b9c693a3ae6382ef5af2341683bdfd66" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> accidente<br>     <strong>Descripción:</strong> Negocio emite m�sica a alto volumen durante toda la noche.<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/24c5f20a-c702-442e-93f5-8e76e54ad78e.jpg" width="200px">     </div>`)[0];
+                popup_ded9c5a6cea112493ca68e274dc10e83.setContent(html_b9c693a3ae6382ef5af2341683bdfd66);
+            
+        
+
+        marker_0dd8c047f58d23cd80cf8a6dc0026cd1.bindPopup(popup_ded9c5a6cea112493ca68e274dc10e83)
+        ;
+
+        
+    
+    
+                marker_0dd8c047f58d23cd80cf8a6dc0026cd1.setIcon(icon_957c428c5c77b4458559f876df4b7d50);
+            
+    
+            var feature_group_6b9ae7c0f1115ed9dffec20126a7b671 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_2154e26012586c3906a4b2e0fecfe105 = L.marker(
+                [-0.2532, -78.5293],
+                {
+}
+            ).addTo(feature_group_6b9ae7c0f1115ed9dffec20126a7b671);
+        
+    
+            var icon_bba74a76144ce4d35141a32dadf2bd55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32b75adcbc6e5db304b4948312c4e9ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d20b8fa7607f0e4407669490ed3ec31 = $(`<div id="html_2d20b8fa7607f0e4407669490ed3ec31" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> alumbrado<br>     <strong>Descripción:</strong> Poste de luz no funciona desde hace una semana en la calle principal del barrio.<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/6a236bed-8d58-4724-8c08-7b7ba8072667.jpg" width="200px">     </div>`)[0];
+                popup_32b75adcbc6e5db304b4948312c4e9ee.setContent(html_2d20b8fa7607f0e4407669490ed3ec31);
+            
+        
+
+        marker_2154e26012586c3906a4b2e0fecfe105.bindPopup(popup_32b75adcbc6e5db304b4948312c4e9ee)
+        ;
+
+        
+    
+    
+                marker_2154e26012586c3906a4b2e0fecfe105.setIcon(icon_bba74a76144ce4d35141a32dadf2bd55);
+            
+    
+            var feature_group_f7012dae275067561966c5ff0baca62e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_0b9f6c2b110643316e02b3fb35a2b14d = L.marker(
+                [-0.8131, -77.7172],
+                {
+}
+            ).addTo(feature_group_f7012dae275067561966c5ff0baca62e);
+        
+    
+            var icon_dbaebfef5cbdfe3b1e8d6192e6e839fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40a771bffe9fe97dfa36cf99a94b7d00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_825206dce89649dbf399b4512dc0415c = $(`<div id="html_825206dce89649dbf399b4512dc0415c" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> bache<br>     <strong>Descripción:</strong> Prueba test endpoint<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/226741d7-0816-4bae-b35a-e0ef7f1375d7.jpg" width="200px">     </div>`)[0];
+                popup_40a771bffe9fe97dfa36cf99a94b7d00.setContent(html_825206dce89649dbf399b4512dc0415c);
+            
+        
+
+        marker_0b9f6c2b110643316e02b3fb35a2b14d.bindPopup(popup_40a771bffe9fe97dfa36cf99a94b7d00)
+        ;
+
+        
+    
+    
+                marker_0b9f6c2b110643316e02b3fb35a2b14d.setIcon(icon_dbaebfef5cbdfe3b1e8d6192e6e839fd);
+            
+    
+            var marker_5424740a4617416e56aa407a94da6327 = L.marker(
+                [-0.8131, -77.7172],
+                {
+}
+            ).addTo(feature_group_f7012dae275067561966c5ff0baca62e);
+        
+    
+            var icon_aae08312baeef24840428ec8bab74492 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac692ac34f6cdc43b15caffb593e2d28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_587fbc16612efd07c5fe282159e200ac = $(`<div id="html_587fbc16612efd07c5fe282159e200ac" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> bache<br>     <strong>Descripción:</strong> Test desde Render<br>     <img src="https://via.placeholder.com/600" width="200px">     </div>`)[0];
+                popup_ac692ac34f6cdc43b15caffb593e2d28.setContent(html_587fbc16612efd07c5fe282159e200ac);
+            
+        
+
+        marker_5424740a4617416e56aa407a94da6327.bindPopup(popup_ac692ac34f6cdc43b15caffb593e2d28)
+        ;
+
+        
+    
+    
+                marker_5424740a4617416e56aa407a94da6327.setIcon(icon_aae08312baeef24840428ec8bab74492);
+            
+    
+            var feature_group_0de5867723ae70faeb4fecdd1a7a665c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_4add636f363247533a4085e7051ef9c0 = L.marker(
+                [-0.1396, -78.7172],
+                {
+}
+            ).addTo(feature_group_0de5867723ae70faeb4fecdd1a7a665c);
+        
+    
+            var icon_4cba9e5a54afca65f95d9888c059ac8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_687945738d40ee90c10f47a9cd2e6ed5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be8ff950d60b54ca8af39511b71e01f5 = $(`<div id="html_be8ff950d60b54ca8af39511b71e01f5" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> basura<br>     <strong>Descripción:</strong> Prueba test endpoint<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/1a00f8f9-39bd-4906-a5a3-d5d083daaadb.jpg" width="200px">     </div>`)[0];
+                popup_687945738d40ee90c10f47a9cd2e6ed5.setContent(html_be8ff950d60b54ca8af39511b71e01f5);
+            
+        
+
+        marker_4add636f363247533a4085e7051ef9c0.bindPopup(popup_687945738d40ee90c10f47a9cd2e6ed5)
+        ;
+
+        
+    
+    
+                marker_4add636f363247533a4085e7051ef9c0.setIcon(icon_4cba9e5a54afca65f95d9888c059ac8c);
+            
+    
+            var marker_8f1afbb34bb42999e91afede2ee7aa7c = L.marker(
+                [-0.8131, -77.7172],
+                {
+}
+            ).addTo(feature_group_0de5867723ae70faeb4fecdd1a7a665c);
+        
+    
+            var icon_c5d651f0b97283d60bd7275f7c97dc40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e75873bf906b5da3318a3b70f5e17599 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_500ead31f390afb9e5f5930134524169 = $(`<div id="html_500ead31f390afb9e5f5930134524169" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> basura<br>     <strong>Descripción:</strong> Prueba test endpoint<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/86c32094-3fae-4095-8932-cd942d04e6b9.jpg" width="200px">     </div>`)[0];
+                popup_e75873bf906b5da3318a3b70f5e17599.setContent(html_500ead31f390afb9e5f5930134524169);
+            
+        
+
+        marker_8f1afbb34bb42999e91afede2ee7aa7c.bindPopup(popup_e75873bf906b5da3318a3b70f5e17599)
+        ;
+
+        
+    
+    
+                marker_8f1afbb34bb42999e91afede2ee7aa7c.setIcon(icon_c5d651f0b97283d60bd7275f7c97dc40);
+            
+    
+            var feature_group_0972fcf95f61c1c4e82e935d1a5df6b4 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_fcab3570962e6a7a1518044bb1297a3a = L.marker(
+                [-0.2177, -78.487],
+                {
+}
+            ).addTo(feature_group_0972fcf95f61c1c4e82e935d1a5df6b4);
+        
+    
+            var icon_3fddb737cd6aba3683d465c90810dbdb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d01828e757c59e7208a42aab92eeac95 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b22c1cf7b1815b2006488000938297e9 = $(`<div id="html_b22c1cf7b1815b2006488000938297e9" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> fuga<br>     <strong>Descripción:</strong> Tuber�a rota genera fuga de agua en la v�a p�blica desde hace 2 d�as.<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/daa36293-138d-46fb-bf0d-fd43b927c479.jpg" width="200px">     </div>`)[0];
+                popup_d01828e757c59e7208a42aab92eeac95.setContent(html_b22c1cf7b1815b2006488000938297e9);
+            
+        
+
+        marker_fcab3570962e6a7a1518044bb1297a3a.bindPopup(popup_d01828e757c59e7208a42aab92eeac95)
+        ;
+
+        
+    
+    
+                marker_fcab3570962e6a7a1518044bb1297a3a.setIcon(icon_3fddb737cd6aba3683d465c90810dbdb);
+            
+    
+            var feature_group_bde4b3c3b21a8c5ade0f2d1175fc5bd0 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_2378276cc7de5df92a72ac2740fee7cf = L.marker(
+                [-0.2023, -78.4954],
+                {
+}
+            ).addTo(feature_group_bde4b3c3b21a8c5ade0f2d1175fc5bd0);
+        
+    
+            var icon_47a8aefa299efae84b66294231fa247a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea7cd952eccf5dd786e8bdb6bc37010d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0bc1c7acc4250e207c5b7ac170314c42 = $(`<div id="html_0bc1c7acc4250e207c5b7ac170314c42" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> hueco<br>     <strong>Descripción:</strong> Hueco grande en la Av. Mariscal Sucre que representa peligro para veh�culos.<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/97b0bd73-4223-4733-9d0c-12a9ad4e8c8b.jpg" width="200px">     </div>`)[0];
+                popup_ea7cd952eccf5dd786e8bdb6bc37010d.setContent(html_0bc1c7acc4250e207c5b7ac170314c42);
+            
+        
+
+        marker_2378276cc7de5df92a72ac2740fee7cf.bindPopup(popup_ea7cd952eccf5dd786e8bdb6bc37010d)
+        ;
+
+        
+    
+    
+                marker_2378276cc7de5df92a72ac2740fee7cf.setIcon(icon_47a8aefa299efae84b66294231fa247a);
+            
+    
+            var feature_group_e8ffa57d0bafbb38468d8683f34c2b1d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_e459ff2babede36f81b95c0d9ae3bc78 = L.marker(
+                [-0.2108, -78.5001],
+                {
+}
+            ).addTo(feature_group_e8ffa57d0bafbb38468d8683f34c2b1d);
+        
+    
+            var icon_a0f2fd0505a1461cdf5496fdb4fc0c3f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2da59bd971a88eb00089879e70876545 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29b142d7b2e15e208ea35c92d254edf2 = $(`<div id="html_29b142d7b2e15e208ea35c92d254edf2" style="width: 100.0%; height: 100.0%;">     <strong>Categoría:</strong> semaforo<br>     <strong>Descripción:</strong> Sem�foro en rojo permanente en la intersecci�n con Av. 10 de Agosto.<br>     <img src="https://storage.googleapis.com/mingabdd.firebasestorage.app/reportes/1c63b99c-dd8c-4d0e-b5ed-7ba4fe853bcd.jpg" width="200px">     </div>`)[0];
+                popup_2da59bd971a88eb00089879e70876545.setContent(html_29b142d7b2e15e208ea35c92d254edf2);
+            
+        
+
+        marker_e459ff2babede36f81b95c0d9ae3bc78.bindPopup(popup_2da59bd971a88eb00089879e70876545)
+        ;
+
+        
+    
+    
+                marker_e459ff2babede36f81b95c0d9ae3bc78.setIcon(icon_a0f2fd0505a1461cdf5496fdb4fc0c3f);
+            
+    
+            var feature_group_c997b1f8624054623b5784f287d5a058 = L.featureGroup(
+                {
+}
+            );
+        
+    
+                marker_0dd8c047f58d23cd80cf8a6dc0026cd1.setIcon(icon_957c428c5c77b4458559f876df4b7d50);
+            
+    
+                marker_fcab3570962e6a7a1518044bb1297a3a.setIcon(icon_3fddb737cd6aba3683d465c90810dbdb);
+            
+    
+                marker_e459ff2babede36f81b95c0d9ae3bc78.setIcon(icon_a0f2fd0505a1461cdf5496fdb4fc0c3f);
+            
+    
+                marker_2154e26012586c3906a4b2e0fecfe105.setIcon(icon_bba74a76144ce4d35141a32dadf2bd55);
+            
+    
+                marker_2378276cc7de5df92a72ac2740fee7cf.setIcon(icon_47a8aefa299efae84b66294231fa247a);
+            
+    
+                marker_4add636f363247533a4085e7051ef9c0.setIcon(icon_4cba9e5a54afca65f95d9888c059ac8c);
+            
+    
+                marker_8f1afbb34bb42999e91afede2ee7aa7c.setIcon(icon_c5d651f0b97283d60bd7275f7c97dc40);
+            
+    
+                marker_0b9f6c2b110643316e02b3fb35a2b14d.setIcon(icon_dbaebfef5cbdfe3b1e8d6192e6e839fd);
+            
+    
+                marker_5424740a4617416e56aa407a94da6327.setIcon(icon_aae08312baeef24840428ec8bab74492);
+            
+    
+            feature_group_c997b1f8624054623b5784f287d5a058.addTo(map_9e547fdfa73fe248982d21c4a6a671da);
+        
+    
+            var layer_control_143086dde95092b5480a6e045e7c429b_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e795e6da4d0a96581e4304dd314cfe87,
+                },
+                overlays :  {
+                    "accidente" : feature_group_9ab72f19ea188aa2df5d62603e778e23,
+                    "alumbrado" : feature_group_6b9ae7c0f1115ed9dffec20126a7b671,
+                    "bache" : feature_group_f7012dae275067561966c5ff0baca62e,
+                    "basura" : feature_group_0de5867723ae70faeb4fecdd1a7a665c,
+                    "fuga" : feature_group_0972fcf95f61c1c4e82e935d1a5df6b4,
+                    "hueco" : feature_group_bde4b3c3b21a8c5ade0f2d1175fc5bd0,
+                    "semaforo" : feature_group_e8ffa57d0bafbb38468d8683f34c2b1d,
+                    "Inicial" : feature_group_c997b1f8624054623b5784f287d5a058,
+                },
+            };
+            let layer_control_143086dde95092b5480a6e045e7c429b = L.control.layers(
+                layer_control_143086dde95092b5480a6e045e7c429b_layers.base_layers,
+                layer_control_143086dde95092b5480a6e045e7c429b_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_9e547fdfa73fe248982d21c4a6a671da);
+
+        
+</script>
+</html>

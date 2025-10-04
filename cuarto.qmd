@@ -1,0 +1,156 @@
+---
+title: "Reto 2 – Mapa Vivo Inicial"
+jupyter: python3
+author: "Cadena Paul"
+date: "04-10-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+
+
+![App](images/logo.png){width=25%}
+
+
+
+
+
+
+# Mapa interactivo
+
+Simple conexion con API (GET reportes) y muestra puntos en mapa 
+
+![App](images/maps.png){width=25%}
+
+
+```{python}
+import requests
+import folium
+from folium.plugins import MarkerCluster
+import os
+
+# -------------------------------
+# 1. Obtener datos desde la API
+# -------------------------------
+url = "https://renderpi.onrender.com/reportes"
+response = requests.get(url)
+data = response.json()
+
+# -------------------------------
+# 2. Reportes y categorías
+# -------------------------------
+reportes = data.get('data', [])
+primeros_10 = reportes[:10]
+todas_las_categorias = sorted(set(r.get("categoria", "otro") for r in reportes))
+
+# -------------------------------
+# 3. Crear el mapa centrado
+# -------------------------------
+if primeros_10:
+    lat_centro = primeros_10[0]['ubicacion']['lat']
+    lng_centro = primeros_10[0]['ubicacion']['lng']
+else:
+    lat_centro, lng_centro = 0, 0
+
+m = folium.Map(location=[lat_centro, lng_centro], zoom_start=14)
+
+# -------------------------------
+# 4. Colores por categoría
+# -------------------------------
+colores = {
+    "bache": "red",
+    "basura": "purple",
+    "fuga": "white",
+    "hueco": "orange",
+    "semaforo": "pink",
+    "alumbrado": "black",
+    "accidente": "blue",
+    "incendio": "orange",
+    "derrumbe": "green",
+    "otro": "gray"
+}
+
+# -------------------------------
+# 5. Crear grupo para cada categoría
+# -------------------------------
+categoria_grupos = {}
+for categoria in todas_las_categorias:
+    categoria_grupos[categoria] = folium.FeatureGroup(name=categoria, show=False)
+    m.add_child(categoria_grupos[categoria])
+
+# Grupo de los primeros 10 visibles inicialmente
+grupo_inicial = folium.FeatureGroup(name="Inicial", show=True)
+m.add_child(grupo_inicial)
+
+# -------------------------------
+# 6. Añadir marcadores
+# -------------------------------
+for i, reporte in enumerate(reportes):
+    categoria = reporte.get("categoria", "otro")
+    color = colores.get(categoria, "gray")
+    lat = reporte["ubicacion"]["lat"]
+    lng = reporte["ubicacion"]["lng"]
+    descripcion = reporte.get("descripcion", "")
+    imagen_url = reporte.get("fotoUrl", "")
+    
+    popup_html = f"""
+    <strong>Categoría:</strong> {categoria}<br>
+    <strong>Descripción:</strong> {descripcion}<br>
+    <img src="{imagen_url}" width="200px">
+    """
+    
+    marker = folium.Marker(
+        location=[lat, lng],
+        popup=popup_html,
+        icon=folium.Icon(color=color)
+    )
+    
+    if i < 10:
+        marker.add_to(grupo_inicial)
+    marker.add_to(categoria_grupos[categoria])
+
+# -------------------------------
+# 7. Agregar controles y guardar
+# -------------------------------
+folium.LayerControl(collapsed=False).add_to(m)
+
+# JavaScript para la selección de categoría
+categoria_dropdown = f"""
+<script>
+function mostrarCategoria() {{
+    var seleccion = document.getElementById('categoria-select').value;
+    var capas = document.getElementsByClassName('leaflet-control-layers-selector');
+    for (var i = 0; i < capas.length; i++) {{
+        var label = capas[i].nextSibling.innerText.trim();
+        capas[i].checked = (label === seleccion);
+        capas[i].click();
+    }}
+}}
+</script>
+
+<div style="position: fixed; top: 10px; left: 50px; z-index: 1000; background: white; padding: 10px;">
+    <label for="categoria-select"><strong>Filtrar por categoría:</strong></label>
+    <select id="categoria-select" onchange="mostrarCategoria()">
+        <option disabled selected>-- Seleccione una categoría --</option>
+        {''.join([f'<option value="{c}">{c.capitalize()}</option>' for c in todas_las_categorias])}
+    </select>
+</div>
+"""
+
+# Agregar el script manualmente al HTML del mapa
+map_file = "mapas/mapa.html"
+os.makedirs("mapas", exist_ok=True)
+
+m.get_root().html.add_child(folium.Element(categoria_dropdown))
+m.save(map_file)
+```
+
+
+
+<!-- Mostrar el mapa embebido -->
+<iframe src="mapas/mapa.html" width="100%" height="600px" style="border:none;"></iframe>
+
+```{python}
+
+```
