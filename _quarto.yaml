@@ -12,6 +12,8 @@ website:
         text: Reto 0-Arquitectura
       - href: tercer.qmd
         text: Reto 1-API Ciudadana Básica
+      - href: cuarto.qmd
+        text: Reto 2 – Mapa Vivo Inicial
 
 format:
   html:
