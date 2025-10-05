@@ -1,0 +1,27 @@
+---
+title: " Reto 3 Creativo-Comunitario “Yo soy Minguero”"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-04-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+
+
+![App](images/logo.png){width=50%}
+
+
+
+Video Compartido por el canal de watsapp
+
+
+## Video Explicativo
+https://youtu.be/7qWxTZJ96LM
+
+
+### Author
+
+    Paul Cadena
+ 
