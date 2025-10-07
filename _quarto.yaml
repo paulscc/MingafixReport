@@ -21,7 +21,7 @@ website:
       - text: "Semana 2"
         menu:
           - href: 1primer.qmd
-            text: Primer Reporte
+            text: Reto 1 Supabase Connection & Data Handling
 
 format:
   html:
