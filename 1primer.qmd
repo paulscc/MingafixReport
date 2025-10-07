@@ -1,0 +1,35 @@
+---
+title: " Reto 1 Supabase Connection & Data Handling”"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+
+
+![App](images/logo.png){width=50%}
+
+Supabase Conexion con Api y envio de reportes y muestra de reportes
+
+https://renderpisu.onrender.com
+API 
+
+
+Codigo generar reportes
+curl -X GET https://renderpisu.onrender.com/reportes
+
+Codigo insertar reporte 
+ curl -X POST https://renderpisu.onrender.com/reportes      -F "categoria=luminaria"      -F "lat=-0.8131"      -F "lng=-77.7172"      -F "descripcion=Prueba test endpoint"      -F "usuario_id=FUNC-001"      -F "foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg"
+
+
+
+## Video Explicativo
+https://youtu.be/3nYP_T7PJYc
+
+### Author
+
+    Paul Cadena
+ 
