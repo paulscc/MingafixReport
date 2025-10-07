@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "tercer.html",
+    "href": "tercer.html",
+    "title": "Reto 1: Ciudadana Basica",
+    "section": "",
+    "text": "MINGAFIX API v1.0 - REST + GraphQL"
+  },
+  {
+    "objectID": "tercer.html#documentacion",
+    "href": "tercer.html#documentacion",
+    "title": "Reto 1: Ciudadana Basica",
+    "section": "Documentacion",
+    "text": "Documentacion\nApi implementeda a traves de: Backend: Render.com BBD y Storage: Firebase Consultas: Graphql\nQué hace esta API? Permite que ciudadanos reporten problemas en su ciudad (baches, basura, luminarias rotas, etc.) usando su celular. Los funcionarios pueden ver estos reportes y darles tratamiento.\n¿Cómo usar la API? Producción: https://renderpi.onrender.com/ (En caso de inactividad la API se demorara en encenderse alrededor de 45s)\nSe puede usar Postman en este caso se usará Gitbash(simplemente usare los comandos y la comunicacion se realizará)\n\n\n\nApp\n\n\nPROBAR LA API (Paso a Paso) Paso 1: Verificar que funcione bash curl https://renderpi.onrender.com\n        Respuesta : {\"status\": \"online\", ...}\nCrear un Reporte Para qué sirve: Un ciudadano reporta un problema (bache, basura, etc.) Endpoint: POST /reportes Qué necesitas enviar:\ncategoria: Tipo de problema (bache, basura, luminaria, acera_rota) lat: Latitud (ubicación en el mapa) lng: Longitud (ubicación en el mapa) descripcion: Qué está pasando usuario_id: Quién está reportando foto: Imagen del problema (opcional)\nEjemplo con foto desde tu celular: bash# Subir una foto\ncurl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Bache muy grande en la avenida”\n-F “usuario_id=juan123”\n-F “foto=@/ruta/a/foto.jpg”\nEjemplo usado de codigo en video: curl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Prueba test endpoint”\n-F “usuario_id=USER-ABC-001”\n-F “foto=@C:/Users/OneDrive/Escritorio/foto.jpg”\nLímite de Reportes Regla: Solo puedes hacer 30 reportes por minuto ¿Por qué? Para evitar spam y abusos\nNo Duplicados\nRegla: No puedes reportar el mismo problema 2 veces en\nGRAPHQL (Consultas Avanzadas) Para qué sirve: Hacer consultas más complejas de forma más eficiente Endpoint: POST\nSOBRE LAS FOTOS Se guardan en Firebase Storage y esta direccion luego en la base de Datos con todos los registros de reportes\n\nGithub\nhttps://github.com/paulscc/RenderPi\n\nVideo Explicacion\nhttps://youtu.be/czEOuxzFUsY \nAuthor: Cadena Paul"
+  },
+  {
+    "objectID": "quinto.html",
+    "href": "quinto.html",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
+    "section": "",
+    "text": "App\nVideo Compartido por el canal de watsapp"
+  },
+  {
+    "objectID": "quinto.html#video-explicativo",
+    "href": "quinto.html#video-explicativo",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/7qWxTZJ96LM\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "cuarto.html",
+    "href": "cuarto.html",
+    "title": "Reto 2 – Mapa Vivo Inicial",
+    "section": "",
+    "text": "App"
+  },
+  {
+    "objectID": "cuarto.html#video-explicativo",
+    "href": "cuarto.html#video-explicativo",
+    "title": "Reto 2 – Mapa Vivo Inicial",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/e2oQPsmCcAs\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "1primer.html",
+    "href": "1primer.html",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "",
+    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
+  },
+  {
+    "objectID": "1primer.html#video-explicativo",
+    "href": "1primer.html#video-explicativo",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Primer reporte Mingafix",
+    "section": "",
+    "text": "```{column width=“100%”}\n\n\n\nApp\n\n\n```\n#Link App (movil)\nhttps://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage\n##Video Explicacion\nhttps://www.youtube.com/watch?v=zngtVqOHEoU\nAuthor: Cadena Paul"
+  },
+  {
+    "objectID": "segundo.html#documento-explicativo",
+    "href": "segundo.html#documento-explicativo",
+    "title": "Reto 0 Mingafix",
+    "section": "Documento explicativo",
+    "text": "Documento explicativo\n\n¿QUÉ HACE LA APP? Permite a ciudadanos reportar problemas urbanos (baches, luminarias rotas, basura, etc.) con fotos y ubicación. Las encargados reciben, gestionan y resuelven estos reportes.\nEl sistema es simple trabaja con varios servicios como Firebase para La BDD, y monitoreo de estos, con implementeacion de OAUTH 2.0 para login facil, APIs para servicios de la aplicacion(reportes, consultas, etc) y de terceros como Maps\n\n🎨 FRONTEND (Apps)\n\niOS/Android: Ciudadanos reportan incidentes con foto + GPS Web Admin: Funcionarios municipales gestionan reportes\n\nAUTENTICACIÓN Firebase Auth: Login de usuarios OAuth 2.0: Login con Google/Facebook SMS: Verificación por código de teléfono (evita bots)\nAPI GATEWAY (Puerta de entrada) REST: Crear/editar reportes (POST /api/reportes) GraphQL: Consultas complejas (estadísticas, filtros) WebSocket: Notificaciones en tiempo real\nMICROSERVICIOS (Lógica de negocio) Usuarios: Perfiles, historial, credibilidad Reportes: Crear incidentes, estados (pendiente→proceso→resuelto) Asignación: Distribuye reportes automáticamente por zona/tipo Notificaciones: Alerta a ciudadanos y funcionarios\nBASES DE DATOS Firestore: Guarda reportes, usuarios, comentarios (NoSQL en la nube) Cloud Storage: Almacena fotos/videos de incidentes Redis Cache: Acelera consultas frecuentes SQLite Local: Modo offline (crea reportes sin internet)\nSERVICIOS EXTERNOS Google Maps: Ubicación exacta + mapas interactivos Firebase Cloud Messaging: Notificaciones push (“Tu reporte fue resuelto”) Twilio SMS: Confirmaciones por mensaje de texto\nANALITICA Crashlytics: Detecta errores de la app Analytics: Estadísticas de uso (reportes/día, zonas críticas) Cloud Monitoring: Rendimiento de servidores —\n\n\nVideo Explicacion\nhttps://youtu.be/VocYuBjjObc\n\n\n\nAuthor: Paul Cadena\n\n\n\nGithub: https://github.com/paulscc"
+  }
+]
