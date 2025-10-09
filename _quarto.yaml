@@ -20,8 +20,10 @@ website:
             text: Reto 3 – Creativo-Comunitario 
       - text: "Semana 2"
         menu:
-          - href: 1primer.qmd
+          - href: 2primer.qmd
             text: Reto 1 Supabase Connection & Data Handling
+          - href: 2segundo.qmd
+            text: Reto 2 – LiveMap API Integration
 
 format:
   html:
