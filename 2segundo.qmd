@@ -1,5 +1,5 @@
 ---
-title: " Reto 2 – LiveMap API Integration "
+title: " Reto 2 – LiveMap API Integration"
 jupyter: python3
 author: "Cadena Paul"
 date: "10-07-2025"
