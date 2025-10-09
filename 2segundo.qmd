@@ -1,0 +1,126 @@
+---
+title: " Reto 1 Supabase Connection & Data Handling”"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+![App](images/logo.png){width=50%}
+
+## Mapa de reportes desde API
+
+
+### Mapa 
+```{python}
+
+
+import requests
+import folium
+from folium.plugins import Fullscreen, LocateControl, MousePosition
+
+# 1. Obtener datos
+url = "https://javaspringap.onrender.com/api/reportes"
+response = requests.get(url)
+data = response.json()["data"]
+
+# 2. Definir colores por categoría
+categoria_colores = {
+    "bache": "red",
+    "basura": "green",
+    "luminaria": "orange",
+    "acera_rota": "blue",
+    "semaforo": "purple",
+    "alcantarilla": "cadetblue",
+    "arbol_caido": "darkgreen",
+    "cable_suelto": "darkpurple",
+    "grafiti": "pink",
+    "otro": "gray"
+}
+
+# 3. Crear mapa
+m = folium.Map(location=[-0.20016, -78.49418], zoom_start=15, control_scale=True)
+
+# 4. Capas por categoría
+capas = {}
+
+for reporte in data:
+    cat = reporte.get("categoria", "otro").lower()
+    capa = capas.setdefault(cat, folium.FeatureGroup(name=cat.capitalize(), show=True))
+
+    lat = reporte.get("lat")
+    lng = reporte.get("lng")
+    descripcion = reporte.get("descripcion", "Sin descripción")
+    estado = reporte.get("estado", "desconocido")
+    foto = reporte.get("fotoUrl")
+
+    popup_html = f"""
+    <b>Categoría:</b> {cat}<br>
+    <b>Estado:</b> {estado}<br>
+    <b>Descripción:</b> {descripcion}<br>
+    """
+    if foto:
+        popup_html += f"<img src='{foto}' width='180'>"
+
+    marker = folium.Marker(
+        location=[lat, lng],
+        popup=folium.Popup(popup_html, max_width=250),
+        icon=folium.Icon(color=categoria_colores.get(cat, "gray"), icon="info-sign")
+    )
+
+    marker.add_to(capa)
+
+# 5. Agregar capas al mapa
+for capa in capas.values():
+    capa.add_to(m)
+
+# 6. Agregar control de capas
+folium.LayerControl(collapsed=False).add_to(m)
+
+# 7. Agregar plugins adicionales
+Fullscreen().add_to(m)
+LocateControl(auto_start=False).add_to(m)
+MousePosition().add_to(m)
+
+# 8. Mostrar mapa
+m
+```
+
+
+Supabase Conexion con Api en Java Spring Boot +GraphSql en Render 
+
+
+#### Api
+https://javaspringap.onrender.com/api
+
+
+### Arquitectura
+La api se desarrollo en JAVA Spring Boot, con java v17, y se subio a render como un archivo docker
+
+#### Comandos para API- Git Bash
+    Se uso Git Bash para las peticiones con la API
+
+Codigo generar reportes
+curl -X GET https://javaspringap.onrender.com/api
+    Respuesta Esperada:
+            Una Json con los reportes 
+
+Codigo insertar reporte 
+  $ curl -X POST https://javaspringap.onrender.com/api/reportes  -F "categoria=basura"   -F "lat=-0.8131"   -F "lng=-77.7172"   -F "descripcion=Pr"   -F "usuarioId=USER-001"   -F "foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg"  
+ 
+    Respuesta Esperada: 
+           {"estado":"pendiente","foto_url":"https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/51cd906a-3774-459e-a853-151b8e0eaeb0.jpg","success":true,"id":"287b8dce-a992-423f-99ce-683d4bdd1cfa","message":"Reporte creado exitosamente"}
+
+
+
+
+## Video Explicativo
+https://youtu.be/SdZLBzGYdPQ
+
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
+    

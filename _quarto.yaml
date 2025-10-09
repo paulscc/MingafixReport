@@ -6,14 +6,24 @@ website:
   title: "MingaFix Report"
   navbar:
     left:
-      - href: index.qmd
-        text: Primer Reporte
-      - href: segundo.qmd
-        text: Reto 0-Arquitectura
-      - href: tercer.qmd
-        text: Reto 1-API Ciudadana Básica
-      - href: cuarto.qmd
-        text: Reto 2 – Mapa Vivo Inicial
+      - text: "Semana 1"
+        menu:
+          - href: index.qmd
+            text: Primer Reporte
+          - href: segundo.qmd
+            text: Reto 0-Arquitectura
+          - href: tercer.qmd
+            text: Reto 1-API Ciudadana Básica
+          - href: cuarto.qmd
+            text: Reto 2 – Mapa Vivo Inicial
+          - href: quinto.qmd
+            text: Reto 3 – Creativo-Comunitario 
+      - text: "Semana 2"
+        menu:
+          - href: 2primer.qmd
+            text: Reto 1 Supabase Connection & Data Handling
+          - href: 2segundo.qmd
+            text: Reto 2 – LiveMap API Integration
 
 format:
   html:

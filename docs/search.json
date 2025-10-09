@@ -14,11 +14,18 @@
     "text": "Documentacion\nApi implementeda a traves de: Backend: Render.com BBD y Storage: Firebase Consultas: Graphql\nQué hace esta API? Permite que ciudadanos reporten problemas en su ciudad (baches, basura, luminarias rotas, etc.) usando su celular. Los funcionarios pueden ver estos reportes y darles tratamiento.\n¿Cómo usar la API? Producción: https://renderpi.onrender.com/ (En caso de inactividad la API se demorara en encenderse alrededor de 45s)\nSe puede usar Postman en este caso se usará Gitbash(simplemente usare los comandos y la comunicacion se realizará)\n\n\n\nApp\n\n\nPROBAR LA API (Paso a Paso) Paso 1: Verificar que funcione bash curl https://renderpi.onrender.com\n        Respuesta : {\"status\": \"online\", ...}\nCrear un Reporte Para qué sirve: Un ciudadano reporta un problema (bache, basura, etc.) Endpoint: POST /reportes Qué necesitas enviar:\ncategoria: Tipo de problema (bache, basura, luminaria, acera_rota) lat: Latitud (ubicación en el mapa) lng: Longitud (ubicación en el mapa) descripcion: Qué está pasando usuario_id: Quién está reportando foto: Imagen del problema (opcional)\nEjemplo con foto desde tu celular: bash# Subir una foto\ncurl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Bache muy grande en la avenida”\n-F “usuario_id=juan123”\n-F “foto=@/ruta/a/foto.jpg”\nEjemplo usado de codigo en video: curl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Prueba test endpoint”\n-F “usuario_id=USER-ABC-001”\n-F “foto=@C:/Users/OneDrive/Escritorio/foto.jpg”\nLímite de Reportes Regla: Solo puedes hacer 30 reportes por minuto ¿Por qué? Para evitar spam y abusos\nNo Duplicados\nRegla: No puedes reportar el mismo problema 2 veces en\nGRAPHQL (Consultas Avanzadas) Para qué sirve: Hacer consultas más complejas de forma más eficiente Endpoint: POST\nSOBRE LAS FOTOS Se guardan en Firebase Storage y esta direccion luego en la base de Datos con todos los registros de reportes\n\nGithub\nhttps://github.com/paulscc/RenderPi\n\nVideo Explicacion\nhttps://youtu.be/czEOuxzFUsY \nAuthor: Cadena Paul"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Primer reporte Mingafix",
+    "objectID": "quinto.html",
+    "href": "quinto.html",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
     "section": "",
-    "text": "```{column width=“100%”}\n\n\n\nApp\n\n\n```\n#Link App (movil)\nhttps://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage\n##Video Explicacion\nhttps://www.youtube.com/watch?v=zngtVqOHEoU\nAuthor: Cadena Paul"
+    "text": "App\nVideo Compartido por el canal de watsapp"
+  },
+  {
+    "objectID": "quinto.html#video-explicativo",
+    "href": "quinto.html#video-explicativo",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/7qWxTZJ96LM\n\nAuthor\nPaul Cadena"
   },
   {
     "objectID": "cuarto.html",
@@ -33,6 +40,48 @@
     "title": "Reto 2 – Mapa Vivo Inicial",
     "section": "Video Explicativo",
     "text": "Video Explicativo\nhttps://youtu.be/e2oQPsmCcAs\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "2primer.html",
+    "href": "2primer.html",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "",
+    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
+  },
+  {
+    "objectID": "2primer.html#video-explicativo",
+    "href": "2primer.html#video-explicativo",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "2segundo.html",
+    "href": "2segundo.html",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "",
+    "text": "App"
+  },
+  {
+    "objectID": "2segundo.html#mapa-de-reportes-desde-api",
+    "href": "2segundo.html#mapa-de-reportes-desde-api",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Mapa de reportes desde API",
+    "text": "Mapa de reportes desde API\n\nMapa\n\n\nCode\nimport requests\nimport folium\nfrom folium.plugins import Fullscreen, LocateControl, MousePosition\n\n# 1. Obtener datos\nurl = \"https://javaspringap.onrender.com/api/reportes\"\nresponse = requests.get(url)\ndata = response.json()[\"data\"]\n\n# 2. Definir colores por categoría\ncategoria_colores = {\n    \"bache\": \"red\",\n    \"basura\": \"green\",\n    \"luminaria\": \"orange\",\n    \"acera_rota\": \"blue\",\n    \"semaforo\": \"purple\",\n    \"alcantarilla\": \"cadetblue\",\n    \"arbol_caido\": \"darkgreen\",\n    \"cable_suelto\": \"darkpurple\",\n    \"grafiti\": \"pink\",\n    \"otro\": \"gray\"\n}\n\n# 3. Crear mapa\nm = folium.Map(location=[-0.20016, -78.49418], zoom_start=15, control_scale=True)\n\n# 4. Capas por categoría\ncapas = {}\n\nfor reporte in data:\n    cat = reporte.get(\"categoria\", \"otro\").lower()\n    capa = capas.setdefault(cat, folium.FeatureGroup(name=cat.capitalize(), show=True))\n\n    lat = reporte.get(\"lat\")\n    lng = reporte.get(\"lng\")\n    descripcion = reporte.get(\"descripcion\", \"Sin descripción\")\n    estado = reporte.get(\"estado\", \"desconocido\")\n    foto = reporte.get(\"fotoUrl\")\n\n    popup_html = f\"\"\"\n    &lt;b&gt;Categoría:&lt;/b&gt; {cat}&lt;br&gt;\n    &lt;b&gt;Estado:&lt;/b&gt; {estado}&lt;br&gt;\n    &lt;b&gt;Descripción:&lt;/b&gt; {descripcion}&lt;br&gt;\n    \"\"\"\n    if foto:\n        popup_html += f\"&lt;img src='{foto}' width='180'&gt;\"\n\n    marker = folium.Marker(\n        location=[lat, lng],\n        popup=folium.Popup(popup_html, max_width=250),\n        icon=folium.Icon(color=categoria_colores.get(cat, \"gray\"), icon=\"info-sign\")\n    )\n\n    marker.add_to(capa)\n\n# 5. Agregar capas al mapa\nfor capa in capas.values():\n    capa.add_to(m)\n\n# 6. Agregar control de capas\nfolium.LayerControl(collapsed=False).add_to(m)\n\n# 7. Agregar plugins adicionales\nFullscreen().add_to(m)\nLocateControl(auto_start=False).add_to(m)\nMousePosition().add_to(m)\n\n# 8. Mostrar mapa\nm\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook\n\n\nSupabase Conexion con Api en Java Spring Boot +GraphSql en Render\n\nApi\nhttps://javaspringap.onrender.com/api\n\n\n\nArquitectura\nLa api se desarrollo en JAVA Spring Boot, con java v17, y se subio a render como un archivo docker\n\nComandos para API- Git Bash\nSe uso Git Bash para las peticiones con la API\nCodigo generar reportes curl -X GET https://javaspringap.onrender.com/api Respuesta Esperada: Una Json con los reportes\nCodigo insertar reporte $ curl -X POST https://javaspringap.onrender.com/api/reportes -F “categoria=basura” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Pr” -F “usuarioId=USER-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”\nRespuesta Esperada: \n       {\"estado\":\"pendiente\",\"foto_url\":\"https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/51cd906a-3774-459e-a853-151b8e0eaeb0.jpg\",\"success\":true,\"id\":\"287b8dce-a992-423f-99ce-683d4bdd1cfa\",\"message\":\"Reporte creado exitosamente\"}"
+  },
+  {
+    "objectID": "2segundo.html#video-explicativo",
+    "href": "2segundo.html#video-explicativo",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/SdZLBzGYdPQ\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Primer reporte Mingafix",
+    "section": "",
+    "text": "```{column width=“100%”}\n\n\n\nApp\n\n\n```\n#Link App (movil)\nhttps://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage\n##Video Explicacion\nhttps://www.youtube.com/watch?v=zngtVqOHEoU\nAuthor: Cadena Paul"
   },
   {
     "objectID": "segundo.html#documento-explicativo",
