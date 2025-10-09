@@ -56,6 +56,20 @@
     "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
   },
   {
+    "objectID": "1primer.html",
+    "href": "1primer.html",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "",
+    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
+  },
+  {
+    "objectID": "1primer.html#video-explicativo",
+    "href": "1primer.html#video-explicativo",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
+  },
+  {
     "objectID": "2segundo.html",
     "href": "2segundo.html",
     "title": "Reto 2 – LiveMap API Integration”",
