@@ -56,23 +56,37 @@
     "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
   },
   {
+    "objectID": "1primer.html",
+    "href": "1primer.html",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "",
+    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
+  },
+  {
+    "objectID": "1primer.html#video-explicativo",
+    "href": "1primer.html#video-explicativo",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
+  },
+  {
     "objectID": "2segundo.html",
     "href": "2segundo.html",
-    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "title": "Reto 2 – LiveMap API Integration”",
     "section": "",
     "text": "App"
   },
   {
     "objectID": "2segundo.html#mapa-de-reportes-desde-api",
     "href": "2segundo.html#mapa-de-reportes-desde-api",
-    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "title": "Reto 2 – LiveMap API Integration”",
     "section": "Mapa de reportes desde API",
     "text": "Mapa de reportes desde API\n\nMapa\n\n\nCode\nimport requests\nimport folium\nfrom folium.plugins import Fullscreen, LocateControl, MousePosition\n\n# 1. Obtener datos\nurl = \"https://javaspringap.onrender.com/api/reportes\"\nresponse = requests.get(url)\ndata = response.json()[\"data\"]\n\n# 2. Definir colores por categoría\ncategoria_colores = {\n    \"bache\": \"red\",\n    \"basura\": \"green\",\n    \"luminaria\": \"orange\",\n    \"acera_rota\": \"blue\",\n    \"semaforo\": \"purple\",\n    \"alcantarilla\": \"cadetblue\",\n    \"arbol_caido\": \"darkgreen\",\n    \"cable_suelto\": \"darkpurple\",\n    \"grafiti\": \"pink\",\n    \"otro\": \"gray\"\n}\n\n# 3. Crear mapa\nm = folium.Map(location=[-0.20016, -78.49418], zoom_start=15, control_scale=True)\n\n# 4. Capas por categoría\ncapas = {}\n\nfor reporte in data:\n    cat = reporte.get(\"categoria\", \"otro\").lower()\n    capa = capas.setdefault(cat, folium.FeatureGroup(name=cat.capitalize(), show=True))\n\n    lat = reporte.get(\"lat\")\n    lng = reporte.get(\"lng\")\n    descripcion = reporte.get(\"descripcion\", \"Sin descripción\")\n    estado = reporte.get(\"estado\", \"desconocido\")\n    foto = reporte.get(\"fotoUrl\")\n\n    popup_html = f\"\"\"\n    &lt;b&gt;Categoría:&lt;/b&gt; {cat}&lt;br&gt;\n    &lt;b&gt;Estado:&lt;/b&gt; {estado}&lt;br&gt;\n    &lt;b&gt;Descripción:&lt;/b&gt; {descripcion}&lt;br&gt;\n    \"\"\"\n    if foto:\n        popup_html += f\"&lt;img src='{foto}' width='180'&gt;\"\n\n    marker = folium.Marker(\n        location=[lat, lng],\n        popup=folium.Popup(popup_html, max_width=250),\n        icon=folium.Icon(color=categoria_colores.get(cat, \"gray\"), icon=\"info-sign\")\n    )\n\n    marker.add_to(capa)\n\n# 5. Agregar capas al mapa\nfor capa in capas.values():\n    capa.add_to(m)\n\n# 6. Agregar control de capas\nfolium.LayerControl(collapsed=False).add_to(m)\n\n# 7. Agregar plugins adicionales\nFullscreen().add_to(m)\nLocateControl(auto_start=False).add_to(m)\nMousePosition().add_to(m)\n\n# 8. Mostrar mapa\nm\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook\n\n\nSupabase Conexion con Api en Java Spring Boot +GraphSql en Render\n\nApi\nhttps://javaspringap.onrender.com/api\n\n\n\nArquitectura\nLa api se desarrollo en JAVA Spring Boot, con java v17, y se subio a render como un archivo docker\n\nComandos para API- Git Bash\nSe uso Git Bash para las peticiones con la API\nCodigo generar reportes curl -X GET https://javaspringap.onrender.com/api Respuesta Esperada: Una Json con los reportes\nCodigo insertar reporte $ curl -X POST https://javaspringap.onrender.com/api/reportes -F “categoria=basura” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Pr” -F “usuarioId=USER-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”\nRespuesta Esperada: \n       {\"estado\":\"pendiente\",\"foto_url\":\"https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/51cd906a-3774-459e-a853-151b8e0eaeb0.jpg\",\"success\":true,\"id\":\"287b8dce-a992-423f-99ce-683d4bdd1cfa\",\"message\":\"Reporte creado exitosamente\"}"
   },
   {
     "objectID": "2segundo.html#video-explicativo",
     "href": "2segundo.html#video-explicativo",
-    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "title": "Reto 2 – LiveMap API Integration”",
     "section": "Video Explicativo",
     "text": "Video Explicativo\nhttps://youtu.be/SdZLBzGYdPQ\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
   },
