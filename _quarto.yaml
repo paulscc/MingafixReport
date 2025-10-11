@@ -24,6 +24,8 @@ website:
             text: Reto 1 Supabase Connection & Data Handling
           - href: 2segundo.qmd
             text: Reto 2 – LiveMap API Integration
+          - href: 2tercero.qmd
+            text: Reto 3 – Live Updates Simulation (Polling)
 
 format:
   html:

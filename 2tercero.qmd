@@ -1,0 +1,61 @@
+---
+title: " Reto 3 Live Updates Simulation (Polling)"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+![App](images/logo.png){width=50%}
+
+## Reto 3 Live Updates Simulation (Polling) 
+
+    Tecnologias Python, Streamlit+Api Java (para reportes)
+
+    Se uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro
+    una actualizacion del mapa automatica:
+        Ejemplo de uso de funcion:
+        
+        
+            def obtener_datos():
+                try:
+                    url = "https://javaspringap.onrender.com/api/reportes"
+                    response = requests.get(url, timeout=20)
+                        response.raise_for_status()
+                    return response.json()["data"]
+                except Exception as e:
+                    st.error(f"Error al obtener datos: {e}")
+                    return []
+    
+    Este script se ejecuta cada 20segundos lo que hace que el mapa  se auto-recargue con los nuevos reportes que viene desde la API en JAVA desplegada en Render
+
+
+    Ingresar a la API: Para usar la api usar estos comandos:
+
+        
+            Codigo generar reportes
+            
+            curl -X GET https://renderpisu.onrender.com/reportes
+
+            Codigo insertar reporte 
+            
+            curl -X POST https://renderpisu.onrender.com/reportes      -F "categoria=luminaria"      -F "lat=-0.8131"      -F "lng=-77.7172"      -F "descripcion=Prueba test endpoint"      -F "usuario_id=FUNC-001"      -F "foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg"
+
+
+        StreamLit, es una aplicacion que permite desplegar directamente desde un repositorio en github, solo hace falta importar
+        librerias e instalarlo en el entorno y empezar a programar. Streamlit funciona perfecto para este reto de despliegue de de mapa +  polling para auto actualizacion donde el backend funciona. Streamlit en su plan Free tiene opcion de despligue a difererncia del plan de pago, este permite el despliegue de aplicaciones por 30minutos siempre que se deje de usar el servicio.  
+
+
+
+
+## Video Explicativo
+
+https://youtu.be/PurB-jq5pxw
+
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
+    
