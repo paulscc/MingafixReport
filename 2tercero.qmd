@@ -11,6 +11,8 @@ format:
 
 ## Reto 3 Live Updates Simulation (Polling) 
 
+    Web: https://mingmapapp-jepqodfkdttgydyoesjwr7.streamlit.app/
+
     Tecnologias Python, Streamlit+Api Java (para reportes)
 
     Se uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro
@@ -47,7 +49,7 @@ format:
         librerias e instalarlo en el entorno y empezar a programar. Streamlit funciona perfecto para este reto de despliegue de de mapa +  polling para auto actualizacion donde el backend funciona. Streamlit en su plan Free tiene opcion de despligue a difererncia del plan de pago, este permite el despliegue de aplicaciones por 30minutos siempre que se deje de usar el servicio.  
 
 
-
+Codigo Fuente: https://github.com/paulscc/MingMapStreamLit
 
 ## Video Explicativo
 
