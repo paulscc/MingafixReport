@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "2tercero.html",
+    "href": "2tercero.html",
+    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "section": "",
+    "text": "App"
+  },
+  {
+    "objectID": "2tercero.html#reto-3-live-updates-simulation-polling",
+    "href": "2tercero.html#reto-3-live-updates-simulation-polling",
+    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "section": "Reto 3 Live Updates Simulation (Polling)",
+    "text": "Reto 3 Live Updates Simulation (Polling)\nTecnologias Python, Streamlit+Api Java (para reportes)\n\nSe uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro\nuna actualizacion del mapa automatica:\n    Ejemplo de uso de funcion:\n    \n    \n        def obtener_datos():\n            try:\n                url = \"https://javaspringap.onrender.com/api/reportes\"\n                response = requests.get(url, timeout=20)\n                    response.raise_for_status()\n                return response.json()[\"data\"]\n            except Exception as e:\n                st.error(f\"Error al obtener datos: {e}\")\n                return []\n\nEste script se ejecuta cada 20segundos lo que hace que el mapa  se auto-recargue con los nuevos reportes que viene desde la API en JAVA desplegada en Render\n\n\nIngresar a la API: Para usar la api usar estos comandos:\n\n\n        Codigo generar reportes\n        \n        curl -X GET https://renderpisu.onrender.com/reportes\n\n        Codigo insertar reporte \n        \n        curl -X POST https://renderpisu.onrender.com/reportes      -F \"categoria=luminaria\"      -F \"lat=-0.8131\"      -F \"lng=-77.7172\"      -F \"descripcion=Prueba test endpoint\"      -F \"usuario_id=FUNC-001\"      -F \"foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg\"\n\n\n    StreamLit, es una aplicacion que permite desplegar directamente desde un repositorio en github, solo hace falta importar\n    librerias e instalarlo en el entorno y empezar a programar. Streamlit funciona perfecto para este reto de despliegue de de mapa +  polling para auto actualizacion donde el backend funciona. Streamlit en su plan Free tiene opcion de despligue a difererncia del plan de pago, este permite el despliegue de aplicaciones por 30minutos siempre que se deje de usar el servicio."
+  },
+  {
+    "objectID": "2tercero.html#video-explicativo",
+    "href": "2tercero.html#video-explicativo",
+    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/PurB-jq5pxw\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
+  }
+]
