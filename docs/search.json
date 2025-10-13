@@ -124,5 +124,26 @@
     "title": "Reto 0 Mingafix",
     "section": "Documento explicativo",
     "text": "Documento explicativo\n\n¿QUÉ HACE LA APP? Permite a ciudadanos reportar problemas urbanos (baches, luminarias rotas, basura, etc.) con fotos y ubicación. Las encargados reciben, gestionan y resuelven estos reportes.\nEl sistema es simple trabaja con varios servicios como Firebase para La BDD, y monitoreo de estos, con implementeacion de OAUTH 2.0 para login facil, APIs para servicios de la aplicacion(reportes, consultas, etc) y de terceros como Maps\n\n🎨 FRONTEND (Apps)\n\niOS/Android: Ciudadanos reportan incidentes con foto + GPS Web Admin: Funcionarios municipales gestionan reportes\n\nAUTENTICACIÓN Firebase Auth: Login de usuarios OAuth 2.0: Login con Google/Facebook SMS: Verificación por código de teléfono (evita bots)\nAPI GATEWAY (Puerta de entrada) REST: Crear/editar reportes (POST /api/reportes) GraphQL: Consultas complejas (estadísticas, filtros) WebSocket: Notificaciones en tiempo real\nMICROSERVICIOS (Lógica de negocio) Usuarios: Perfiles, historial, credibilidad Reportes: Crear incidentes, estados (pendiente→proceso→resuelto) Asignación: Distribuye reportes automáticamente por zona/tipo Notificaciones: Alerta a ciudadanos y funcionarios\nBASES DE DATOS Firestore: Guarda reportes, usuarios, comentarios (NoSQL en la nube) Cloud Storage: Almacena fotos/videos de incidentes Redis Cache: Acelera consultas frecuentes SQLite Local: Modo offline (crea reportes sin internet)\nSERVICIOS EXTERNOS Google Maps: Ubicación exacta + mapas interactivos Firebase Cloud Messaging: Notificaciones push (“Tu reporte fue resuelto”) Twilio SMS: Confirmaciones por mensaje de texto\nANALITICA Crashlytics: Detecta errores de la app Analytics: Estadísticas de uso (reportes/día, zonas críticas) Cloud Monitoring: Rendimiento de servidores —\n\n\nVideo Explicacion\nhttps://youtu.be/VocYuBjjObc\n\n\n\nAuthor: Paul Cadena\n\n\n\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "2cuarto.html",
+    "href": "2cuarto.html",
+    "title": "Reto Creativo – Visualización Inteligente de Datos Urbano",
+    "section": "",
+    "text": "Link Dashboard: https://public.tableau.com/app/profile/paul.cadena/viz/LibroMinga/Dashboard1?publish=yes\n\n\n\nApp\n\n\nPara reportes pas profesionales se uso Tableau, un software para analitica de datos, en esta caso enfocado en los reportes donde podemos ver Categorias, Descripciones, Mapa, etc. Es muy adaptable y se lo puede mejorar poder diferentes tipos de datos excelente para un analisis de reportes mas profesional\n\n\nhttps://youtu.be/wYobrL0fP6k\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "2extras.html",
+    "href": "2extras.html",
+    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "section": "",
+    "text": "Code\nimport csv\n\ninput_file = 'Libro1.csv'   # Tu archivo original\noutput_file = 'reportes_limpios.csv'  # Archivo limpio que generarás\n\nwith open(input_file, 'r', encoding='utf-8') as infile, \\\n     open(output_file, 'w', newline='', encoding='utf-8') as outfile:\n    \n    reader = csv.reader(infile)\n    writer = csv.writer(outfile)\n    \n    for row in reader:\n        # Saltar filas vacías o con solo espacios\n        if not row or all(cell.strip() == '' for cell in row):\n            continue\n        \n        # Asumiendo que solo tienes un campo por fila (el reporte)\n        reporte = row[0].strip()\n        \n        # Eliminar número y punto al inicio usando split o regex\n        # Opción simple con split:\n        if '.' in reporte:\n            # Dividir en máximo 2 partes, eliminar la primera si es número\n            parts = reporte.split('.', 1)\n            if parts[0].strip().isdigit():\n                reporte = parts[1].strip()\n        \n        # Escribir reporte limpio\n        writer.writerow([reporte])"
+  },
+  {
+    "objectID": "2cuarto.html#video-expliacacion",
+    "href": "2cuarto.html#video-expliacacion",
+    "title": "Reto Creativo – Visualización Inteligente de Datos Urbano",
+    "section": "",
+    "text": "https://youtu.be/wYobrL0fP6k\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
   }
 ]

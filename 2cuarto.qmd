@@ -1,0 +1,33 @@
+---
+title: " Reto Creativo – Visualización Inteligente de Datos Urbano"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+# Reto Creativo – Visualización Inteligente de Datos Urbano
+
+    Link Dashboard: https://public.tableau.com/app/profile/paul.cadena/viz/LibroMinga/Dashboard1?publish=yes
+
+
+
+![App](images/dash.png){width=80%}
+
+
+
+Para reportes pas profesionales se uso Tableau, un software para analitica de datos, en esta caso
+enfocado en los reportes donde podemos ver Categorias,
+Descripciones, Mapa, etc. Es muy adaptable y se lo puede mejorar poder diferentes tipos de datos excelente para un analisis de reportes mas profesional
+
+## Video Expliacacion
+https://youtu.be/wYobrL0fP6k
+
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
+    

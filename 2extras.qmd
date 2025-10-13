@@ -1,0 +1,47 @@
+---
+title: " Reto 3 Live Updates Simulation (Polling)"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+
+
+```{python}
+
+import csv
+
+input_file = 'Libro1.csv'   # Tu archivo original
+output_file = 'reportes_limpios.csv'  # Archivo limpio que generarás
+
+with open(input_file, 'r', encoding='utf-8') as infile, \
+     open(output_file, 'w', newline='', encoding='utf-8') as outfile:
+    
+    reader = csv.reader(infile)
+    writer = csv.writer(outfile)
+    
+    for row in reader:
+        # Saltar filas vacías o con solo espacios
+        if not row or all(cell.strip() == '' for cell in row):
+            continue
+        
+        # Asumiendo que solo tienes un campo por fila (el reporte)
+        reporte = row[0].strip()
+        
+        # Eliminar número y punto al inicio usando split o regex
+        # Opción simple con split:
+        if '.' in reporte:
+            # Dividir en máximo 2 partes, eliminar la primera si es número
+            parts = reporte.split('.', 1)
+            if parts[0].strip().isdigit():
+                reporte = parts[1].strip()
+        
+        # Escribir reporte limpio
+        writer.writerow([reporte])
+
+
+
+```

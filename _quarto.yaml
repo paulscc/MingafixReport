@@ -18,6 +18,7 @@ website:
             text: Reto 2 – Mapa Vivo Inicial
           - href: quinto.qmd
             text: Reto 3 – Creativo-Comunitario 
+          
       - text: "Semana 2"
         menu:
           - href: 2primer.qmd
@@ -26,6 +27,8 @@ website:
             text: Reto 2 – LiveMap API Integration
           - href: 2tercero.qmd
             text: Reto 3 – Live Updates Simulation (Polling)
+          - href: 2cuarto.qmd
+            text: Creativo-Comunitario Visualización Inteligente
 
 format:
   html:
