@@ -9,7 +9,7 @@
 <meta name="author" content="Cadena Paul">
 <meta name="dcterms.date" content="2025-10-07">
 
-<title>Reto 3 Live Updates Simulation (Polling) – MingaFix Report</title>
+<title>Bonus Avanzado (opcional) – MingaFix Report</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
-}
-
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-}
-pre.numberSource { margin-left: 3em; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -3930,6 +3895,14 @@ vertical-align: -.125em;
     <a class="dropdown-item" href="./2tercero.html">
  <span class="dropdown-text">Reto 3 – Live Updates Simulation (Polling)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./2cuarto.html">
+ <span class="dropdown-text">Creativo-Comunitario Visualización Inteligente</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./2extras.html">
+ <span class="dropdown-text">Bonus</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -3943,15 +3916,27 @@ vertical-align: -.125em;
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bonu-avanzado-opcional" id="toc-bonu-avanzado-opcional" class="nav-link active" data-scroll-target="#bonu-avanzado-opcional">Bonu Avanzado (opcional)</a>
+  <ul class="collapse">
+  <li><a href="#video-expliacacion" id="toc-video-expliacacion" class="nav-link" data-scroll-target="#video-expliacacion">Video Expliacacion</a>
+  <ul class="collapse">
+  <li><a href="#author" id="toc-author" class="nav-link" data-scroll-target="#author">Author</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reto 3 Live Updates Simulation (Polling)</h1>
+<h1 class="title">Bonus Avanzado (opcional)</h1>
 </div>
 
 
@@ -3980,42 +3965,30 @@ vertical-align: -.125em;
 </header>
 
 
-<div id="20bef6e7" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>input_file <span class="op">=</span> <span class="st">&#39;Libro1.csv&#39;</span>   <span class="co"># Tu archivo original</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>output_file <span class="op">=</span> <span class="st">&#39;reportes_limpios.csv&#39;</span>  <span class="co"># Archivo limpio que generarás</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(input_file, <span class="st">&#39;r&#39;</span>, encoding<span class="op">=</span><span class="st">&#39;utf-8&#39;</span>) <span class="im">as</span> infile, <span class="op">\</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>     <span class="bu">open</span>(output_file, <span class="st">&#39;w&#39;</span>, newline<span class="op">=</span><span class="st">&#39;&#39;</span>, encoding<span class="op">=</span><span class="st">&#39;utf-8&#39;</span>) <span class="im">as</span> outfile:</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    reader <span class="op">=</span> csv.reader(infile)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    writer <span class="op">=</span> csv.writer(outfile)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> reader:</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Saltar filas vacías o con solo espacios</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> row <span class="kw">or</span> <span class="bu">all</span>(cell.strip() <span class="op">==</span> <span class="st">&#39;&#39;</span> <span class="cf">for</span> cell <span class="kw">in</span> row):</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Asumiendo que solo tienes un campo por fila (el reporte)</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        reporte <span class="op">=</span> row[<span class="dv">0</span>].strip()</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Eliminar número y punto al inicio usando split o regex</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Opción simple con split:</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">&#39;.&#39;</span> <span class="kw">in</span> reporte:</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Dividir en máximo 2 partes, eliminar la primera si es número</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            parts <span class="op">=</span> reporte.split(<span class="st">&#39;.&#39;</span>, <span class="dv">1</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> parts[<span class="dv">0</span>].strip().isdigit():</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                reporte <span class="op">=</span> parts[<span class="dv">1</span>].strip()</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Escribir reporte limpio</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        writer.writerow([reporte])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
+<section id="bonu-avanzado-opcional" class="level1">
+<h1>Bonu Avanzado (opcional)</h1>
+<pre><code>Integrar IA para clasificación automática de imágenes o textos (por ejemplo, categorizar tipo de incidencia a partir de una foto o descripción).</code></pre>
+<p>## Entrega: -1. Modelo de imagenes-texto para tener una descripcion a partir de una simple imagen -2. Modelo de Clasificacion a partir de la descripcion del reporte</p>
+<pre><code>    1. Este modelo hace uso de un modelo Open SOurce y de libre acceso
+    que nos dara una descripcion con solo una imagen de imput, es decir nos explicara la imagen, si subimos una imagen del cielo este modelo de IA sabra explicarnoslo
+
+    2. Se entreno un modelo de IA, se hizo Fine-tuning a otro modelo (bert-base). Basicamente se tomo un modelo de lenguaje de clasificacion y se lo entreno con muchos ejemplos de descripciones para asi que este modelo aprenda a categorizar un modelo a partir de su descripcion es decir: dada una descripcion del reporte, este modelo sabra en cual categoria ponerla(bache, luminaria, grafitti, etc)</code></pre>
+<p>Todo se realizo en google collab importante los modelos de codigo libre y entrenandolos en google collab, cualquiera comparto los enlaces a estos modelos para que los prueben</p>
+<pre><code>        Imagen: https://colab.research.google.com/drive/15yMGgjKFOXGO2PBdZPeKXVwQ9fe-tB5F?usp=sharing
+
+        Clasificador :https://colab.research.google.com/drive/1vOrGJq04CjlZUK-WijqJkRLOk9t2v8Yp?usp=sharing</code></pre>
+<section id="video-expliacacion" class="level2">
+<h2 class="anchored" data-anchor-id="video-expliacacion">Video Expliacacion</h2>
+<p>https://youtu.be/TMTnp84gqsU</p>
+<section id="author" class="level3">
+<h3 class="anchored" data-anchor-id="author">Author</h3>
+<pre><code>Paul Cadena
+Github: https://github.com/paulscc</code></pre>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

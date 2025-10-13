@@ -3946,6 +3946,14 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
     <a class="dropdown-item" href="./2tercero.html">
  <span class="dropdown-text">Reto 3 – Live Updates Simulation (Polling)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./2cuarto.html">
+ <span class="dropdown-text">Creativo-Comunitario Visualización Inteligente</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./2extras.html">
+ <span class="dropdown-text">Bonus</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -4020,7 +4028,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <h2 class="anchored" data-anchor-id="mapa-de-reportes-desde-api">Mapa de reportes desde API</h2>
 <section id="mapa" class="level3">
 <h3 class="anchored" data-anchor-id="mapa">Mapa</h3>
-<div id="7989c31d" class="cell" data-execution_count="1">
+<div id="06c498f0" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -4113,7 +4121,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_6db3259ea5c17cc22363fc3ad3c0ba9d {
+                #map_a399679c6d50914d50a553cd83d59648 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -4156,14 +4164,14 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_6db3259ea5c17cc22363fc3ad3c0ba9d&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_a399679c6d50914d50a553cd83d59648&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_6db3259ea5c17cc22363fc3ad3c0ba9d = L.map(
-                &quot;map_6db3259ea5c17cc22363fc3ad3c0ba9d&quot;,
+            var map_a399679c6d50914d50a553cd83d59648 = L.map(
+                &quot;map_a399679c6d50914d50a553cd83d59648&quot;,
                 {
                     center: [-0.20016, -78.49418],
                     crs: L.CRS.EPSG3857,
@@ -4175,13 +4183,13 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 
                 }
             );
-            L.control.scale().addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            L.control.scale().addTo(map_a399679c6d50914d50a553cd83d59648);
 
             
 
         
     
-            var tile_layer_b5f5b078c7533114630a87e39661af62 = L.tileLayer(
+            var tile_layer_816a1bea5e58989c40efe2458d670d41 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -4198,23 +4206,23 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-            tile_layer_b5f5b078c7533114630a87e39661af62.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            tile_layer_816a1bea5e58989c40efe2458d670d41.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_cc10543118e15cd5e02fee2c0e2e0e63 = L.featureGroup(
+            var feature_group_e70e8fe7b92e38070782f893da8e22f7 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_b5513154f2f4a3fd59857099e92eafc0 = L.marker(
+            var marker_8b2424e8bf9e3282a7a01ffd683f630f = L.marker(
                 [-0.19399, -78.50632],
                 {
 }
-            ).addTo(feature_group_cc10543118e15cd5e02fee2c0e2e0e63);
+            ).addTo(feature_group_e70e8fe7b92e38070782f893da8e22f7);
         
     
-            var icon_fa3c8682aaafddc91a57f739b3d7ce06 = L.AwesomeMarkers.icon(
+            var icon_b47bec9cb5c446c7b7de60ec3e5776ea = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;red&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4225,34 +4233,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_f86fcff8ee646bb88e29c5a607f42bce = L.popup({
+        var popup_4fa26e8c72265d11dbc4941c75655498 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_ca6c7b8856a547fc9bf595c24cd566b1 = $(`&lt;div id=&quot;html_ca6c7b8856a547fc9bf595c24cd566b1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Nuevo&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/58977cbb-bb87-4cf0-b2a0-0292a70cb244.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_f86fcff8ee646bb88e29c5a607f42bce.setContent(html_ca6c7b8856a547fc9bf595c24cd566b1);
+                var html_bf1a0e84d8f64a5e5c73d92c32059326 = $(`&lt;div id=&quot;html_bf1a0e84d8f64a5e5c73d92c32059326&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Nuevo&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/58977cbb-bb87-4cf0-b2a0-0292a70cb244.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_4fa26e8c72265d11dbc4941c75655498.setContent(html_bf1a0e84d8f64a5e5c73d92c32059326);
             
         
 
-        marker_b5513154f2f4a3fd59857099e92eafc0.bindPopup(popup_f86fcff8ee646bb88e29c5a607f42bce)
+        marker_8b2424e8bf9e3282a7a01ffd683f630f.bindPopup(popup_4fa26e8c72265d11dbc4941c75655498)
         ;
 
         
     
     
-                marker_b5513154f2f4a3fd59857099e92eafc0.setIcon(icon_fa3c8682aaafddc91a57f739b3d7ce06);
+                marker_8b2424e8bf9e3282a7a01ffd683f630f.setIcon(icon_b47bec9cb5c446c7b7de60ec3e5776ea);
             
     
-            var marker_56f4f0a4c58c9bfc3755ca19bac449d2 = L.marker(
+            var marker_150b039ed013a36a24de7d7e4899b010 = L.marker(
                 [-0.19588, -78.50479],
                 {
 }
-            ).addTo(feature_group_cc10543118e15cd5e02fee2c0e2e0e63);
+            ).addTo(feature_group_e70e8fe7b92e38070782f893da8e22f7);
         
     
-            var icon_f8c8aee785f6f2953507d307b22b080f = L.AwesomeMarkers.icon(
+            var icon_1046e82d6aad486b318f02bd6494e886 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;red&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4263,34 +4271,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_66fa0804b085b48f9cae296ecd3d75bd = L.popup({
+        var popup_f3a6ffdb01c92e0be5dd64df8b9c5f78 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_2908320c58ca1106126d7832b9b137d4 = $(`&lt;div id=&quot;html_2908320c58ca1106126d7832b9b137d4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Conr&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/243e46da-a04f-4850-a3f7-1e1ae16e2b69.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_66fa0804b085b48f9cae296ecd3d75bd.setContent(html_2908320c58ca1106126d7832b9b137d4);
+                var html_39d57fb082fb5fc2e48fd28fd611619a = $(`&lt;div id=&quot;html_39d57fb082fb5fc2e48fd28fd611619a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Conr&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/243e46da-a04f-4850-a3f7-1e1ae16e2b69.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_f3a6ffdb01c92e0be5dd64df8b9c5f78.setContent(html_39d57fb082fb5fc2e48fd28fd611619a);
             
         
 
-        marker_56f4f0a4c58c9bfc3755ca19bac449d2.bindPopup(popup_66fa0804b085b48f9cae296ecd3d75bd)
+        marker_150b039ed013a36a24de7d7e4899b010.bindPopup(popup_f3a6ffdb01c92e0be5dd64df8b9c5f78)
         ;
 
         
     
     
-                marker_56f4f0a4c58c9bfc3755ca19bac449d2.setIcon(icon_f8c8aee785f6f2953507d307b22b080f);
+                marker_150b039ed013a36a24de7d7e4899b010.setIcon(icon_1046e82d6aad486b318f02bd6494e886);
             
     
-            var marker_80f4fc67cc1b868ce55aa483e27eff99 = L.marker(
+            var marker_7955e21842a187f81d6b04c221f79851 = L.marker(
                 [-0.1962, -78.507],
                 {
 }
-            ).addTo(feature_group_cc10543118e15cd5e02fee2c0e2e0e63);
+            ).addTo(feature_group_e70e8fe7b92e38070782f893da8e22f7);
         
     
-            var icon_cf8d4bd49b9d9c042fb8d855ade3ad05 = L.AwesomeMarkers.icon(
+            var icon_638fc3352a7d209669b988c62171b4bd = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;red&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4301,43 +4309,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_94a15e63d4e43587e8a9df2628f594c3 = L.popup({
+        var popup_47bb0da2908dbd143547d2bb061834b3 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_633e359f19186bc941d154851c1ab224 = $(`&lt;div id=&quot;html_633e359f19186bc941d154851c1ab224&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Hueco profundo en la calzada de La Gasca&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/ec47633b-b91d-434b-9399-71093079213b.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_94a15e63d4e43587e8a9df2628f594c3.setContent(html_633e359f19186bc941d154851c1ab224);
+                var html_5f5851021e0d71b93b8e82ae0c867482 = $(`&lt;div id=&quot;html_5f5851021e0d71b93b8e82ae0c867482&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Hueco profundo en la calzada de La Gasca&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/ec47633b-b91d-434b-9399-71093079213b.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_47bb0da2908dbd143547d2bb061834b3.setContent(html_5f5851021e0d71b93b8e82ae0c867482);
             
         
 
-        marker_80f4fc67cc1b868ce55aa483e27eff99.bindPopup(popup_94a15e63d4e43587e8a9df2628f594c3)
+        marker_7955e21842a187f81d6b04c221f79851.bindPopup(popup_47bb0da2908dbd143547d2bb061834b3)
         ;
 
         
     
     
-                marker_80f4fc67cc1b868ce55aa483e27eff99.setIcon(icon_cf8d4bd49b9d9c042fb8d855ade3ad05);
+                marker_7955e21842a187f81d6b04c221f79851.setIcon(icon_638fc3352a7d209669b988c62171b4bd);
             
     
-            feature_group_cc10543118e15cd5e02fee2c0e2e0e63.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_e70e8fe7b92e38070782f893da8e22f7.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_087e255fd8ca35e2247f7bdba49a7611 = L.featureGroup(
+            var feature_group_97ba645f339329c4e5ff534028545ce7 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_ac79630d432c946e5dd3efbcc0fd7a56 = L.marker(
+            var marker_9e04e79c3096a01e5adfbdfb070e0f66 = L.marker(
                 [-0.19706, -78.48954],
                 {
 }
-            ).addTo(feature_group_087e255fd8ca35e2247f7bdba49a7611);
+            ).addTo(feature_group_97ba645f339329c4e5ff534028545ce7);
         
     
-            var icon_d48690087d865a4dda586b0de5db4fd3 = L.AwesomeMarkers.icon(
+            var icon_838648e8d71b34b1a2c05c4591503218 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;darkgreen&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4348,34 +4356,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_cee471ff92fecb2acfeee99533cc4ca0 = L.popup({
+        var popup_8eeee9f9df9d8a2a3ec407417f8c53b3 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_74f9827bfa1fe305aca6e64016734b2e = $(`&lt;div id=&quot;html_74f9827bfa1fe305aca6e64016734b2e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Conr&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/54f41280-98fc-41b5-af0d-ca1722bb547e.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_cee471ff92fecb2acfeee99533cc4ca0.setContent(html_74f9827bfa1fe305aca6e64016734b2e);
+                var html_7ddbf5e403e912cced4e84420e7beadd = $(`&lt;div id=&quot;html_7ddbf5e403e912cced4e84420e7beadd&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Conr&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/54f41280-98fc-41b5-af0d-ca1722bb547e.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_8eeee9f9df9d8a2a3ec407417f8c53b3.setContent(html_7ddbf5e403e912cced4e84420e7beadd);
             
         
 
-        marker_ac79630d432c946e5dd3efbcc0fd7a56.bindPopup(popup_cee471ff92fecb2acfeee99533cc4ca0)
+        marker_9e04e79c3096a01e5adfbdfb070e0f66.bindPopup(popup_8eeee9f9df9d8a2a3ec407417f8c53b3)
         ;
 
         
     
     
-                marker_ac79630d432c946e5dd3efbcc0fd7a56.setIcon(icon_d48690087d865a4dda586b0de5db4fd3);
+                marker_9e04e79c3096a01e5adfbdfb070e0f66.setIcon(icon_838648e8d71b34b1a2c05c4591503218);
             
     
-            var marker_74ce904874a8cedeb4b9f5062936c84a = L.marker(
+            var marker_4e1211dac280c3183dece0cec26ca289 = L.marker(
                 [-0.1849, -78.4849],
                 {
 }
-            ).addTo(feature_group_087e255fd8ca35e2247f7bdba49a7611);
+            ).addTo(feature_group_97ba645f339329c4e5ff534028545ce7);
         
     
-            var icon_c146cb1bc0e5ba1d5dd4bf19ebaef71b = L.AwesomeMarkers.icon(
+            var icon_8c203fbc726554075627d48ef5b7890e = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;darkgreen&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4386,43 +4394,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_cd60c613a42aa7945256545054412184 = L.popup({
+        var popup_4bd9d8630839b8535d21853ef3f59c1d = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_d2f3eb56880edc01da71d9f6f2bfdc2b = $(`&lt;div id=&quot;html_d2f3eb56880edc01da71d9f6f2bfdc2b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; �rbol ca�do obstruye paso en parque La Carolina&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/4497fbe0-e68d-479e-978d-c2fc67e0844d.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_cd60c613a42aa7945256545054412184.setContent(html_d2f3eb56880edc01da71d9f6f2bfdc2b);
+                var html_9b565d079d6d8b70c90738f61c0589d4 = $(`&lt;div id=&quot;html_9b565d079d6d8b70c90738f61c0589d4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; �rbol ca�do obstruye paso en parque La Carolina&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/4497fbe0-e68d-479e-978d-c2fc67e0844d.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_4bd9d8630839b8535d21853ef3f59c1d.setContent(html_9b565d079d6d8b70c90738f61c0589d4);
             
         
 
-        marker_74ce904874a8cedeb4b9f5062936c84a.bindPopup(popup_cd60c613a42aa7945256545054412184)
+        marker_4e1211dac280c3183dece0cec26ca289.bindPopup(popup_4bd9d8630839b8535d21853ef3f59c1d)
         ;
 
         
     
     
-                marker_74ce904874a8cedeb4b9f5062936c84a.setIcon(icon_c146cb1bc0e5ba1d5dd4bf19ebaef71b);
+                marker_4e1211dac280c3183dece0cec26ca289.setIcon(icon_8c203fbc726554075627d48ef5b7890e);
             
     
-            feature_group_087e255fd8ca35e2247f7bdba49a7611.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_97ba645f339329c4e5ff534028545ce7.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_492ca72a80051f68e9cf494ff7aad852 = L.featureGroup(
+            var feature_group_09e5946c0b6fa2fce45df661a907f9fa = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_62070ed7ff07f317c34cc9692a26b94d = L.marker(
+            var marker_61ec27517d6785c8901901ba18cec31b = L.marker(
                 [-0.20231, -78.50156],
                 {
 }
-            ).addTo(feature_group_492ca72a80051f68e9cf494ff7aad852);
+            ).addTo(feature_group_09e5946c0b6fa2fce45df661a907f9fa);
         
     
-            var icon_47ebdf8cf02e2eecf3fb6bd41beb0646 = L.AwesomeMarkers.icon(
+            var icon_b6909981e592060a69713fc9fb988c68 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;gray&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4433,34 +4441,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_73d02dce18dc94c7827fd51b59b58988 = L.popup({
+        var popup_8d8d0447baafa34c9ddd947cc15adced = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_3e62cb50ca189b8366ea0198ed4841ba = $(`&lt;div id=&quot;html_3e62cb50ca189b8366ea0198ed4841ba&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/6fc0d449-3876-4110-9b46-ac4aa91c95ea.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_73d02dce18dc94c7827fd51b59b58988.setContent(html_3e62cb50ca189b8366ea0198ed4841ba);
+                var html_b9b4ba55fbd6a9de3931bbaca924021e = $(`&lt;div id=&quot;html_b9b4ba55fbd6a9de3931bbaca924021e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/6fc0d449-3876-4110-9b46-ac4aa91c95ea.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_8d8d0447baafa34c9ddd947cc15adced.setContent(html_b9b4ba55fbd6a9de3931bbaca924021e);
             
         
 
-        marker_62070ed7ff07f317c34cc9692a26b94d.bindPopup(popup_73d02dce18dc94c7827fd51b59b58988)
+        marker_61ec27517d6785c8901901ba18cec31b.bindPopup(popup_8d8d0447baafa34c9ddd947cc15adced)
         ;
 
         
     
     
-                marker_62070ed7ff07f317c34cc9692a26b94d.setIcon(icon_47ebdf8cf02e2eecf3fb6bd41beb0646);
+                marker_61ec27517d6785c8901901ba18cec31b.setIcon(icon_b6909981e592060a69713fc9fb988c68);
             
     
-            var marker_60fc0a5b5cb4a53c64373af7a2f13009 = L.marker(
+            var marker_0cccac6c14b3879b7082ea9c948c382a = L.marker(
                 [-0.1081, -78.5109],
                 {
 }
-            ).addTo(feature_group_492ca72a80051f68e9cf494ff7aad852);
+            ).addTo(feature_group_09e5946c0b6fa2fce45df661a907f9fa);
         
     
-            var icon_0f153bead5fa6d76ff4d3af8f57f46a5 = L.AwesomeMarkers.icon(
+            var icon_dba7c8982a75af8bdddd4497e18343f8 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;gray&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4471,43 +4479,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_0d304d6162fe161f805a63adda0f41a1 = L.popup({
+        var popup_e441946535a4ac494e7f7dfdfe4ceac0 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_c445777b9d882331f40e22cdbca35b52 = $(`&lt;div id=&quot;html_c445777b9d882331f40e22cdbca35b52&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor quemado abandonado en la v�a&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/e0e3bf35-6002-4594-b022-b0185e711da4.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_0d304d6162fe161f805a63adda0f41a1.setContent(html_c445777b9d882331f40e22cdbca35b52);
+                var html_35f0300f0fb0e92c229a26f47b67f188 = $(`&lt;div id=&quot;html_35f0300f0fb0e92c229a26f47b67f188&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor quemado abandonado en la v�a&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/e0e3bf35-6002-4594-b022-b0185e711da4.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_e441946535a4ac494e7f7dfdfe4ceac0.setContent(html_35f0300f0fb0e92c229a26f47b67f188);
             
         
 
-        marker_60fc0a5b5cb4a53c64373af7a2f13009.bindPopup(popup_0d304d6162fe161f805a63adda0f41a1)
+        marker_0cccac6c14b3879b7082ea9c948c382a.bindPopup(popup_e441946535a4ac494e7f7dfdfe4ceac0)
         ;
 
         
     
     
-                marker_60fc0a5b5cb4a53c64373af7a2f13009.setIcon(icon_0f153bead5fa6d76ff4d3af8f57f46a5);
+                marker_0cccac6c14b3879b7082ea9c948c382a.setIcon(icon_dba7c8982a75af8bdddd4497e18343f8);
             
     
-            feature_group_492ca72a80051f68e9cf494ff7aad852.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_09e5946c0b6fa2fce45df661a907f9fa.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_bcbb95bc69ed2ce2281de09b367f939f = L.featureGroup(
+            var feature_group_1ccdfaf8327897f45d3023d769c448ea = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_4c123e028e495c1d38428d4a57e08f02 = L.marker(
+            var marker_04f897245e2c74e2a75791784ac8f369 = L.marker(
                 [-0.2195, -78.5122],
                 {
 }
-            ).addTo(feature_group_bcbb95bc69ed2ce2281de09b367f939f);
+            ).addTo(feature_group_1ccdfaf8327897f45d3023d769c448ea);
         
     
-            var icon_1b872eefd4c57d16202ae4f61ae8f70e = L.AwesomeMarkers.icon(
+            var icon_22e5f303423ebd322fc7d34290d593f3 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;pink&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4518,43 +4526,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_c0268c4527b18715923ff571159fd731 = L.popup({
+        var popup_d3f6cdee85b501c12db350160c2fd4c5 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_27701bc385061679e14915b061ac78b4 = $(`&lt;div id=&quot;html_27701bc385061679e14915b061ac78b4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; grafiti&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Grafiti ofensivo en mural patrimonial&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2b7e16b5-2057-4e37-93a3-ae69a59e2f5f.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_c0268c4527b18715923ff571159fd731.setContent(html_27701bc385061679e14915b061ac78b4);
+                var html_24956083d4c56d1edaf712fead496530 = $(`&lt;div id=&quot;html_24956083d4c56d1edaf712fead496530&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; grafiti&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Grafiti ofensivo en mural patrimonial&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2b7e16b5-2057-4e37-93a3-ae69a59e2f5f.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_d3f6cdee85b501c12db350160c2fd4c5.setContent(html_24956083d4c56d1edaf712fead496530);
             
         
 
-        marker_4c123e028e495c1d38428d4a57e08f02.bindPopup(popup_c0268c4527b18715923ff571159fd731)
+        marker_04f897245e2c74e2a75791784ac8f369.bindPopup(popup_d3f6cdee85b501c12db350160c2fd4c5)
         ;
 
         
     
     
-                marker_4c123e028e495c1d38428d4a57e08f02.setIcon(icon_1b872eefd4c57d16202ae4f61ae8f70e);
+                marker_04f897245e2c74e2a75791784ac8f369.setIcon(icon_22e5f303423ebd322fc7d34290d593f3);
             
     
-            feature_group_bcbb95bc69ed2ce2281de09b367f939f.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_1ccdfaf8327897f45d3023d769c448ea.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_97abaaff57568815fa0e806f39b5820b = L.featureGroup(
+            var feature_group_325361f9090b57d7f7752a9c0aef2860 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_bc31e72a5faa31ef5538e3818bc32ccc = L.marker(
+            var marker_d000206575283d98ae7d85540d1c6f76 = L.marker(
                 [-0.0783, -78.4742],
                 {
 }
-            ).addTo(feature_group_97abaaff57568815fa0e806f39b5820b);
+            ).addTo(feature_group_325361f9090b57d7f7752a9c0aef2860);
         
     
-            var icon_ac919c280cce2cfd4a6439456cc5e2dd = L.AwesomeMarkers.icon(
+            var icon_a45ca91fbf05f3363729e82c728090ea = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;darkpurple&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4565,43 +4573,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_9cb0364dc25a837428c2952fa37bc2df = L.popup({
+        var popup_dd7d444df8256c6e21ee271ece1c02b2 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_7c5cd4d47d69c79a0450fd56c196d0a6 = $(`&lt;div id=&quot;html_7c5cd4d47d69c79a0450fd56c196d0a6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; cable_suelto&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Cable el�ctrico colgando sobre la vereda&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2ba6084c-fda8-441d-8493-b1e89f277381.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_9cb0364dc25a837428c2952fa37bc2df.setContent(html_7c5cd4d47d69c79a0450fd56c196d0a6);
+                var html_a793d657bddbd6e8f13db0446fb44144 = $(`&lt;div id=&quot;html_a793d657bddbd6e8f13db0446fb44144&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; cable_suelto&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Cable el�ctrico colgando sobre la vereda&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2ba6084c-fda8-441d-8493-b1e89f277381.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_dd7d444df8256c6e21ee271ece1c02b2.setContent(html_a793d657bddbd6e8f13db0446fb44144);
             
         
 
-        marker_bc31e72a5faa31ef5538e3818bc32ccc.bindPopup(popup_9cb0364dc25a837428c2952fa37bc2df)
+        marker_d000206575283d98ae7d85540d1c6f76.bindPopup(popup_dd7d444df8256c6e21ee271ece1c02b2)
         ;
 
         
     
     
-                marker_bc31e72a5faa31ef5538e3818bc32ccc.setIcon(icon_ac919c280cce2cfd4a6439456cc5e2dd);
+                marker_d000206575283d98ae7d85540d1c6f76.setIcon(icon_a45ca91fbf05f3363729e82c728090ea);
             
     
-            feature_group_97abaaff57568815fa0e806f39b5820b.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_325361f9090b57d7f7752a9c0aef2860.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_6c0f905e7026dbaae916970f2a49fa99 = L.featureGroup(
+            var feature_group_5e7f0712eccf67aeb1093b286f85545d = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_81c9340f747840e7ccc95e35f91a82bb = L.marker(
+            var marker_ca9d6a9264c2c7dd2556f669a97a32e7 = L.marker(
                 [-0.2974, -78.5613],
                 {
 }
-            ).addTo(feature_group_6c0f905e7026dbaae916970f2a49fa99);
+            ).addTo(feature_group_5e7f0712eccf67aeb1093b286f85545d);
         
     
-            var icon_01b7ee5274bfb3c26a59f8dc19cae92c = L.AwesomeMarkers.icon(
+            var icon_1b2b4e18c5e1c6290b8c696bb33622f3 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;cadetblue&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4612,43 +4620,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_ac7d194b365071c7c55969408841b3bb = L.popup({
+        var popup_d2e6d75a2ed78bff8bf984d59dc138d7 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_954cd13d48e85de098333895ff8ee88e = $(`&lt;div id=&quot;html_954cd13d48e85de098333895ff8ee88e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; alcantarilla&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Alcantarilla sin tapa representa peligro vehicular&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/1ff37f47-b4e4-4f0f-85bc-577b048f2dd0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_ac7d194b365071c7c55969408841b3bb.setContent(html_954cd13d48e85de098333895ff8ee88e);
+                var html_e90cd0c17e74418b5d0ccae005e4f3c8 = $(`&lt;div id=&quot;html_e90cd0c17e74418b5d0ccae005e4f3c8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; alcantarilla&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Alcantarilla sin tapa representa peligro vehicular&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/1ff37f47-b4e4-4f0f-85bc-577b048f2dd0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_d2e6d75a2ed78bff8bf984d59dc138d7.setContent(html_e90cd0c17e74418b5d0ccae005e4f3c8);
             
         
 
-        marker_81c9340f747840e7ccc95e35f91a82bb.bindPopup(popup_ac7d194b365071c7c55969408841b3bb)
+        marker_ca9d6a9264c2c7dd2556f669a97a32e7.bindPopup(popup_d2e6d75a2ed78bff8bf984d59dc138d7)
         ;
 
         
     
     
-                marker_81c9340f747840e7ccc95e35f91a82bb.setIcon(icon_01b7ee5274bfb3c26a59f8dc19cae92c);
+                marker_ca9d6a9264c2c7dd2556f669a97a32e7.setIcon(icon_1b2b4e18c5e1c6290b8c696bb33622f3);
             
     
-            feature_group_6c0f905e7026dbaae916970f2a49fa99.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_5e7f0712eccf67aeb1093b286f85545d.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_0e8bd658454ada7719800e969872fb30 = L.featureGroup(
+            var feature_group_a87482cb35ff82d16b4486ee939adb5f = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_8fde1a00668a2bb02accc6359b854ab9 = L.marker(
+            var marker_385500777cddd630d374a0254628f82a = L.marker(
                 [-0.2021, -78.4941],
                 {
 }
-            ).addTo(feature_group_0e8bd658454ada7719800e969872fb30);
+            ).addTo(feature_group_a87482cb35ff82d16b4486ee939adb5f);
         
     
-            var icon_85c501d2f22a81a45d6adc361923e1d1 = L.AwesomeMarkers.icon(
+            var icon_5a7518eb02172f6401bc7bfb761eccb2 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;purple&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4659,43 +4667,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_6050d8be6df0ef82387a18c3c73da343 = L.popup({
+        var popup_2342b28a6d0a6fcfa4bcc3beff9cb090 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_9d1f4750ffbb9477b9e50803127ef196 = $(`&lt;div id=&quot;html_9d1f4750ffbb9477b9e50803127ef196&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; semaforo&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Sem�foro apagado en cruce de Av. Col�n y 10 de Agosto&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/bb2ac768-bc69-46cd-9e13-1a2c590c81f9.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_6050d8be6df0ef82387a18c3c73da343.setContent(html_9d1f4750ffbb9477b9e50803127ef196);
+                var html_f985f6175cb872d1083e95517c6150e5 = $(`&lt;div id=&quot;html_f985f6175cb872d1083e95517c6150e5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; semaforo&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Sem�foro apagado en cruce de Av. Col�n y 10 de Agosto&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/bb2ac768-bc69-46cd-9e13-1a2c590c81f9.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_2342b28a6d0a6fcfa4bcc3beff9cb090.setContent(html_f985f6175cb872d1083e95517c6150e5);
             
         
 
-        marker_8fde1a00668a2bb02accc6359b854ab9.bindPopup(popup_6050d8be6df0ef82387a18c3c73da343)
+        marker_385500777cddd630d374a0254628f82a.bindPopup(popup_2342b28a6d0a6fcfa4bcc3beff9cb090)
         ;
 
         
     
     
-                marker_8fde1a00668a2bb02accc6359b854ab9.setIcon(icon_85c501d2f22a81a45d6adc361923e1d1);
+                marker_385500777cddd630d374a0254628f82a.setIcon(icon_5a7518eb02172f6401bc7bfb761eccb2);
             
     
-            feature_group_0e8bd658454ada7719800e969872fb30.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_a87482cb35ff82d16b4486ee939adb5f.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_475abe5b38bd6b456546573acbf97246 = L.featureGroup(
+            var feature_group_b08c3c21f76dc6f9426a054706b85542 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_c69970edd85b60f8aa2c661d2a131501 = L.marker(
+            var marker_72c0731080618c20fcd0aaba20cd6f6c = L.marker(
                 [-0.162, -78.466],
                 {
 }
-            ).addTo(feature_group_475abe5b38bd6b456546573acbf97246);
+            ).addTo(feature_group_b08c3c21f76dc6f9426a054706b85542);
         
     
-            var icon_6e2b637fb9dbeb4c9133e9e9edf92d66 = L.AwesomeMarkers.icon(
+            var icon_e8af160b8a00cfb3fdc2a4d8b147253a = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;blue&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4706,43 +4714,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_0ff93f31621cc7da6cc4468d50c3dbf8 = L.popup({
+        var popup_7836031cb22a2306560f4a781f60c063 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_bbcab79b0efa1bbadca8cb7ceb26e1ce = $(`&lt;div id=&quot;html_bbcab79b0efa1bbadca8cb7ceb26e1ce&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; acera_rota&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Acera agrietada, peligro para peatones&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/3fc0ce48-dde5-4a32-95f5-3a6f4a9c4ffc.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_0ff93f31621cc7da6cc4468d50c3dbf8.setContent(html_bbcab79b0efa1bbadca8cb7ceb26e1ce);
+                var html_c8aa8b916e130229e09b54e90224308f = $(`&lt;div id=&quot;html_c8aa8b916e130229e09b54e90224308f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; acera_rota&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Acera agrietada, peligro para peatones&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/3fc0ce48-dde5-4a32-95f5-3a6f4a9c4ffc.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_7836031cb22a2306560f4a781f60c063.setContent(html_c8aa8b916e130229e09b54e90224308f);
             
         
 
-        marker_c69970edd85b60f8aa2c661d2a131501.bindPopup(popup_0ff93f31621cc7da6cc4468d50c3dbf8)
+        marker_72c0731080618c20fcd0aaba20cd6f6c.bindPopup(popup_7836031cb22a2306560f4a781f60c063)
         ;
 
         
     
     
-                marker_c69970edd85b60f8aa2c661d2a131501.setIcon(icon_6e2b637fb9dbeb4c9133e9e9edf92d66);
+                marker_72c0731080618c20fcd0aaba20cd6f6c.setIcon(icon_e8af160b8a00cfb3fdc2a4d8b147253a);
             
     
-            feature_group_475abe5b38bd6b456546573acbf97246.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_b08c3c21f76dc6f9426a054706b85542.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_37bd4585aa9380a4c45ec429f2ff4b83 = L.featureGroup(
+            var feature_group_30855b2767fcc0727861a020644d82b1 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_1ce859557e973c7ba3e807c4af8d2b38 = L.marker(
+            var marker_abce801c7cb5b5b6f1ac9b4e4d930bed = L.marker(
                 [-0.3219, -78.5532],
                 {
 }
-            ).addTo(feature_group_37bd4585aa9380a4c45ec429f2ff4b83);
+            ).addTo(feature_group_30855b2767fcc0727861a020644d82b1);
         
     
-            var icon_cb03662366f9a6649bc44e533799abc6 = L.AwesomeMarkers.icon(
+            var icon_044f98daab2471c9cd6e2e8743dfcbe4 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;orange&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4753,43 +4761,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_03d90369c29c5e16959b8ac476da84d3 = L.popup({
+        var popup_7c5bd938e85dbbfdd96622d2a4ae4e58 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_f591f29ab571cd25b13a409d51f7c844 = $(`&lt;div id=&quot;html_f591f29ab571cd25b13a409d51f7c844&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; luminaria&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Poste de luz no enciende desde hace d�as&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/47656e78-5adf-48b9-99f7-6c46af350237.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_03d90369c29c5e16959b8ac476da84d3.setContent(html_f591f29ab571cd25b13a409d51f7c844);
+                var html_4af8283c0b9871f9e92a767bde9e252e = $(`&lt;div id=&quot;html_4af8283c0b9871f9e92a767bde9e252e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; luminaria&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Poste de luz no enciende desde hace d�as&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/47656e78-5adf-48b9-99f7-6c46af350237.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_7c5bd938e85dbbfdd96622d2a4ae4e58.setContent(html_4af8283c0b9871f9e92a767bde9e252e);
             
         
 
-        marker_1ce859557e973c7ba3e807c4af8d2b38.bindPopup(popup_03d90369c29c5e16959b8ac476da84d3)
+        marker_abce801c7cb5b5b6f1ac9b4e4d930bed.bindPopup(popup_7c5bd938e85dbbfdd96622d2a4ae4e58)
         ;
 
         
     
     
-                marker_1ce859557e973c7ba3e807c4af8d2b38.setIcon(icon_cb03662366f9a6649bc44e533799abc6);
+                marker_abce801c7cb5b5b6f1ac9b4e4d930bed.setIcon(icon_044f98daab2471c9cd6e2e8743dfcbe4);
             
     
-            feature_group_37bd4585aa9380a4c45ec429f2ff4b83.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_30855b2767fcc0727861a020644d82b1.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var feature_group_8db294b5d7d3ca51fdd2632581f513d1 = L.featureGroup(
+            var feature_group_8a34efb6b6a4e76e51f0ee89ec246722 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_71a5736bb24c6b83c7f186e845d46bb4 = L.marker(
+            var marker_c9558ae099f7cd8aad62768209138b1f = L.marker(
                 [-0.2178, -78.5034],
                 {
 }
-            ).addTo(feature_group_8db294b5d7d3ca51fdd2632581f513d1);
+            ).addTo(feature_group_8a34efb6b6a4e76e51f0ee89ec246722);
         
     
-            var icon_ef08b3b7db58e28475e11ec360674ca8 = L.AwesomeMarkers.icon(
+            var icon_413729062f90e8de727b83080416918e = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;green&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4800,55 +4808,55 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_ebec25753359e53a34f8e458a8f146a5 = L.popup({
+        var popup_f3d0cfd61f3c6cd409f0fb59ae1d63e7 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_7fde7990299db1998e3f0da2686e4ba4 = $(`&lt;div id=&quot;html_7fde7990299db1998e3f0da2686e4ba4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; basura&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Basura acumulada en la entrada del parque El Ejido&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/5050dd94-5142-4e34-864c-d16695f0d2e0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_ebec25753359e53a34f8e458a8f146a5.setContent(html_7fde7990299db1998e3f0da2686e4ba4);
+                var html_d7f027d03bbccb07a600f5b174919663 = $(`&lt;div id=&quot;html_d7f027d03bbccb07a600f5b174919663&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; basura&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Basura acumulada en la entrada del parque El Ejido&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/5050dd94-5142-4e34-864c-d16695f0d2e0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_f3d0cfd61f3c6cd409f0fb59ae1d63e7.setContent(html_d7f027d03bbccb07a600f5b174919663);
             
         
 
-        marker_71a5736bb24c6b83c7f186e845d46bb4.bindPopup(popup_ebec25753359e53a34f8e458a8f146a5)
+        marker_c9558ae099f7cd8aad62768209138b1f.bindPopup(popup_f3d0cfd61f3c6cd409f0fb59ae1d63e7)
         ;
 
         
     
     
-                marker_71a5736bb24c6b83c7f186e845d46bb4.setIcon(icon_ef08b3b7db58e28475e11ec360674ca8);
+                marker_c9558ae099f7cd8aad62768209138b1f.setIcon(icon_413729062f90e8de727b83080416918e);
             
     
-            feature_group_8db294b5d7d3ca51fdd2632581f513d1.addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            feature_group_8a34efb6b6a4e76e51f0ee89ec246722.addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var layer_control_d8b3627f81e424beefa025426e9fe37e_layers = {
+            var layer_control_73e6133de55ae95797128f6eb98cf223_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_b5f5b078c7533114630a87e39661af62,
+                    &quot;openstreetmap&quot; : tile_layer_816a1bea5e58989c40efe2458d670d41,
                 },
                 overlays :  {
-                    &quot;Bache&quot; : feature_group_cc10543118e15cd5e02fee2c0e2e0e63,
-                    &quot;Arbol_caido&quot; : feature_group_087e255fd8ca35e2247f7bdba49a7611,
-                    &quot;Otro&quot; : feature_group_492ca72a80051f68e9cf494ff7aad852,
-                    &quot;Grafiti&quot; : feature_group_bcbb95bc69ed2ce2281de09b367f939f,
-                    &quot;Cable_suelto&quot; : feature_group_97abaaff57568815fa0e806f39b5820b,
-                    &quot;Alcantarilla&quot; : feature_group_6c0f905e7026dbaae916970f2a49fa99,
-                    &quot;Semaforo&quot; : feature_group_0e8bd658454ada7719800e969872fb30,
-                    &quot;Acera_rota&quot; : feature_group_475abe5b38bd6b456546573acbf97246,
-                    &quot;Luminaria&quot; : feature_group_37bd4585aa9380a4c45ec429f2ff4b83,
-                    &quot;Basura&quot; : feature_group_8db294b5d7d3ca51fdd2632581f513d1,
+                    &quot;Bache&quot; : feature_group_e70e8fe7b92e38070782f893da8e22f7,
+                    &quot;Arbol_caido&quot; : feature_group_97ba645f339329c4e5ff534028545ce7,
+                    &quot;Otro&quot; : feature_group_09e5946c0b6fa2fce45df661a907f9fa,
+                    &quot;Grafiti&quot; : feature_group_1ccdfaf8327897f45d3023d769c448ea,
+                    &quot;Cable_suelto&quot; : feature_group_325361f9090b57d7f7752a9c0aef2860,
+                    &quot;Alcantarilla&quot; : feature_group_5e7f0712eccf67aeb1093b286f85545d,
+                    &quot;Semaforo&quot; : feature_group_a87482cb35ff82d16b4486ee939adb5f,
+                    &quot;Acera_rota&quot; : feature_group_b08c3c21f76dc6f9426a054706b85542,
+                    &quot;Luminaria&quot; : feature_group_30855b2767fcc0727861a020644d82b1,
+                    &quot;Basura&quot; : feature_group_8a34efb6b6a4e76e51f0ee89ec246722,
                 },
             };
-            let layer_control_d8b3627f81e424beefa025426e9fe37e = L.control.layers(
-                layer_control_d8b3627f81e424beefa025426e9fe37e_layers.base_layers,
-                layer_control_d8b3627f81e424beefa025426e9fe37e_layers.overlays,
+            let layer_control_73e6133de55ae95797128f6eb98cf223 = L.control.layers(
+                layer_control_73e6133de55ae95797128f6eb98cf223_layers.base_layers,
+                layer_control_73e6133de55ae95797128f6eb98cf223_layers.overlays,
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;collapsed&quot;: false,
   &quot;autoZIndex&quot;: true,
 }
-            ).addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            ).addTo(map_a399679c6d50914d50a553cd83d59648);
 
         
     
@@ -4859,16 +4867,16 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
   &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;,
   &quot;forceSeparateButton&quot;: false,
 }
-            ).addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            ).addTo(map_a399679c6d50914d50a553cd83d59648);
         
     
-            var locate_control_0f150b3b518225a5d8afb26722d1bc19 = L.control.locate(
+            var locate_control_99f62ebcc11345e4a702ecbe916dc91e = L.control.locate(
                 {}
-            ).addTo(map_6db3259ea5c17cc22363fc3ad3c0ba9d);
+            ).addTo(map_a399679c6d50914d50a553cd83d59648);
             
         
     
-            var mouse_position_129ea99d4eec801d41a680dd8e46e725 = new L.Control.MousePosition(
+            var mouse_position_25de6672aaae4da17df515c448517390 = new L.Control.MousePosition(
                 {
   &quot;position&quot;: &quot;bottomright&quot;,
   &quot;separator&quot;: &quot; : &quot;,
@@ -4878,11 +4886,11 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
   &quot;prefix&quot;: &quot;&quot;,
 }
             );
-            mouse_position_129ea99d4eec801d41a680dd8e46e725.options[&quot;latFormatter&quot;] =
+            mouse_position_25de6672aaae4da17df515c448517390.options[&quot;latFormatter&quot;] =
                 undefined;
-            mouse_position_129ea99d4eec801d41a680dd8e46e725.options[&quot;lngFormatter&quot;] =
+            mouse_position_25de6672aaae4da17df515c448517390.options[&quot;lngFormatter&quot;] =
                 undefined;
-            map_6db3259ea5c17cc22363fc3ad3c0ba9d.addControl(mouse_position_129ea99d4eec801d41a680dd8e46e725);
+            map_a399679c6d50914d50a553cd83d59648.addControl(mouse_position_25de6672aaae4da17df515c448517390);
         
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>

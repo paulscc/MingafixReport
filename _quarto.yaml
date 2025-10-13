@@ -29,6 +29,8 @@ website:
             text: Reto 3 – Live Updates Simulation (Polling)
           - href: 2cuarto.qmd
             text: Creativo-Comunitario Visualización Inteligente
+          - href: 2extras.qmd
+            text: Bonus
 
 format:
   html:

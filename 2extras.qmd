@@ -1,5 +1,5 @@
 ---
-title: " Reto 3 Live Updates Simulation (Polling)"
+title: " Bonus Avanzado (opcional)"
 jupyter: python3
 author: "Cadena Paul"
 date: "10-07-2025"
@@ -9,39 +9,33 @@ format:
 ---
 
 
+# Bonu Avanzado (opcional)
+    Integrar IA para clasificación automática de imágenes o textos (por ejemplo, categorizar tipo de incidencia a partir de una foto o descripción).
 
-```{python}
+ ## Entrega:
+    -1. Modelo de imagenes-texto para tener una descripcion a partir de una simple imagen
+    -2.  Modelo de Clasificacion a partir de la descripcion del reporte
 
-import csv
+        1. Este modelo hace uso de un modelo Open SOurce y de libre acceso
+        que nos dara una descripcion con solo una imagen de imput, es decir nos explicara la imagen, si subimos una imagen del cielo este modelo de IA sabra explicarnoslo
 
-input_file = 'Libro1.csv'   # Tu archivo original
-output_file = 'reportes_limpios.csv'  # Archivo limpio que generarás
+        2. Se entreno un modelo de IA, se hizo Fine-tuning a otro modelo (bert-base). Basicamente se tomo un modelo de lenguaje de clasificacion y se lo entreno con muchos ejemplos de descripciones para asi que este modelo aprenda a categorizar un modelo a partir de su descripcion es decir: dada una descripcion del reporte, este modelo sabra en cual categoria ponerla(bache, luminaria, grafitti, etc)
 
-with open(input_file, 'r', encoding='utf-8') as infile, \
-     open(output_file, 'w', newline='', encoding='utf-8') as outfile:
+Todo se realizo en google collab importante los modelos de codigo libre y entrenandolos en google collab, cualquiera comparto los enlaces a estos modelos para que los prueben 
+            
+            Imagen: https://colab.research.google.com/drive/15yMGgjKFOXGO2PBdZPeKXVwQ9fe-tB5F?usp=sharing
+
+            Clasificador :https://colab.research.google.com/drive/1vOrGJq04CjlZUK-WijqJkRLOk9t2v8Yp?usp=sharing
+
+
+## Video Expliacacion
+https://youtu.be/TMTnp84gqsU
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
     
-    reader = csv.reader(infile)
-    writer = csv.writer(outfile)
-    
-    for row in reader:
-        # Saltar filas vacías o con solo espacios
-        if not row or all(cell.strip() == '' for cell in row):
-            continue
-        
-        # Asumiendo que solo tienes un campo por fila (el reporte)
-        reporte = row[0].strip()
-        
-        # Eliminar número y punto al inicio usando split o regex
-        # Opción simple con split:
-        if '.' in reporte:
-            # Dividir en máximo 2 partes, eliminar la primera si es número
-            parts = reporte.split('.', 1)
-            if parts[0].strip().isdigit():
-                reporte = parts[1].strip()
-        
-        # Escribir reporte limpio
-        writer.writerow([reporte])
 
 
 
-```
