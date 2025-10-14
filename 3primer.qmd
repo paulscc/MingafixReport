@@ -1,0 +1,34 @@
+---
+title: " Reto 1 – Smart Report Submission Flow "
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+![App](images/logo.png){width=50%}
+
+# Reto 1 – Smart Report Submission Flow
+    
+
+
+ ## Entrega:
+    Front End conectado con backend funcional
+    React JS front end formulario conectado con API Java js y Modelos de IA para sugerencias funcional
+     --- 
+
+![App](images/report.png){width=75%}
+     ---
+     
+    Codigo Formulario en: https://github.com/paulscc/React-Fromulario-APi-Java-Supa-IA
+
+## Video Expliacacion
+https://youtu.be/TJ5H9-I4eQo
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
+    

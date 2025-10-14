@@ -31,6 +31,11 @@ website:
             text: Creativo-Comunitario Visualización Inteligente
           - href: 2extras.qmd
             text: Bonus
+      - text: "Semana 3"
+        menu:
+          - href: 3primer.qmd
+            text: Reto 1 – Smart Report Submission Flow
+          
 
 format:
   html:

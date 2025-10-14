@@ -107,7 +107,7 @@ curl -X GET https://javaspringap.onrender.com/api
             Una Json con los reportes 
 
 Codigo insertar reporte 
-  $ curl -X POST https://javaspringap.onrender.com/api/reportes  -F "categoria=basura"   -F "lat=-0.8131"   -F "lng=-77.7172"   -F "descripcion=Pr"   -F "usuarioId=USER-001"   -F "foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg"  
+  $ curl -X POST https://javaspringap.onrender.com/api/reportes  -F "categoria=bache"   -F "lat=-0.8131"   -F "lng=-77.7172"   -F "descripcion=Blabla"   -F "usuarioId=USER-001"   -F "foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg"  
  
     Respuesta Esperada: 
            {"estado":"pendiente","foto_url":"https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/51cd906a-3774-459e-a853-151b8e0eaeb0.jpg","success":true,"id":"287b8dce-a992-423f-99ce-683d4bdd1cfa","message":"Reporte creado exitosamente"}
