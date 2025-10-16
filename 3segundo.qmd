@@ -1,0 +1,36 @@
+---
+title: " Reto 1 – Smart Report Submission Flow "
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+![App](images/logo.png){width=50%}
+
+# Reto 2 – LiveMap Intelligence Layer
+    
+
+
+ ## Entrega:
+    Mapas interactivos, conectados a BDD por api, funcionales
+
+        -El mapa tiene caracteristicas por se detalla cuando hay varios repartos reportas en el mismo sitio, se crea una vista. 
+        -Opciones para elegir entre categorias, etc
+     --- 
+
+![App](images/report.png){width=75%}
+     ---
+     
+    Codigo Web ReactJs en: https://github.com/paulscc/React-Fromulario-APi-Java-Supa-IA
+
+## Video Expliacacion
+https://youtu.be/uV3rH2HJs0Q
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
+    
