@@ -35,6 +35,8 @@ website:
         menu:
           - href: 3primer.qmd
             text: Reto 1 – Smart Report Submission Flow
+          - href: 3segundo.qmd
+            text: Reto 2– LiveMap Intelligence Layer
           
 
 format:

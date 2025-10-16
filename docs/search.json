@@ -42,81 +42,18 @@
     "text": "Video Explicativo\nhttps://youtu.be/e2oQPsmCcAs\n\nAuthor\nPaul Cadena"
   },
   {
-    "objectID": "2tercero.html",
-    "href": "2tercero.html",
-    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "objectID": "3primer.html",
+    "href": "3primer.html",
+    "title": "Reto 1 – Smart Report Submission Flow",
     "section": "",
     "text": "App"
   },
   {
-    "objectID": "2tercero.html#reto-3-live-updates-simulation-polling",
-    "href": "2tercero.html#reto-3-live-updates-simulation-polling",
-    "title": "Reto 3 Live Updates Simulation (Polling)",
-    "section": "Reto 3 Live Updates Simulation (Polling)",
-    "text": "Reto 3 Live Updates Simulation (Polling)\nWeb: https://mingmapapp-jepqodfkdttgydyoesjwr7.streamlit.app/\n\nTecnologias Python, Streamlit+Api Java (para reportes)\n\nSe uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro\nuna actualizacion del mapa automatica:\n    Ejemplo de uso de funcion:\n    \n    \n        def obtener_datos():\n            try:\n                url = \"https://javaspringap.onrender.com/api/reportes\"\n                response = requests.get(url, timeout=20)\n                    response.raise_for_status()\n                return response.json()[\"data\"]\n            except Exception as e:\n                st.error(f\"Error al obtener datos: {e}\")\n                return []\n\nEste script se ejecuta cada 20segundos lo que hace que el mapa  se auto-recargue con los nuevos reportes que viene desde la API en JAVA desplegada en Render\n\n\nIngresar a la API: Para usar la api usar estos comandos:\n\n\n        Codigo generar reportes\n        \n        curl -X GET https://renderpisu.onrender.com/reportes\n\n        Codigo insertar reporte \n        \n        curl -X POST https://renderpisu.onrender.com/reportes      -F \"categoria=luminaria\"      -F \"lat=-0.8131\"      -F \"lng=-77.7172\"      -F \"descripcion=Prueba test endpoint\"      -F \"usuario_id=FUNC-001\"      -F \"foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg\"\n\n\n    StreamLit, es una aplicacion que permite desplegar directamente desde un repositorio en github, solo hace falta importar\n    librerias e instalarlo en el entorno y empezar a programar. Streamlit funciona perfecto para este reto de despliegue de de mapa +  polling para auto actualizacion donde el backend funciona. Streamlit en su plan Free tiene opcion de despligue a difererncia del plan de pago, este permite el despliegue de aplicaciones por 30minutos siempre que se deje de usar el servicio.  \nCodigo Fuente: https://github.com/paulscc/MingMapStreamLit"
-  },
-  {
-    "objectID": "2tercero.html#video-explicativo",
-    "href": "2tercero.html#video-explicativo",
-    "title": "Reto 3 Live Updates Simulation (Polling)",
-    "section": "Video Explicativo",
-    "text": "Video Explicativo\nhttps://youtu.be/PurB-jq5pxw\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
-  },
-  {
-    "objectID": "2primer.html",
-    "href": "2primer.html",
-    "title": "Reto 1 Supabase Connection & Data Handling”",
-    "section": "",
-    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
-  },
-  {
-    "objectID": "2primer.html#video-explicativo",
-    "href": "2primer.html#video-explicativo",
-    "title": "Reto 1 Supabase Connection & Data Handling”",
-    "section": "Video Explicativo",
-    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
-  },
-  {
-    "objectID": "2cuarto.html",
-    "href": "2cuarto.html",
-    "title": "Reto Creativo – Visualización Inteligente de Datos Urbano",
-    "section": "",
-    "text": "Link Dashboard: https://public.tableau.com/app/profile/paul.cadena/viz/LibroMinga/Dashboard1?publish=yes\n\n\n\nApp\n\n\nPara reportes pas profesionales se uso Tableau, un software para analitica de datos, en esta caso enfocado en los reportes donde podemos ver Categorias, Descripciones, Mapa, etc. Es muy adaptable y se lo puede mejorar poder diferentes tipos de datos excelente para un analisis de reportes mas profesional\n\n\nhttps://youtu.be/wYobrL0fP6k\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
-  },
-  {
-    "objectID": "2cuarto.html#video-expliacacion",
-    "href": "2cuarto.html#video-expliacacion",
-    "title": "Reto Creativo – Visualización Inteligente de Datos Urbano",
-    "section": "",
-    "text": "https://youtu.be/wYobrL0fP6k\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
-  },
-  {
-    "objectID": "1primer.html",
-    "href": "1primer.html",
-    "title": "Reto 1 Supabase Connection & Data Handling”",
-    "section": "",
-    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
-  },
-  {
-    "objectID": "1primer.html#video-explicativo",
-    "href": "1primer.html#video-explicativo",
-    "title": "Reto 1 Supabase Connection & Data Handling”",
-    "section": "Video Explicativo",
-    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
-  },
-  {
-    "objectID": "2extras.html",
-    "href": "2extras.html",
-    "title": "Bonus Avanzado (opcional)",
-    "section": "",
-    "text": "Integrar IA para clasificación automática de imágenes o textos (por ejemplo, categorizar tipo de incidencia a partir de una foto o descripción).\n## Entrega: -1. Modelo de imagenes-texto para tener una descripcion a partir de una simple imagen -2. Modelo de Clasificacion a partir de la descripcion del reporte\n    1. Este modelo hace uso de un modelo Open SOurce y de libre acceso\n    que nos dara una descripcion con solo una imagen de imput, es decir nos explicara la imagen, si subimos una imagen del cielo este modelo de IA sabra explicarnoslo\n\n    2. Se entreno un modelo de IA, se hizo Fine-tuning a otro modelo (bert-base). Basicamente se tomo un modelo de lenguaje de clasificacion y se lo entreno con muchos ejemplos de descripciones para asi que este modelo aprenda a categorizar un modelo a partir de su descripcion es decir: dada una descripcion del reporte, este modelo sabra en cual categoria ponerla(bache, luminaria, grafitti, etc)\nTodo se realizo en google collab importante los modelos de codigo libre y entrenandolos en google collab, cualquiera comparto los enlaces a estos modelos para que los prueben\n        Imagen: https://colab.research.google.com/drive/15yMGgjKFOXGO2PBdZPeKXVwQ9fe-tB5F?usp=sharing\n\n        Clasificador :https://colab.research.google.com/drive/1vOrGJq04CjlZUK-WijqJkRLOk9t2v8Yp?usp=sharing\n\n\nhttps://youtu.be/TMTnp84gqsU\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
-  },
-  {
-    "objectID": "2extras.html#video-expliacacion",
-    "href": "2extras.html#video-expliacacion",
-    "title": "Bonus Avanzado (opcional)",
-    "section": "",
-    "text": "https://youtu.be/TMTnp84gqsU\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
+    "objectID": "3primer.html#video-expliacacion",
+    "href": "3primer.html#video-expliacacion",
+    "title": "Reto 1 – Smart Report Submission Flow",
+    "section": "Video Expliacacion",
+    "text": "Video Expliacacion\nhttps://youtu.be/6cWt80tMquo\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
   },
   {
     "objectID": "2segundo.html",
@@ -140,18 +77,95 @@
     "text": "Video Explicativo\nhttps://youtu.be/SdZLBzGYdPQ\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
   },
   {
-    "objectID": "3primer.html",
-    "href": "3primer.html",
+    "objectID": "2extras.html",
+    "href": "2extras.html",
+    "title": "Bonus Avanzado (opcional)",
+    "section": "",
+    "text": "Integrar IA para clasificación automática de imágenes o textos (por ejemplo, categorizar tipo de incidencia a partir de una foto o descripción).\n## Entrega: -1. Modelo de imagenes-texto para tener una descripcion a partir de una simple imagen -2. Modelo de Clasificacion a partir de la descripcion del reporte\n    1. Este modelo hace uso de un modelo Open SOurce y de libre acceso\n    que nos dara una descripcion con solo una imagen de imput, es decir nos explicara la imagen, si subimos una imagen del cielo este modelo de IA sabra explicarnoslo\n\n    2. Se entreno un modelo de IA, se hizo Fine-tuning a otro modelo (bert-base). Basicamente se tomo un modelo de lenguaje de clasificacion y se lo entreno con muchos ejemplos de descripciones para asi que este modelo aprenda a categorizar un modelo a partir de su descripcion es decir: dada una descripcion del reporte, este modelo sabra en cual categoria ponerla(bache, luminaria, grafitti, etc)\nTodo se realizo en google collab importante los modelos de codigo libre y entrenandolos en google collab, cualquiera comparto los enlaces a estos modelos para que los prueben\n        Imagen: https://colab.research.google.com/drive/15yMGgjKFOXGO2PBdZPeKXVwQ9fe-tB5F?usp=sharing\n\n        Clasificador :https://colab.research.google.com/drive/1vOrGJq04CjlZUK-WijqJkRLOk9t2v8Yp?usp=sharing\n\n\nhttps://youtu.be/TMTnp84gqsU\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "2extras.html#video-expliacacion",
+    "href": "2extras.html#video-expliacacion",
+    "title": "Bonus Avanzado (opcional)",
+    "section": "",
+    "text": "https://youtu.be/TMTnp84gqsU\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "1primer.html",
+    "href": "1primer.html",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "",
+    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
+  },
+  {
+    "objectID": "1primer.html#video-explicativo",
+    "href": "1primer.html#video-explicativo",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "2cuarto.html",
+    "href": "2cuarto.html",
+    "title": "Reto Creativo – Visualización Inteligente de Datos Urbano",
+    "section": "",
+    "text": "Link Dashboard: https://public.tableau.com/app/profile/paul.cadena/viz/LibroMinga/Dashboard1?publish=yes\n\n\n\nApp\n\n\nPara reportes pas profesionales se uso Tableau, un software para analitica de datos, en esta caso enfocado en los reportes donde podemos ver Categorias, Descripciones, Mapa, etc. Es muy adaptable y se lo puede mejorar poder diferentes tipos de datos excelente para un analisis de reportes mas profesional\n\n\nhttps://youtu.be/wYobrL0fP6k\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "2cuarto.html#video-expliacacion",
+    "href": "2cuarto.html#video-expliacacion",
+    "title": "Reto Creativo – Visualización Inteligente de Datos Urbano",
+    "section": "",
+    "text": "https://youtu.be/wYobrL0fP6k\n\n\nPaul Cadena\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "2primer.html",
+    "href": "2primer.html",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "",
+    "text": "App\nSupabase Conexion con Api y envio de reportes y muestra de reportes\nhttps://renderpisu.onrender.com API\nCodigo generar reportes curl -X GET https://renderpisu.onrender.com/reportes\nCodigo insertar reporte curl -X POST https://renderpisu.onrender.com/reportes -F “categoria=luminaria” -F “lat=-0.8131” -F “lng=-77.7172” -F “descripcion=Prueba test endpoint” -F “usuario_id=FUNC-001” -F “foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg”"
+  },
+  {
+    "objectID": "2primer.html#video-explicativo",
+    "href": "2primer.html#video-explicativo",
+    "title": "Reto 1 Supabase Connection & Data Handling”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/3nYP_T7PJYc\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "2tercero.html",
+    "href": "2tercero.html",
+    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "section": "",
+    "text": "App"
+  },
+  {
+    "objectID": "2tercero.html#reto-3-live-updates-simulation-polling",
+    "href": "2tercero.html#reto-3-live-updates-simulation-polling",
+    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "section": "Reto 3 Live Updates Simulation (Polling)",
+    "text": "Reto 3 Live Updates Simulation (Polling)\nWeb: https://mingmapapp-jepqodfkdttgydyoesjwr7.streamlit.app/\n\nTecnologias Python, Streamlit+Api Java (para reportes)\n\nSe uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro\nuna actualizacion del mapa automatica:\n    Ejemplo de uso de funcion:\n    \n    \n        def obtener_datos():\n            try:\n                url = \"https://javaspringap.onrender.com/api/reportes\"\n                response = requests.get(url, timeout=20)\n                    response.raise_for_status()\n                return response.json()[\"data\"]\n            except Exception as e:\n                st.error(f\"Error al obtener datos: {e}\")\n                return []\n\nEste script se ejecuta cada 20segundos lo que hace que el mapa  se auto-recargue con los nuevos reportes que viene desde la API en JAVA desplegada en Render\n\n\nIngresar a la API: Para usar la api usar estos comandos:\n\n\n        Codigo generar reportes\n        \n        curl -X GET https://renderpisu.onrender.com/reportes\n\n        Codigo insertar reporte \n        \n        curl -X POST https://renderpisu.onrender.com/reportes      -F \"categoria=luminaria\"      -F \"lat=-0.8131\"      -F \"lng=-77.7172\"      -F \"descripcion=Prueba test endpoint\"      -F \"usuario_id=FUNC-001\"      -F \"foto=@C:/Users/pcstu/OneDrive/Escritorio/foto.jpg\"\n\n\n    StreamLit, es una aplicacion que permite desplegar directamente desde un repositorio en github, solo hace falta importar\n    librerias e instalarlo en el entorno y empezar a programar. Streamlit funciona perfecto para este reto de despliegue de de mapa +  polling para auto actualizacion donde el backend funciona. Streamlit en su plan Free tiene opcion de despligue a difererncia del plan de pago, este permite el despliegue de aplicaciones por 30minutos siempre que se deje de usar el servicio.  \nCodigo Fuente: https://github.com/paulscc/MingMapStreamLit"
+  },
+  {
+    "objectID": "2tercero.html#video-explicativo",
+    "href": "2tercero.html#video-explicativo",
+    "title": "Reto 3 Live Updates Simulation (Polling)",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/PurB-jq5pxw\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "3segundo.html",
+    "href": "3segundo.html",
     "title": "Reto 1 – Smart Report Submission Flow",
     "section": "",
     "text": "App"
   },
   {
-    "objectID": "3primer.html#video-expliacacion",
-    "href": "3primer.html#video-expliacacion",
+    "objectID": "3segundo.html#video-expliacacion",
+    "href": "3segundo.html#video-expliacacion",
     "title": "Reto 1 – Smart Report Submission Flow",
     "section": "Video Expliacacion",
-    "text": "Video Expliacacion\nhttps://youtu.be/6cWt80tMquo\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
+    "text": "Video Expliacacion\nhttps://youtu.be/uV3rH2HJs0Q\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
   },
   {
     "objectID": "index.html",
