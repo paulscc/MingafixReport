@@ -1,5 +1,5 @@
 ---
-title: " Reto 1 – Smart Report Submission Flow "
+title: " Reto 2 – LiveMap Intelligence Layer "
 jupyter: python3
 author: "Cadena Paul"
 date: "10-07-2025"
@@ -21,7 +21,7 @@ format:
         -Opciones para elegir entre categorias, etc
      --- 
 
-![App](images/report.png){width=75%}
+
      ---
      
     Codigo Web ReactJs en: https://github.com/paulscc/React-Fromulario-APi-Java-Supa-IA
