@@ -25,7 +25,7 @@ format:
     Codigo Formulario en: https://github.com/paulscc/React-Fromulario-APi-Java-Supa-IA
 
 ## Video Expliacacion
-https://youtu.be/TJ5H9-I4eQo
+https://youtu.be/6cWt80tMquo
 
 ### Author
 
