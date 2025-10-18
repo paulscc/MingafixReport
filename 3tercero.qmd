@@ -1,0 +1,42 @@
+---
+title: " Reto 3 – Gamificación Aplicada (Sistema de Puntos y Badges)"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+
+![App](images/logo.png){width=50%}
+
+
+# Reto 3 – Gamificación Aplicada (Sistema de Puntos y Badges)
+
+
+
+![App](images/logs.png){width=100%}
+
+    Sistema de Logros, y puntos se obtendran puntos por hacer fierentes cosas como reportar diferentes categorias, 
+    reportar bastantes, puntos por haber recibido una validacion por haberse resulto, etc y el sistema de logros como:
+
+Primer Paso
+    -Realizaste tu primer reporte
+Ciudadano Activo
+    -5 reportes realizados
+Vigilante
+    -10 reportes realizados
+Guardián
+25 reportes realizados
+     Como en la imagen, etc
+
+
+## Video Expliacacion
+https://youtu.be/m0I9FzUzwV4
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
+    

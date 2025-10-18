@@ -180,5 +180,19 @@
     "title": "Reto 0 Mingafix",
     "section": "Documento explicativo",
     "text": "Documento explicativo\n\n¿QUÉ HACE LA APP? Permite a ciudadanos reportar problemas urbanos (baches, luminarias rotas, basura, etc.) con fotos y ubicación. Las encargados reciben, gestionan y resuelven estos reportes.\nEl sistema es simple trabaja con varios servicios como Firebase para La BDD, y monitoreo de estos, con implementeacion de OAUTH 2.0 para login facil, APIs para servicios de la aplicacion(reportes, consultas, etc) y de terceros como Maps\n\n🎨 FRONTEND (Apps)\n\niOS/Android: Ciudadanos reportan incidentes con foto + GPS Web Admin: Funcionarios municipales gestionan reportes\n\nAUTENTICACIÓN Firebase Auth: Login de usuarios OAuth 2.0: Login con Google/Facebook SMS: Verificación por código de teléfono (evita bots)\nAPI GATEWAY (Puerta de entrada) REST: Crear/editar reportes (POST /api/reportes) GraphQL: Consultas complejas (estadísticas, filtros) WebSocket: Notificaciones en tiempo real\nMICROSERVICIOS (Lógica de negocio) Usuarios: Perfiles, historial, credibilidad Reportes: Crear incidentes, estados (pendiente→proceso→resuelto) Asignación: Distribuye reportes automáticamente por zona/tipo Notificaciones: Alerta a ciudadanos y funcionarios\nBASES DE DATOS Firestore: Guarda reportes, usuarios, comentarios (NoSQL en la nube) Cloud Storage: Almacena fotos/videos de incidentes Redis Cache: Acelera consultas frecuentes SQLite Local: Modo offline (crea reportes sin internet)\nSERVICIOS EXTERNOS Google Maps: Ubicación exacta + mapas interactivos Firebase Cloud Messaging: Notificaciones push (“Tu reporte fue resuelto”) Twilio SMS: Confirmaciones por mensaje de texto\nANALITICA Crashlytics: Detecta errores de la app Analytics: Estadísticas de uso (reportes/día, zonas críticas) Cloud Monitoring: Rendimiento de servidores —\n\n\nVideo Explicacion\nhttps://youtu.be/VocYuBjjObc\n\n\n\nAuthor: Paul Cadena\n\n\n\nGithub: https://github.com/paulscc"
+  },
+  {
+    "objectID": "3tercero.html",
+    "href": "3tercero.html",
+    "title": "Reto 3 – Gamificación Aplicada (Sistema de Puntos y Badges)",
+    "section": "",
+    "text": "App"
+  },
+  {
+    "objectID": "3tercero.html#video-expliacacion",
+    "href": "3tercero.html#video-expliacacion",
+    "title": "Reto 3 – Gamificación Aplicada (Sistema de Puntos y Badges)",
+    "section": "Video Expliacacion",
+    "text": "Video Expliacacion\nhttps://youtu.be/m0I9FzUzwV4\n\nAuthor\nPaul Cadena\nGithub: https://github.com/paulscc"
   }
 ]
