@@ -37,6 +37,10 @@ website:
             text: Reto 1 – Smart Report Submission Flow
           - href: 3segundo.qmd
             text: Reto 2– LiveMap Intelligence Layer
+          - href: 3tercero.qmd
+            text: Reto 3 – Gamificación Aplicada Sistema de Puntos y Badges
+          - href: 3cuarto.qmd
+            text: Reto Creativo – “Future of Fixing” 
           
 
 format:

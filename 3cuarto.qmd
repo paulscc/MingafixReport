@@ -1,5 +1,5 @@
 ---
-title: " Reto 3 – Gamificación Aplicada (Sistema de Puntos y Badges)"
+title: " Reto 4 – Reto Creativo – “Future of Fixing” "
 jupyter: python3
 author: "Cadena Paul"
 date: "10-07-2025"
@@ -11,6 +11,7 @@ format:
 
 ![App](images/logo.png){width=50%}
 
+# Reto Creativo – “Future of Fixing”    
 
     Generacion de Modelo De ML(Machine Learning) Para prediccion de reportes, basados en reporte de 100 dias
 
