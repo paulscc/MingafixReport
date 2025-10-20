@@ -1,0 +1,50 @@
+---
+title: " Bonus Avanzado (opcional)"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-07-2025"
+format: 
+    html:
+        embed-resources: true
+---
+![App](images/logo.png){width=50%}
+
+# Bonu Avanzado (opcional)
+    Desarrollar un “AI Helper (o agente)” o bot ciudadano que interprete un mensaje o imagen y lo
+    convierta en un reporte preformateado
+
+
+![App](images/llama.png){width=50%}
+ 
+ 
+ ## Entrega:
+    
+    
+    Para esta entrega se simplifico con la ayuda de los modelos anteriores  y se hizo uso de un LLM LLama 3.2 3B en local un para manejar textos y nos ayude a generar la descripciones para prepararlos para enviar a la API y guardarlo en Supabase
+
+    -Modelos Anteriores:
+    -1. Modelo de imagenes-texto para tener una descripcion a partir de una simple imagen
+    -2.  Modelo de Clasificacion a partir de la descripcion del reporte
+
+        1. Muestra la descripcion de una imagen cualquiera que sea
+
+        2. Clasifica el texto en una categoria
+
+Todo se realizo en google collab importante los modelos de codigo libre y entrenandolos en google collab, cualquiera comparto los enlaces a estos modelos para que los prueben 
+            
+            Imagen: https://colab.research.google.com/drive/15yMGgjKFOXGO2PBdZPeKXVwQ9fe-tB5F?usp=sharing
+
+            Clasificador :https://colab.research.google.com/drive/1vOrGJq04CjlZUK-WijqJkRLOk9t2v8Yp?usp=sharing
+
+
+## Video Expliacacion
+https://youtu.be/6ZOUiqbFNPA
+
+### Author
+
+    Paul Cadena
+    Github: https://github.com/paulscc
+    
+
+
+
