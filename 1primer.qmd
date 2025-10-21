@@ -29,6 +29,9 @@ Codigo insertar reporte
 ## Video Explicativo
 https://youtu.be/3nYP_T7PJYc
 
+{{< video https://www.youtube.com/embed/3nYP_T7PJYc >}}
+
+
 ### Author
 
     Paul Cadena

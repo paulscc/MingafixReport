@@ -1,0 +1,124 @@
+---
+title: " Reporte General"
+jupyter: python3
+author: "Cadena Paul"
+date: "10-20-2025"
+format: 
+    html:
+        embed-resources: true
+---
+
+## CV
+Hola Presento aqui mi CV
+[Haz click Aqui ](https://drive.google.com/file/d/1SR3ScKbVT-ybCjCsoAtRMf59IbsFfoZ-/view?usp=sharing)
+
+## Retos
+###  "Semana 1"
+          
+             Primer Reporte 
+[Haz click Aqui ](https://paulscc.github.io/MingafixReport/)
+
+Este Reto fue de hacer un MVP que muestre la aplicacion, lo que se hizo fue hacerlo con FlutterFlow herramienta multiplataforma con su debida preview de la app         
+
+
+             Reto 0-Arquitectura 
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/segundo.html)
+
+Como su nombre lo indica, la arquitectura tecnica propuesta de esta aplicacion: backend, front end conexiones, tecnologias etc
+
+          
+             Reto 1-API Ciudadana Básica 
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/tercer.html)
+
+Se genero una api en Python y se cargo en render.com, lo que permite aun su uso de esta api para cargar datos directamente con la BDD, 
+
+          
+             Reto 2 – Mapa Vivo Inicial 
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/cuarto.html)
+
+Se realizo la conexion del mapa con los reportes, asi pues simplemente se hizo una conexion con API (GET reportes) y se muestran puntos en mapa
+
+          
+             Reto 3 – Creativo-Comunitario  
+[Haz click Aqui ](https://paulscc.github.io/MingafixReport/quinto.html)
+
+Video creativo ejemplo que para promocionar esta app, se realizo un video que es amable al publico
+
+
+###  "Semana 2"
+
+          
+             Reto 1 Supabase Connection & Data Handling Reporte 
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/2primer.html)
+
+Se realizo una conexion entre Supabase con la Api y enviaron reportes para probar funcionalidad, muestra de reportes.
+
+
+             Reto 2 – LiveMap API Integration Reporte 
+[Haz click Aqui ](https://paulscc.github.io/MingafixReport/2segundo.html)
+
+La api se desarrollo en JAVA Spring Boot, con java v17, y se subio a render. Mapa interactivo conectado con la API para reportes
+
+
+             Reto 3 – Live Updates Simulation (Polling) Reporte 
+[Haz click Aqui ](https://paulscc.github.io/MingafixReport/2tercer.html)
+
+Se uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro
+una actualizacion del mapa automatica.
+
+             Creativo-Comunitario Visualización Inteligente Reporte 
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/2cuarto.html)
+
+Para reportes profesionales se uso Tableau, un software para analitica de datos, en esta caso enfocado en los reportes donde podemos ver Categorias, Descripciones, Mapa, etc
+
+             Bonus
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/2extras.html)
+
+Integrar IA para clasificación automática de imágenes o textos (por ejemplo, categorizar tipo de incidencia a partir de una foto o descripción).
+      
+###  "Semana 3"
+          
+             Reto 1 – Smart Report Submission Flow
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/3primer.html)
+
+Front End conectado con backend funcional React JS front end formulario conectado con API Java js y Modelos de IA para sugerencias funcional —
+
+             Reto 2– LiveMap Intelligence Layer
+[Haz click Aqui ](https://paulscc.github.io/MingafixReport/3segundo.html)
+
+Entrega: Mapas interactivos, conectados a BDD por api, funcionales
+-El mapa tiene caracteristicas por se detalla cuando hay varios repartos reportas en el mismo sitio, se crea una vista. 
+          
+             Reto 3 – Gamificación Aplicada Sistema de Puntos y Badges
+[Haz click Aqui ](https://paulscc.github.io/MingafixReport/3tercero.html)
+
+Sistema de Logros, y puntos se obtendran puntos por hacer fierentes cosas como reportar diferentes categorias, reportar variado, puntos por haber recibido una validacion por haberse resulto, etc y el sistema de logros 
+
+             Reto Creativo – “Future of Fixing”
+[Haz click Aqui ](https://paulscc.github.io/MingafixReport/3cuarto.html)
+
+Generacion de Modelo De ML(Machine Learning) Para prediccion de reportes, basados en reporte de 100 dias    
+
+             Bonus Avanzado
+[Haz click Aqui](https://paulscc.github.io/MingafixReport/3extras.html)
+
+Desarrollar un “AI Helper (o agente)” o bot ciudadano que interprete un mensaje o imagen y lo
+convierta en un reporte preformateado         
+
+
+## Ensayo
+---
+
+
+       ** Hola mi Nombre es Paul Cadena, estas ultimas semanas he participado de este
+       evento Mingafix, donde ademas de los retos de los cuales participe, estuve revisando muchas otras aplicaciones de esta misma indole, como se puede trabajar, que se puede implementar, como podría ayudar, estos servicios que se han logrado implementar exitosamente en otras partes, me di cuenta de que en realidad puede generar un impacto, esto es una herramienta para la urbe, y las personas pueden usarlo en este mundo donde la tecnología cada vez esta mas presente, y mas para una capital como lo es Quito, con esa necesidad, y el potencial para tener una herramienta que pueda generar un cambio social, y servir a la gente. Con mis conocimientos en IA, Machine Learning crearía herramientas para este servicio, la podríamos volver mas precisa, mas servicial, mas capaz, mas inteligente; generar información valiosa que pueda aumentar su valor, supervisar esta seria fundamental para asegurar que este servicio tenga una útil y larga  vida.
+        Me encantaría formar parte del equipo; apoyar en un equipo de este
+        impacto seria genial, siempre estoy dispuesto a colaborar en 
+        cualquier campo además del profesional, deportivo, etc. Siempre 
+        con buena disposición y sepan que cuentan conmigo**
+
+
+
+### Video personal 
+
+{{< video https://www.youtube.com/embed/0ePV2bnonyU >}}

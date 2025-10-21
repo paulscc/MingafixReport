@@ -118,6 +118,7 @@ Codigo insertar reporte
 ## Video Explicativo
 https://youtu.be/SdZLBzGYdPQ
 
+{{< video https://www.youtube.com/embed/SdZLBzGYdPQ >}}
 
 ### Author
 

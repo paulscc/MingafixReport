@@ -55,6 +55,7 @@ Codigo Fuente: https://github.com/paulscc/MingMapStreamLit
 
 https://youtu.be/PurB-jq5pxw
 
+{{< video https://www.youtube.com/embed/PurB-jq5pxw >}}
 
 ### Author
 

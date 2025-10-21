@@ -164,8 +164,8 @@ Cloud Monitoring: Rendimiento de servidores
 ---
 
 ### Video Explicacion 
-https://youtu.be/VocYuBjjObc
 
+{{< video https://www.youtube.com/embed/VocYuBjjObc >}}
 -------
 Author: Paul Cadena 
 -

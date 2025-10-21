@@ -40,6 +40,7 @@ Todo se realizo en google collab importante los modelos de codigo libre y entren
 ## Video Expliacacion
 https://youtu.be/6ZOUiqbFNPA
 
+{{< video https://www.youtube.com/embed/6ZOUiqbFNPA >}}
 ### Author
 
     Paul Cadena

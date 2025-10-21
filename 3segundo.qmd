@@ -29,6 +29,7 @@ format:
 ## Video Expliacacion
 https://youtu.be/uV3rH2HJs0Q
 
+{{< video https://www.youtube.com/embed/uV3rH2HJs0Q >}}
 ### Author
 
     Paul Cadena

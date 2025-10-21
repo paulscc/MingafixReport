@@ -25,6 +25,7 @@ Descripciones, Mapa, etc. Es muy adaptable y se lo puede mejorar poder diferente
 ## Video Expliacacion
 https://youtu.be/wYobrL0fP6k
 
+{{< video https://www.youtube.com/embed/wYobrL0fP6k >}}
 
 ### Author
 

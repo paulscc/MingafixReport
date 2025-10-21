@@ -41,6 +41,8 @@ website:
             text: Reto 3 – Gamificación Aplicada Sistema de Puntos y Badges
           - href: 3cuarto.qmd
             text: Reto Creativo – “Future of Fixing” 
+          - href: 3extras.qmd
+            text: Bonus Avanzado
           
 
 format:

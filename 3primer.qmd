@@ -27,6 +27,7 @@ format:
 ## Video Expliacacion
 https://youtu.be/6cWt80tMquo
 
+{{< video https://www.youtube.com/embed/6cWt80tMquo >}}
 ### Author
 
     Paul Cadena

@@ -98,8 +98,8 @@ https://github.com/paulscc/RenderPi
 \n
 
 #### Video Explicacion
-https://youtu.be/czEOuxzFUsY
-\n
 
+\n
+{{< video https://www.youtube.com/embed/czEOuxzFUsY >}}
 Author:
 Cadena Paul

@@ -21,7 +21,7 @@ Video Compartido por el canal de watsapp
 
 ## Video Explicativo
 https://youtu.be/7qWxTZJ96LM
-
+{{< video https://www.youtube.com/embed/7qWxTZJ96LM >}}
 
 ### Author
 
