@@ -43,8 +43,10 @@ website:
             text: Reto Creativo – “Future of Fixing” 
           - href: 3extras.qmd
             text: Bonus Avanzado
-          
-
+      - text: "Reporte"
+        menu:  
+          - href: resumen.qmd
+            text: Resumen MingaFix
 format:
   html:
     theme: cosmo

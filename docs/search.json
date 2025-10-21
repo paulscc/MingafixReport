@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "reporte.html",
+    "href": "reporte.html",
+    "title": "Reporte General",
+    "section": "",
+    "text": "Hola Presento aqui mi CV Haz click Aqui"
+  },
+  {
+    "objectID": "reporte.html#cv",
+    "href": "reporte.html#cv",
+    "title": "Reporte General",
+    "section": "",
+    "text": "Hola Presento aqui mi CV Haz click Aqui"
+  },
+  {
+    "objectID": "reporte.html#retos",
+    "href": "reporte.html#retos",
+    "title": "Reporte General",
+    "section": "Retos",
+    "text": "Retos\n\n“Semana 1”\n         Primer Reporte \nHaz click Aqui\nEste Reto fue de hacer un MVP que muestre la aplicacion, lo que se hizo fue hacerlo con FlutterFlow herramienta multiplataforma con su debida preview de la app\n         Reto 0-Arquitectura \nHaz click Aqui\nComo su nombre lo indica, la arquitectura tecnica propuesta de esta aplicacion: backend, front end conexiones, tecnologias etc\n         Reto 1-API Ciudadana Básica \nHaz click Aqui\nSe genero una api en Python y se cargo en render.com, lo que permite aun su uso de esta api para cargar datos directamente con la BDD,\n         Reto 2 – Mapa Vivo Inicial \nHaz click Aqui\nSe realizo la conexion del mapa con los reportes, asi pues simplemente se hizo una conexion con API (GET reportes) y se muestran puntos en mapa\n         Reto 3 – Creativo-Comunitario  \nHaz click Aqui\nVideo creativo ejemplo que para promocionar esta app, se realizo un video que es amable al publico\n\n\n“Semana 2”\n         Reto 1 Supabase Connection & Data Handling Reporte \nHaz click Aqui\nSe realizo una conexion entre Supabase con la Api y enviaron reportes para probar funcionalidad, muestra de reportes.\n         Reto 2 – LiveMap API Integration Reporte \nHaz click Aqui\nLa api se desarrollo en JAVA Spring Boot, con java v17, y se subio a render. Mapa interactivo conectado con la API para reportes\n         Reto 3 – Live Updates Simulation (Polling) Reporte \nHaz click Aqui\nSe uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro una actualizacion del mapa automatica.\n         Creativo-Comunitario Visualización Inteligente Reporte \nHaz click Aqui\nPara reportes profesionales se uso Tableau, un software para analitica de datos, en esta caso enfocado en los reportes donde podemos ver Categorias, Descripciones, Mapa, etc\n         Bonus\nHaz click Aqui\nIntegrar IA para clasificación automática de imágenes o textos (por ejemplo, categorizar tipo de incidencia a partir de una foto o descripción).\n\n\n“Semana 3”\n         Reto 1 – Smart Report Submission Flow\nHaz click Aqui\nFront End conectado con backend funcional React JS front end formulario conectado con API Java js y Modelos de IA para sugerencias funcional —\n         Reto 2– LiveMap Intelligence Layer\nHaz click Aqui\nEntrega: Mapas interactivos, conectados a BDD por api, funcionales -El mapa tiene caracteristicas por se detalla cuando hay varios repartos reportas en el mismo sitio, se crea una vista.\n         Reto 3 – Gamificación Aplicada Sistema de Puntos y Badges\nHaz click Aqui\nSistema de Logros, y puntos se obtendran puntos por hacer fierentes cosas como reportar diferentes categorias, reportar variado, puntos por haber recibido una validacion por haberse resulto, etc y el sistema de logros\n         Reto Creativo – “Future of Fixing”\nHaz click Aqui\nGeneracion de Modelo De ML(Machine Learning) Para prediccion de reportes, basados en reporte de 100 dias\n         Bonus Avanzado\nHaz click Aqui\nDesarrollar un “AI Helper (o agente)” o bot ciudadano que interprete un mensaje o imagen y lo convierta en un reporte preformateado"
+  },
+  {
+    "objectID": "reporte.html#ensayo",
+    "href": "reporte.html#ensayo",
+    "title": "Reporte General",
+    "section": "## Ensayo",
+    "text": "## Ensayo\n   *Hola, mi nombre es Paul Cadena.\nEn estas últimas semanas he participado en el evento Mingafix, donde además de los retos en los que tomé parte, estuve revisando muchas otras aplicaciones similares: cómo se pueden trabajar, qué se puede implementar y cómo podría ayudar.\nEstos servicios, que ya se han implementado exitosamente en otros lugares, me hicieron dar cuenta del impacto real que pueden tener. Esta es una herramienta para la ciudad, y las personas pueden beneficiarse mucho de ella, especialmente en un mundo donde la tecnología está cada vez más presente. Más aún en una capital como Quito, que tiene tanto la necesidad como el potencial para contar con una herramienta que genere un verdadero cambio social y sirva a su gente.\nCon mis conocimientos en Inteligencia Artificial y Machine Learning, puedo ayudar a crear herramientas para este servicio: volverlo más preciso, servicial, capaz e inteligente. También puedo contribuir generando información valiosa que aumente su utilidad y valor, así como supervisar su desarrollo para asegurar que este servicio tenga una vida útil y duradera.\nMe encantaría formar parte del equipo. Apoyar en un proyecto de este impacto sería increíble. Siempre estoy dispuesto a colaborar, no solo en el ámbito profesional, sino también en lo deportivo, social, etc. Siempre con buena disposición y compromiso.\n¡Cuenten conmigo!\n\nVideo personal"
+  },
+  {
     "objectID": "tercer.html",
     "href": "tercer.html",
     "title": "Reto 1: Ciudadana Basica",
@@ -14,25 +42,18 @@
     "text": "Documentacion\nApi implementeda a traves de: Backend: Render.com BBD y Storage: Firebase Consultas: Graphql\nQué hace esta API? Permite que ciudadanos reporten problemas en su ciudad (baches, basura, luminarias rotas, etc.) usando su celular. Los funcionarios pueden ver estos reportes y darles tratamiento.\n¿Cómo usar la API? Producción: https://renderpi.onrender.com/ (En caso de inactividad la API se demorara en encenderse alrededor de 45s)\nSe puede usar Postman en este caso se usará Gitbash(simplemente usare los comandos y la comunicacion se realizará)\n\n\n\nApp\n\n\nPROBAR LA API (Paso a Paso) Paso 1: Verificar que funcione bash curl https://renderpi.onrender.com\n        Respuesta : {\"status\": \"online\", ...}\nCrear un Reporte Para qué sirve: Un ciudadano reporta un problema (bache, basura, etc.) Endpoint: POST /reportes Qué necesitas enviar:\ncategoria: Tipo de problema (bache, basura, luminaria, acera_rota) lat: Latitud (ubicación en el mapa) lng: Longitud (ubicación en el mapa) descripcion: Qué está pasando usuario_id: Quién está reportando foto: Imagen del problema (opcional)\nEjemplo con foto desde tu celular: bash# Subir una foto\ncurl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Bache muy grande en la avenida”\n-F “usuario_id=juan123”\n-F “foto=@/ruta/a/foto.jpg”\nEjemplo usado de codigo en video: curl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Prueba test endpoint”\n-F “usuario_id=USER-ABC-001”\n-F “foto=@C:/Users/OneDrive/Escritorio/foto.jpg”\nLímite de Reportes Regla: Solo puedes hacer 30 reportes por minuto ¿Por qué? Para evitar spam y abusos\nNo Duplicados\nRegla: No puedes reportar el mismo problema 2 veces en\nGRAPHQL (Consultas Avanzadas) Para qué sirve: Hacer consultas más complejas de forma más eficiente Endpoint: POST\nSOBRE LAS FOTOS Se guardan en Firebase Storage y esta direccion luego en la base de Datos con todos los registros de reportes\n\nGithub\nhttps://github.com/paulscc/RenderPi\n\nVideo Explicacion\n  ]{.quarto-shortcode__ data-is-shortcode=“1” data-raw=“{{&lt; video https://www.youtube.com/embed/czEOuxzFUsY &gt;}}”} Author: Cadena Paul"
   },
   {
-    "objectID": "reporte.html",
-    "href": "reporte.html",
-    "title": "Reporte General",
+    "objectID": "quinto.html",
+    "href": "quinto.html",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
     "section": "",
-    "text": "Hola Presento aqui mi CV Haz click Aqui"
+    "text": "App\nVideo Compartido por el canal de watsapp"
   },
   {
-    "objectID": "reporte.html#ensayo",
-    "href": "reporte.html#ensayo",
-    "title": "Reporte General",
-    "section": "## Ensayo",
-    "text": "## Ensayo\n   ** Hola mi Nombre es Paul Cadena, estas ultimas semanas he participado de este\n   evento Mingafix, donde ademas de los retos de los cuales participe, estuve revisando muchas otras aplicaciones de esta misma indole, como se puede trabajar, que se puede implementar, como podría ayudar, estos servicios que se han logrado implementar exitosamente en otras partes, me di cuenta de que en realidad puede generar un impacto, esto es una herramienta para la urbe, y las personas pueden usarlo en este mundo donde la tecnología cada vez esta mas presente, y mas para una capital como lo es Quito, con esa necesidad, y el potencial para tener una herramienta que pueda generar un cambio social, y servir a la gente. Con mis conocimientos en IA, Machine Learning crearía herramientas para este servicio, la podríamos volver mas precisa, mas servicial, mas capaz, mas inteligente; generar información valiosa que pueda aumentar su valor, supervisar esta seria fundamental para asegurar que este servicio tenga una útil y larga  vida.\n    Me encantaría formar parte del equipo; apoyar en un equipo de este\n    impacto seria genial, siempre estoy dispuesto a colaborar en \n    cualquier campo además del profesional, deportivo, etc. Siempre \n    con buena disposición y sepan que cuentan conmigo**\n\nVideo personal"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Primer reporte Mingafix",
-    "section": "",
-    "text": "```{column width=“100%”}\n\n\n\nApp\n\n\n```\n#Link App (movil)\nhttps://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage\n##Video Explicacion\nhttps://www.youtube.com/watch?v=zngtVqOHEoU \nAuthor: Cadena Paul"
+    "objectID": "quinto.html#video-explicativo",
+    "href": "quinto.html#video-explicativo",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/7qWxTZJ96LM \n\nAuthor\nPaul Cadena"
   },
   {
     "objectID": "3tercero.html",
@@ -217,20 +238,6 @@
     "text": "Video Explicativo\nhttps://youtu.be/e2oQPsmCcAs\n\n\nAuthor\nPaul Cadena"
   },
   {
-    "objectID": "quinto.html",
-    "href": "quinto.html",
-    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
-    "section": "",
-    "text": "App\nVideo Compartido por el canal de watsapp"
-  },
-  {
-    "objectID": "quinto.html#video-explicativo",
-    "href": "quinto.html#video-explicativo",
-    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
-    "section": "Video Explicativo",
-    "text": "Video Explicativo\nhttps://youtu.be/7qWxTZJ96LM \n\nAuthor\nPaul Cadena"
-  },
-  {
     "objectID": "segundo.html#documento-explicativo",
     "href": "segundo.html#documento-explicativo",
     "title": "Reto 0 Mingafix",
@@ -243,19 +250,5 @@
     "title": "Reto 0 Mingafix",
     "section": "Author: Paul Cadena",
     "text": "Author: Paul Cadena\nGithub: https://github.com/paulscc"
-  },
-  {
-    "objectID": "reporte.html#retos",
-    "href": "reporte.html#retos",
-    "title": "Reporte General",
-    "section": "Retos",
-    "text": "Retos\n\n“Semana 1”\n         Primer Reporte \nHaz click Aqui\nEste Reto fue de hacer un MVP que muestre la aplicacion, lo que se hizo fue hacerlo con FlutterFlow herramienta multiplataforma con su debida preview de la app\n         Reto 0-Arquitectura \nHaz click Aqui\nComo su nombre lo indica, la arquitectura tecnica propuesta de esta aplicacion: backend, front end conexiones, tecnologias etc\n         Reto 1-API Ciudadana Básica \nHaz click Aqui\nSe genero una api en Python y se cargo en render.com, lo que permite aun su uso de esta api para cargar datos directamente con la BDD,\n         Reto 2 – Mapa Vivo Inicial \nHaz click Aqui\nSe realizo la conexion del mapa con los reportes, asi pues simplemente se hizo una conexion con API (GET reportes) y se muestran puntos en mapa\n         Reto 3 – Creativo-Comunitario  \nHaz click Aqui\nVideo creativo ejemplo que para promocionar esta app, se realizo un video que es amable al publico\n\n\n“Semana 2”\n         Reto 1 Supabase Connection & Data Handling Reporte \nHaz click Aqui\nSe realizo una conexion entre Supabase con la Api y enviaron reportes para probar funcionalidad, muestra de reportes.\n         Reto 2 – LiveMap API Integration Reporte \nHaz click Aqui\nLa api se desarrollo en JAVA Spring Boot, con java v17, y se subio a render. Mapa interactivo conectado con la API para reportes\n         Reto 3 – Live Updates Simulation (Polling) Reporte \nHaz click Aqui\nSe uso un servicio de Polling integrado con python donde por medio de Streamlit se desplego la aplicacion y se logro una actualizacion del mapa automatica.\n         Creativo-Comunitario Visualización Inteligente Reporte \nHaz click Aqui\nPara reportes profesionales se uso Tableau, un software para analitica de datos, en esta caso enfocado en los reportes donde podemos ver Categorias, Descripciones, Mapa, etc\n         Bonus\nHaz click Aqui\nIntegrar IA para clasificación automática de imágenes o textos (por ejemplo, categorizar tipo de incidencia a partir de una foto o descripción).\n\n\n“Semana 3”\n         Reto 1 – Smart Report Submission Flow\nHaz click Aqui\nFront End conectado con backend funcional React JS front end formulario conectado con API Java js y Modelos de IA para sugerencias funcional —\n         Reto 2– LiveMap Intelligence Layer\nHaz click Aqui\nEntrega: Mapas interactivos, conectados a BDD por api, funcionales -El mapa tiene caracteristicas por se detalla cuando hay varios repartos reportas en el mismo sitio, se crea una vista.\n         Reto 3 – Gamificación Aplicada Sistema de Puntos y Badges\nHaz click Aqui\nSistema de Logros, y puntos se obtendran puntos por hacer fierentes cosas como reportar diferentes categorias, reportar variado, puntos por haber recibido una validacion por haberse resulto, etc y el sistema de logros\n         Reto Creativo – “Future of Fixing”\nHaz click Aqui\nGeneracion de Modelo De ML(Machine Learning) Para prediccion de reportes, basados en reporte de 100 dias\n         Bonus Avanzado\nHaz click Aqui\nDesarrollar un “AI Helper (o agente)” o bot ciudadano que interprete un mensaje o imagen y lo convierta en un reporte preformateado"
-  },
-  {
-    "objectID": "reporte.html#cv",
-    "href": "reporte.html#cv",
-    "title": "Reporte General",
-    "section": "",
-    "text": "Hola Presento aqui mi CV Haz click Aqui"
   }
 ]
