@@ -45,7 +45,7 @@ website:
             text: Bonus Avanzado
       - text: "Reporte"
         menu:  
-          - href: resumen.qmd
+          - href: reporte.qmd
             text: Resumen MingaFix
 format:
   html:
