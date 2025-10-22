@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "tercer.html",
+    "href": "tercer.html",
+    "title": "Reto 1: Ciudadana Basica",
+    "section": "",
+    "text": "MINGAFIX API v1.0 - REST + GraphQL"
+  },
+  {
+    "objectID": "tercer.html#documentacion",
+    "href": "tercer.html#documentacion",
+    "title": "Reto 1: Ciudadana Basica",
+    "section": "Documentacion",
+    "text": "Documentacion\nApi implementeda a traves de: Backend: Render.com BBD y Storage: Firebase Consultas: Graphql\nQué hace esta API? Permite que ciudadanos reporten problemas en su ciudad (baches, basura, luminarias rotas, etc.) usando su celular. Los funcionarios pueden ver estos reportes y darles tratamiento.\n¿Cómo usar la API? Producción: https://renderpi.onrender.com/ (En caso de inactividad la API se demorara en encenderse alrededor de 45s)\nSe puede usar Postman en este caso se usará Gitbash(simplemente usare los comandos y la comunicacion se realizará)\n\n\n\nApp\n\n\nPROBAR LA API (Paso a Paso) Paso 1: Verificar que funcione bash curl https://renderpi.onrender.com\n        Respuesta : {\"status\": \"online\", ...}\nCrear un Reporte Para qué sirve: Un ciudadano reporta un problema (bache, basura, etc.) Endpoint: POST /reportes Qué necesitas enviar:\ncategoria: Tipo de problema (bache, basura, luminaria, acera_rota) lat: Latitud (ubicación en el mapa) lng: Longitud (ubicación en el mapa) descripcion: Qué está pasando usuario_id: Quién está reportando foto: Imagen del problema (opcional)\nEjemplo con foto desde tu celular: bash# Subir una foto\ncurl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Bache muy grande en la avenida”\n-F “usuario_id=juan123”\n-F “foto=@/ruta/a/foto.jpg”\nEjemplo usado de codigo en video: curl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Prueba test endpoint”\n-F “usuario_id=USER-ABC-001”\n-F “foto=@C:/Users/OneDrive/Escritorio/foto.jpg”\nLímite de Reportes Regla: Solo puedes hacer 30 reportes por minuto ¿Por qué? Para evitar spam y abusos\nNo Duplicados\nRegla: No puedes reportar el mismo problema 2 veces en\nGRAPHQL (Consultas Avanzadas) Para qué sirve: Hacer consultas más complejas de forma más eficiente Endpoint: POST\nSOBRE LAS FOTOS Se guardan en Firebase Storage y esta direccion luego en la base de Datos con todos los registros de reportes\n\nGithub\nhttps://github.com/paulscc/RenderPi\n\nVideo Explicacion\n  ]{.quarto-shortcode__ data-is-shortcode=“1” data-raw=“{{&lt; video https://www.youtube.com/embed/czEOuxzFUsY &gt;}}”} Author: Cadena Paul"
+  },
+  {
     "objectID": "reporte.html",
     "href": "reporte.html",
     "title": "Reporte General",
@@ -28,32 +42,11 @@
     "text": "## Ensayo\n   *Hola, mi nombre es Paul Cadena.\nEn estas últimas semanas he participado en el evento Mingafix, donde además de los retos en los que tomé parte, estuve revisando muchas otras aplicaciones similares: cómo se pueden trabajar, qué se puede implementar y cómo podría ayudar.\nEstos servicios, que ya se han implementado exitosamente en otros lugares, me hicieron dar cuenta del impacto real que pueden tener. Esta es una herramienta para la ciudad, y las personas pueden beneficiarse mucho de ella, especialmente en un mundo donde la tecnología está cada vez más presente. Más aún en una capital como Quito, que tiene tanto la necesidad como el potencial para contar con una herramienta que genere un verdadero cambio social y sirva a su gente.\nCon mis conocimientos en Inteligencia Artificial y Machine Learning, puedo ayudar a crear herramientas para este servicio: volverlo más preciso, servicial, capaz e inteligente. También puedo contribuir generando información valiosa que aumente su utilidad y valor, así como supervisar su desarrollo para asegurar que este servicio tenga una vida útil y duradera.\nMe encantaría formar parte del equipo. Apoyar en un proyecto de este impacto sería increíble. Siempre estoy dispuesto a colaborar, no solo en el ámbito profesional, sino también en lo deportivo, social, etc. Siempre con buena disposición y compromiso.\n¡Cuenten conmigo!\n\nVideo personal"
   },
   {
-    "objectID": "tercer.html",
-    "href": "tercer.html",
-    "title": "Reto 1: Ciudadana Basica",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Primer reporte Mingafix",
     "section": "",
-    "text": "MINGAFIX API v1.0 - REST + GraphQL"
-  },
-  {
-    "objectID": "tercer.html#documentacion",
-    "href": "tercer.html#documentacion",
-    "title": "Reto 1: Ciudadana Basica",
-    "section": "Documentacion",
-    "text": "Documentacion\nApi implementeda a traves de: Backend: Render.com BBD y Storage: Firebase Consultas: Graphql\nQué hace esta API? Permite que ciudadanos reporten problemas en su ciudad (baches, basura, luminarias rotas, etc.) usando su celular. Los funcionarios pueden ver estos reportes y darles tratamiento.\n¿Cómo usar la API? Producción: https://renderpi.onrender.com/ (En caso de inactividad la API se demorara en encenderse alrededor de 45s)\nSe puede usar Postman en este caso se usará Gitbash(simplemente usare los comandos y la comunicacion se realizará)\n\n\n\nApp\n\n\nPROBAR LA API (Paso a Paso) Paso 1: Verificar que funcione bash curl https://renderpi.onrender.com\n        Respuesta : {\"status\": \"online\", ...}\nCrear un Reporte Para qué sirve: Un ciudadano reporta un problema (bache, basura, etc.) Endpoint: POST /reportes Qué necesitas enviar:\ncategoria: Tipo de problema (bache, basura, luminaria, acera_rota) lat: Latitud (ubicación en el mapa) lng: Longitud (ubicación en el mapa) descripcion: Qué está pasando usuario_id: Quién está reportando foto: Imagen del problema (opcional)\nEjemplo con foto desde tu celular: bash# Subir una foto\ncurl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Bache muy grande en la avenida”\n-F “usuario_id=juan123”\n-F “foto=@/ruta/a/foto.jpg”\nEjemplo usado de codigo en video: curl -X POST https://renderpi.onrender.com/reportes\n-F “categoria=bache”\n-F “lat=-0.8131”\n-F “lng=-77.7172”\n-F “descripcion=Prueba test endpoint”\n-F “usuario_id=USER-ABC-001”\n-F “foto=@C:/Users/OneDrive/Escritorio/foto.jpg”\nLímite de Reportes Regla: Solo puedes hacer 30 reportes por minuto ¿Por qué? Para evitar spam y abusos\nNo Duplicados\nRegla: No puedes reportar el mismo problema 2 veces en\nGRAPHQL (Consultas Avanzadas) Para qué sirve: Hacer consultas más complejas de forma más eficiente Endpoint: POST\nSOBRE LAS FOTOS Se guardan en Firebase Storage y esta direccion luego en la base de Datos con todos los registros de reportes\n\nGithub\nhttps://github.com/paulscc/RenderPi\n\nVideo Explicacion\n  ]{.quarto-shortcode__ data-is-shortcode=“1” data-raw=“{{&lt; video https://www.youtube.com/embed/czEOuxzFUsY &gt;}}”} Author: Cadena Paul"
-  },
-  {
-    "objectID": "quinto.html",
-    "href": "quinto.html",
-    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
-    "section": "",
-    "text": "App\nVideo Compartido por el canal de watsapp"
-  },
-  {
-    "objectID": "quinto.html#video-explicativo",
-    "href": "quinto.html#video-explicativo",
-    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
-    "section": "Video Explicativo",
-    "text": "Video Explicativo\nhttps://youtu.be/7qWxTZJ96LM \n\nAuthor\nPaul Cadena"
+    "text": "```{column width=“100%”}\n\n\n\nApp\n\n\n```\n#Link App (movil)\nhttps://app.flutterflow.io/share/mingaf-fhn2o9?page=HomePage\n##Video Explicacion\nhttps://www.youtube.com/watch?v=zngtVqOHEoU \nAuthor: Cadena Paul"
   },
   {
     "objectID": "3tercero.html",
@@ -236,6 +229,20 @@
     "title": "Reto 2 – Mapa Vivo Inicial",
     "section": "Video Explicativo",
     "text": "Video Explicativo\nhttps://youtu.be/e2oQPsmCcAs\n\n\nAuthor\nPaul Cadena"
+  },
+  {
+    "objectID": "quinto.html",
+    "href": "quinto.html",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
+    "section": "",
+    "text": "App\nVideo Compartido por el canal de watsapp"
+  },
+  {
+    "objectID": "quinto.html#video-explicativo",
+    "href": "quinto.html#video-explicativo",
+    "title": "Reto 3 Creativo-Comunitario “Yo soy Minguero”",
+    "section": "Video Explicativo",
+    "text": "Video Explicativo\nhttps://youtu.be/7qWxTZJ96LM \n\nAuthor\nPaul Cadena"
   },
   {
     "objectID": "segundo.html#documento-explicativo",

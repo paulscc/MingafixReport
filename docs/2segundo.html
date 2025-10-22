@@ -3878,10 +3878,7 @@ vertical-align: -.125em;
 var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseElement,dataMain,src,interactiveScript,currentlyAddingScript,mainScript,subPath,version="2.3.6",commentRegExp=/\/\*[\s\S]*?\*\/|([^:"'=]|^)\/\/.*$/gm,cjsRequireRegExp=/[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g,jsSuffixRegExp=/\.js$/,currDirRegExp=/^\.\//,op=Object.prototype,ostring=op.toString,hasOwn=op.hasOwnProperty,isBrowser=!("undefined"==typeof window||"undefined"==typeof navigator||!window.document),isWebWorker=!isBrowser&&"undefined"!=typeof importScripts,readyRegExp=isBrowser&&"PLAYSTATION 3"===navigator.platform?/^complete$/:/^(complete|loaded)$/,defContextName="_",isOpera="undefined"!=typeof opera&&"[object Opera]"===opera.toString(),contexts={},cfg={},globalDefQueue=[],useInteractive=!1;function commentReplace(e,t){return t||""}function isFunction(e){return"[object Function]"===ostring.call(e)}function isArray(e){return"[object Array]"===ostring.call(e)}function each(e,t){var i;if(e)for(i=0;i<e.length&&(!e[i]||!t(e[i],i,e));i+=1);}function eachReverse(e,t){var i;if(e)for(i=e.length-1;i>-1&&(!e[i]||!t(e[i],i,e));i-=1);}function hasProp(e,t){return hasOwn.call(e,t)}function getOwn(e,t){return hasProp(e,t)&&e[t]}function eachProp(e,t){var i;for(i in e)if(hasProp(e,i)&&t(e[i],i))break}function mixin(e,t,i,r){return t&&eachProp(t,(function(t,n){!i&&hasProp(e,n)||(!r||"object"!=typeof t||!t||isArray(t)||isFunction(t)||t instanceof RegExp?e[n]=t:(e[n]||(e[n]={}),mixin(e[n],t,i,r)))})),e}function bind(e,t){return function(){return t.apply(e,arguments)}}function scripts(){return document.getElementsByTagName("script")}function defaultOnError(e){throw e}function getGlobal(e){if(!e)return e;var t=global;return each(e.split("."),(function(e){t=t[e]})),t}function makeError(e,t,i,r){var n=new Error(t+"\nhttps://requirejs.org/docs/errors.html#"+e);return n.requireType=e,n.requireModules=r,i&&(n.originalError=i),n}if(void 0===define){if(void 0!==requirejs){if(isFunction(requirejs))return;cfg=requirejs,requirejs=void 0}void 0===require||isFunction(require)||(cfg=require,require=void 0),req=requirejs=function(e,t,i,r){var n,o,a=defContextName;return isArray(e)||"string"==typeof e||(o=e,isArray(t)?(e=t,t=i,i=r):e=[]),o&&o.context&&(a=o.context),(n=getOwn(contexts,a))||(n=contexts[a]=req.s.newContext(a)),o&&n.configure(o),n.require(e,t,i)},req.config=function(e){return req(e)},req.nextTick=void 0!==setTimeout?function(e){setTimeout(e,4)}:function(e){e()},require||(require=req),req.version=version,req.jsExtRegExp=/^\/|:|\?|\.js$/,req.isBrowser=isBrowser,s=req.s={contexts:contexts,newContext:newContext},req({}),each(["toUrl","undef","defined","specified"],(function(e){req[e]=function(){var t=contexts[defContextName];return t.require[e].apply(t,arguments)}})),isBrowser&&(head=s.head=document.getElementsByTagName("head")[0],baseElement=document.getElementsByTagName("base")[0],baseElement&&(head=s.head=baseElement.parentNode)),req.onError=defaultOnError,req.createNode=function(e,t,i){var r=e.xhtml?document.createElementNS("http://www.w3.org/1999/xhtml","html:script"):document.createElement("script");return r.type=e.scriptType||"text/javascript",r.charset="utf-8",r.async=!0,r},req.load=function(e,t,i){var r,n=e&&e.config||{};if(isBrowser)return(r=req.createNode(n,t,i)).setAttribute("data-requirecontext",e.contextName),r.setAttribute("data-requiremodule",t),!r.attachEvent||r.attachEvent.toString&&r.attachEvent.toString().indexOf("[native code")<0||isOpera?(r.addEventListener("load",e.onScriptLoad,!1),r.addEventListener("error",e.onScriptError,!1)):(useInteractive=!0,r.attachEvent("onreadystatechange",e.onScriptLoad)),r.src=i,n.onNodeCreated&&n.onNodeCreated(r,n,t,i),currentlyAddingScript=r,baseElement?head.insertBefore(r,baseElement):head.appendChild(r),currentlyAddingScript=null,r;if(isWebWorker)try{setTimeout((function(){}),0),importScripts(i),e.completeLoad(t)}catch(r){e.onError(makeError("importscripts","importScripts failed for "+t+" at "+i,r,[t]))}},isBrowser&&!cfg.skipDataMain&&eachReverse(scripts(),(function(e){if(head||(head=e.parentNode),dataMain=e.getAttribute("data-main"))return mainScript=dataMain,cfg.baseUrl||-1!==mainScript.indexOf("!")||(src=mainScript.split("/"),mainScript=src.pop(),subPath=src.length?src.join("/")+"/":"./",cfg.baseUrl=subPath),mainScript=mainScript.replace(jsSuffixRegExp,""),req.jsExtRegExp.test(mainScript)&&(mainScript=dataMain),cfg.deps=cfg.deps?cfg.deps.concat(mainScript):[mainScript],!0})),define=function(e,t,i){var r,n;"string"!=typeof e&&(i=t,t=e,e=null),isArray(t)||(i=t,t=null),!t&&isFunction(i)&&(t=[],i.length&&(i.toString().replace(commentRegExp,commentReplace).replace(cjsRequireRegExp,(function(e,i){t.push(i)})),t=(1===i.length?["require"]:["require","exports","module"]).concat(t))),useInteractive&&(r=currentlyAddingScript||getInteractiveScript())&&(e||(e=r.getAttribute("data-requiremodule")),n=contexts[r.getAttribute("data-requirecontext")]),n?(n.defQueue.push([e,t,i]),n.defQueueMap[e]=!0):globalDefQueue.push([e,t,i])},define.amd={jQuery:!0},req.exec=function(text){return eval(text)},req(cfg)}function newContext(e){var t,i,r,n,o,a={waitSeconds:7,baseUrl:"./",paths:{},bundles:{},pkgs:{},shim:{},config:{}},s={},u={},c={},d=[],p={},f={},l={},h=1,m=1;function g(e,t,i){var r,n,o,s,u,c,d,p,f,l,h=t&&t.split("/"),m=a.map,g=m&&m["*"];if(e&&(c=(e=e.split("/")).length-1,a.nodeIdCompat&&jsSuffixRegExp.test(e[c])&&(e[c]=e[c].replace(jsSuffixRegExp,"")),"."===e[0].charAt(0)&&h&&(e=h.slice(0,h.length-1).concat(e)),function(e){var t,i;for(t=0;t<e.length;t++)if("."===(i=e[t]))e.splice(t,1),t-=1;else if(".."===i){if(0===t||1===t&&".."===e[2]||".."===e[t-1])continue;t>0&&(e.splice(t-1,2),t-=2)}}(e),e=e.join("/")),i&&m&&(h||g)){e:for(o=(n=e.split("/")).length;o>0;o-=1){if(u=n.slice(0,o).join("/"),h)for(s=h.length;s>0;s-=1)if((r=getOwn(m,h.slice(0,s).join("/")))&&(r=getOwn(r,u))){d=r,p=o;break e}!f&&g&&getOwn(g,u)&&(f=getOwn(g,u),l=o)}!d&&f&&(d=f,p=l),d&&(n.splice(0,p,d),e=n.join("/"))}return getOwn(a.pkgs,e)||e}function v(e){isBrowser&&each(scripts(),(function(t){if(t.getAttribute("data-requiremodule")===e&&t.getAttribute("data-requirecontext")===r.contextName)return t.parentNode.removeChild(t),!0}))}function x(e){var t=getOwn(a.paths,e);if(t&&isArray(t)&&t.length>1)return t.shift(),r.require.undef(e),r.makeRequire(null,{skipMap:!0})([e]),!0}function b(e){var t,i=e?e.indexOf("!"):-1;return i>-1&&(t=e.substring(0,i),e=e.substring(i+1,e.length)),[t,e]}function q(e,t,i,n){var o,a,s,u,c=null,d=t?t.name:null,f=e,l=!0,v="";return e||(l=!1,e="_@r"+(h+=1)),c=(u=b(e))[0],e=u[1],c&&(c=g(c,d,n),a=getOwn(p,c)),e&&(c?v=i?e:a&&a.normalize?a.normalize(e,(function(e){return g(e,d,n)})):-1===e.indexOf("!")?g(e,d,n):e:(c=(u=b(v=g(e,d,n)))[0],v=u[1],i=!0,o=r.nameToUrl(v))),{prefix:c,name:v,parentMap:t,unnormalized:!!(s=!c||a||i?"":"_unnormalized"+(m+=1)),url:o,originalName:f,isDefine:l,id:(c?c+"!"+v:v)+s}}function E(e){var t=e.id,i=getOwn(s,t);return i||(i=s[t]=new r.Module(e)),i}function w(e,t,i){var r=e.id,n=getOwn(s,r);!hasProp(p,r)||n&&!n.defineEmitComplete?(n=E(e)).error&&"error"===t?i(n.error):n.on(t,i):"defined"===t&&i(p[r])}function y(e,t){var i=e.requireModules,r=!1;t?t(e):(each(i,(function(t){var i=getOwn(s,t);i&&(i.error=e,i.events.error&&(r=!0,i.emit("error",e)))})),r||req.onError(e))}function S(){globalDefQueue.length&&(each(globalDefQueue,(function(e){var t=e[0];"string"==typeof t&&(r.defQueueMap[t]=!0),d.push(e)})),globalDefQueue=[])}function k(e){delete s[e],delete u[e]}function M(e,t,i){var r=e.map.id;e.error?e.emit("error",e.error):(t[r]=!0,each(e.depMaps,(function(r,n){var o=r.id,a=getOwn(s,o);!a||e.depMatched[n]||i[o]||(getOwn(t,o)?(e.defineDep(n,p[o]),e.check()):M(a,t,i))})),i[r]=!0)}function O(){var e,i,n=1e3*a.waitSeconds,s=n&&r.startTime+n<(new Date).getTime(),c=[],d=[],p=!1,f=!0;if(!t){if(t=!0,eachProp(u,(function(e){var t=e.map,r=t.id;if(e.enabled&&(t.isDefine||d.push(e),!e.error))if(!e.inited&&s)x(r)?(i=!0,p=!0):(c.push(r),v(r));else if(!e.inited&&e.fetched&&t.isDefine&&(p=!0,!t.prefix))return f=!1})),s&&c.length)return(e=makeError("timeout","Load timeout for modules: "+c,null,c)).contextName=r.contextName,y(e);f&&each(d,(function(e){M(e,{},{})})),s&&!i||!p||!isBrowser&&!isWebWorker||o||(o=setTimeout((function(){o=0,O()}),50)),t=!1}}function j(e){hasProp(p,e[0])||E(q(e[0],null,!0)).init(e[1],e[2])}function P(e,t,i,r){e.detachEvent&&!isOpera?r&&e.detachEvent(r,t):e.removeEventListener(i,t,!1)}function R(e){var t=e.currentTarget||e.srcElement;return P(t,r.onScriptLoad,"load","onreadystatechange"),P(t,r.onScriptError,"error"),{node:t,id:t&&t.getAttribute("data-requiremodule")}}function T(){var e;for(S();d.length;){if(null===(e=d.shift())[0])return y(makeError("mismatch","Mismatched anonymous define() module: "+e[e.length-1]));j(e)}r.defQueueMap={}}return n={require:function(e){return e.require?e.require:e.require=r.makeRequire(e.map)},exports:function(e){if(e.usingExports=!0,e.map.isDefine)return e.exports?p[e.map.id]=e.exports:e.exports=p[e.map.id]={}},module:function(e){return e.module?e.module:e.module={id:e.map.id,uri:e.map.url,config:function(){return getOwn(a.config,e.map.id)||{}},exports:e.exports||(e.exports={})}}},(i=function(e){this.events=getOwn(c,e.id)||{},this.map=e,this.shim=getOwn(a.shim,e.id),this.depExports=[],this.depMaps=[],this.depMatched=[],this.pluginMaps={},this.depCount=0}).prototype={init:function(e,t,i,r){r=r||{},this.inited||(this.factory=t,i?this.on("error",i):this.events.error&&(i=bind(this,(function(e){this.emit("error",e)}))),this.depMaps=e&&e.slice(0),this.errback=i,this.inited=!0,this.ignore=r.ignore,r.enabled||this.enabled?this.enable():this.check())},defineDep:function(e,t){this.depMatched[e]||(this.depMatched[e]=!0,this.depCount-=1,this.depExports[e]=t)},fetch:function(){if(!this.fetched){this.fetched=!0,r.startTime=(new Date).getTime();var e=this.map;if(!this.shim)return e.prefix?this.callPlugin():this.load();r.makeRequire(this.map,{enableBuildCallback:!0})(this.shim.deps||[],bind(this,(function(){return e.prefix?this.callPlugin():this.load()})))}},load:function(){var e=this.map.url;f[e]||(f[e]=!0,r.load(this.map.id,e))},check:function(){if(this.enabled&&!this.enabling){var e,t,i=this.map.id,n=this.depExports,o=this.exports,a=this.factory;if(this.inited){if(this.error)this.emit("error",this.error);else if(!this.defining){if(this.defining=!0,this.depCount<1&&!this.defined){if(isFunction(a)){if(this.events.error&&this.map.isDefine||req.onError!==defaultOnError)try{o=r.execCb(i,a,n,o)}catch(t){e=t}else o=r.execCb(i,a,n,o);if(this.map.isDefine&&void 0===o&&((t=this.module)?o=t.exports:this.usingExports&&(o=this.exports)),e)return e.requireMap=this.map,e.requireModules=this.map.isDefine?[this.map.id]:null,e.requireType=this.map.isDefine?"define":"require",y(this.error=e)}else o=a;if(this.exports=o,this.map.isDefine&&!this.ignore&&(p[i]=o,req.onResourceLoad)){var s=[];each(this.depMaps,(function(e){s.push(e.normalizedMap||e)})),req.onResourceLoad(r,this.map,s)}k(i),this.defined=!0}this.defining=!1,this.defined&&!this.defineEmitted&&(this.defineEmitted=!0,this.emit("defined",this.exports),this.defineEmitComplete=!0)}}else hasProp(r.defQueueMap,i)||this.fetch()}},callPlugin:function(){var e=this.map,t=e.id,i=q(e.prefix);this.depMaps.push(i),w(i,"defined",bind(this,(function(i){var n,o,u,c=getOwn(l,this.map.id),d=this.map.name,p=this.map.parentMap?this.map.parentMap.name:null,f=r.makeRequire(e.parentMap,{enableBuildCallback:!0});return this.map.unnormalized?(i.normalize&&(d=i.normalize(d,(function(e){return g(e,p,!0)}))||""),w(o=q(e.prefix+"!"+d,this.map.parentMap,!0),"defined",bind(this,(function(e){this.map.normalizedMap=o,this.init([],(function(){return e}),null,{enabled:!0,ignore:!0})}))),void((u=getOwn(s,o.id))&&(this.depMaps.push(o),this.events.error&&u.on("error",bind(this,(function(e){this.emit("error",e)}))),u.enable()))):c?(this.map.url=r.nameToUrl(c),void this.load()):((n=bind(this,(function(e){this.init([],(function(){return e}),null,{enabled:!0})}))).error=bind(this,(function(e){this.inited=!0,this.error=e,e.requireModules=[t],eachProp(s,(function(e){0===e.map.id.indexOf(t+"_unnormalized")&&k(e.map.id)})),y(e)})),n.fromText=bind(this,(function(i,o){var s=e.name,u=q(s),c=useInteractive;o&&(i=o),c&&(useInteractive=!1),E(u),hasProp(a.config,t)&&(a.config[s]=a.config[t]);try{req.exec(i)}catch(e){return y(makeError("fromtexteval","fromText eval for "+t+" failed: "+e,e,[t]))}c&&(useInteractive=!0),this.depMaps.push(u),r.completeLoad(s),f([s],n)})),void i.load(e.name,f,n,a))}))),r.enable(i,this),this.pluginMaps[i.id]=i},enable:function(){u[this.map.id]=this,this.enabled=!0,this.enabling=!0,each(this.depMaps,bind(this,(function(e,t){var i,o,a;if("string"==typeof e){if(e=q(e,this.map.isDefine?this.map:this.map.parentMap,!1,!this.skipMap),this.depMaps[t]=e,a=getOwn(n,e.id))return void(this.depExports[t]=a(this));this.depCount+=1,w(e,"defined",bind(this,(function(e){this.undefed||(this.defineDep(t,e),this.check())}))),this.errback?w(e,"error",bind(this,this.errback)):this.events.error&&w(e,"error",bind(this,(function(e){this.emit("error",e)})))}i=e.id,o=s[i],hasProp(n,i)||!o||o.enabled||r.enable(e,this)}))),eachProp(this.pluginMaps,bind(this,(function(e){var t=getOwn(s,e.id);t&&!t.enabled&&r.enable(e,this)}))),this.enabling=!1,this.check()},on:function(e,t){var i=this.events[e];i||(i=this.events[e]=[]),i.push(t)},emit:function(e,t){each(this.events[e],(function(e){e(t)})),"error"===e&&delete this.events[e]}},r={config:a,contextName:e,registry:s,defined:p,urlFetched:f,defQueue:d,defQueueMap:{},Module:i,makeModuleMap:q,nextTick:req.nextTick,onError:y,configure:function(e){if(e.baseUrl&&"/"!==e.baseUrl.charAt(e.baseUrl.length-1)&&(e.baseUrl+="/"),"string"==typeof e.urlArgs){var t=e.urlArgs;e.urlArgs=function(e,i){return(-1===i.indexOf("?")?"?":"&")+t}}var i=a.shim,n={paths:!0,bundles:!0,config:!0,map:!0};eachProp(e,(function(e,t){n[t]?(a[t]||(a[t]={}),mixin(a[t],e,!0,!0)):a[t]=e})),e.bundles&&eachProp(e.bundles,(function(e,t){each(e,(function(e){e!==t&&(l[e]=t)}))})),e.shim&&(eachProp(e.shim,(function(e,t){isArray(e)&&(e={deps:e}),!e.exports&&!e.init||e.exportsFn||(e.exportsFn=r.makeShimExports(e)),i[t]=e})),a.shim=i),e.packages&&each(e.packages,(function(e){var t;t=(e="string"==typeof e?{name:e}:e).name,e.location&&(a.paths[t]=e.location),a.pkgs[t]=e.name+"/"+(e.main||"main").replace(currDirRegExp,"").replace(jsSuffixRegExp,"")})),eachProp(s,(function(e,t){e.inited||e.map.unnormalized||(e.map=q(t,null,!0))})),(e.deps||e.callback)&&r.require(e.deps||[],e.callback)},makeShimExports:function(e){return function(){var t;return e.init&&(t=e.init.apply(global,arguments)),t||e.exports&&getGlobal(e.exports)}},makeRequire:function(t,i){function o(a,u,c){var d,f;return i.enableBuildCallback&&u&&isFunction(u)&&(u.__requireJsBuild=!0),"string"==typeof a?isFunction(u)?y(makeError("requireargs","Invalid require call"),c):t&&hasProp(n,a)?n[a](s[t.id]):req.get?req.get(r,a,t,o):(d=q(a,t,!1,!0).id,hasProp(p,d)?p[d]:y(makeError("notloaded",'Module name "'+d+'" has not been loaded yet for context: '+e+(t?"":". Use require([])")))):(T(),r.nextTick((function(){T(),(f=E(q(null,t))).skipMap=i.skipMap,f.init(a,u,c,{enabled:!0}),O()})),o)}return i=i||{},mixin(o,{isBrowser:isBrowser,toUrl:function(e){var i,n=e.lastIndexOf("."),o=e.split("/")[0];return-1!==n&&(!("."===o||".."===o)||n>1)&&(i=e.substring(n,e.length),e=e.substring(0,n)),r.nameToUrl(g(e,t&&t.id,!0),i,!0)},defined:function(e){return hasProp(p,q(e,t,!1,!0).id)},specified:function(e){return e=q(e,t,!1,!0).id,hasProp(p,e)||hasProp(s,e)}}),t||(o.undef=function(e){S();var i=q(e,t,!0),n=getOwn(s,e);n.undefed=!0,v(e),delete p[e],delete f[i.url],delete c[e],eachReverse(d,(function(t,i){t[0]===e&&d.splice(i,1)})),delete r.defQueueMap[e],n&&(n.events.defined&&(c[e]=n.events),k(e))}),o},enable:function(e){getOwn(s,e.id)&&E(e).enable()},completeLoad:function(e){var t,i,n,o=getOwn(a.shim,e)||{},u=o.exports;for(S();d.length;){if(null===(i=d.shift())[0]){if(i[0]=e,t)break;t=!0}else i[0]===e&&(t=!0);j(i)}if(r.defQueueMap={},n=getOwn(s,e),!t&&!hasProp(p,e)&&n&&!n.inited){if(!(!a.enforceDefine||u&&getGlobal(u)))return x(e)?void 0:y(makeError("nodefine","No define call for "+e,null,[e]));j([e,o.deps||[],o.exportsFn])}O()},nameToUrl:function(e,t,i){var n,o,s,u,c,d,p=getOwn(a.pkgs,e);if(p&&(e=p),d=getOwn(l,e))return r.nameToUrl(d,t,i);if(req.jsExtRegExp.test(e))u=e+(t||"");else{for(n=a.paths,s=(o=e.split("/")).length;s>0;s-=1)if(c=getOwn(n,o.slice(0,s).join("/"))){isArray(c)&&(c=c[0]),o.splice(0,s,c);break}u=o.join("/"),u=("/"===(u+=t||(/^data\:|^blob\:|\?/.test(u)||i?"":".js")).charAt(0)||u.match(/^[\w\+\.\-]+:/)?"":a.baseUrl)+u}return a.urlArgs&&!/^blob\:/.test(u)?u+a.urlArgs(e,u):u},load:function(e,t){req.load(r,e,t)},execCb:function(e,t,i,r){return t.apply(r,i)},onScriptLoad:function(e){if("load"===e.type||readyRegExp.test((e.currentTarget||e.srcElement).readyState)){interactiveScript=null;var t=R(e);r.completeLoad(t.id)}},onScriptError:function(e){var t=R(e);if(!x(t.id)){var i=[];return eachProp(s,(function(e,r){0!==r.indexOf("_@r")&&each(e.depMaps,(function(e){if(e.id===t.id)return i.push(r),!0}))})),y(makeError("scripterror",'Script error for "'+t.id+(i.length?'", needed by: '+i.join(", "):'"'),e,[t.id]))}}},r.require=r.makeRequire(),r}function getInteractiveScript(){return interactiveScript&&"interactive"===interactiveScript.readyState||eachReverse(scripts(),(function(e){if("interactive"===e.readyState)return interactiveScript=e})),interactiveScript}})(this,"undefined"==typeof setTimeout?void 0:setTimeout);
 //# sourceMappingURL=/sm/c085107b3a83774f186e128717d411844a7b1fac09e57eb242821d615fcecdde.map</script>
 
-
-
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-
 
 
 </head>
@@ -4069,7 +4066,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <h2 class="anchored" data-anchor-id="mapa-de-reportes-desde-api">Mapa de reportes desde API</h2>
 <section id="mapa" class="level3">
 <h3 class="anchored" data-anchor-id="mapa">Mapa</h3>
-<div id="d94001b0" class="cell" data-execution_count="1">
+<div id="b26914a1" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -4162,7 +4159,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_84ca5ad1d63489fc75f06255e57c6e85 {
+                #map_88f74a5ea1708dba0d0cf91be18a4666 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -4205,14 +4202,14 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_84ca5ad1d63489fc75f06255e57c6e85&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_88f74a5ea1708dba0d0cf91be18a4666&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_84ca5ad1d63489fc75f06255e57c6e85 = L.map(
-                &quot;map_84ca5ad1d63489fc75f06255e57c6e85&quot;,
+            var map_88f74a5ea1708dba0d0cf91be18a4666 = L.map(
+                &quot;map_88f74a5ea1708dba0d0cf91be18a4666&quot;,
                 {
                     center: [-0.20016, -78.49418],
                     crs: L.CRS.EPSG3857,
@@ -4224,13 +4221,13 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 
                 }
             );
-            L.control.scale().addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            L.control.scale().addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
 
             
 
         
     
-            var tile_layer_ccbe60d1e0da79f81ab7fd1cd630ab0f = L.tileLayer(
+            var tile_layer_62c00e860393a373fa0521c4de69dc05 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -4247,23 +4244,23 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-            tile_layer_ccbe60d1e0da79f81ab7fd1cd630ab0f.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            tile_layer_62c00e860393a373fa0521c4de69dc05.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_9bce079449926bffd1ee91347fdb8af0 = L.featureGroup(
+            var feature_group_8369abc7604cc1963056578d6c2da00d = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_e6337ca0a295f133a83a1e9e49046781 = L.marker(
+            var marker_28f70726efd82076d7ce50c1d049341c = L.marker(
                 [0.330583, -78.216076],
                 {
 }
-            ).addTo(feature_group_9bce079449926bffd1ee91347fdb8af0);
+            ).addTo(feature_group_8369abc7604cc1963056578d6c2da00d);
         
     
-            var icon_67d771df512e64f49b2b316df009f69b = L.AwesomeMarkers.icon(
+            var icon_cfcab86b03113d3b6242013626e5f89d = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;red&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4274,34 +4271,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_9208225c4972475f20393f4d6a41e885 = L.popup({
+        var popup_e7ce4b0cb7724bd1f568545545e4532d = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_d1f404d64450c17f9d379ead5a1261e2 = $(`&lt;div id=&quot;html_d1f404d64450c17f9d379ead5a1261e2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Un bache en la calle principal&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/ddf23e44-b85e-4919-9081-6489e36de991.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_9208225c4972475f20393f4d6a41e885.setContent(html_d1f404d64450c17f9d379ead5a1261e2);
+                var html_0eb450ddc4eeefb2b15d5b4d657f2e79 = $(`&lt;div id=&quot;html_0eb450ddc4eeefb2b15d5b4d657f2e79&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Un bache en la calle principal&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/ddf23e44-b85e-4919-9081-6489e36de991.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_e7ce4b0cb7724bd1f568545545e4532d.setContent(html_0eb450ddc4eeefb2b15d5b4d657f2e79);
             
         
 
-        marker_e6337ca0a295f133a83a1e9e49046781.bindPopup(popup_9208225c4972475f20393f4d6a41e885)
+        marker_28f70726efd82076d7ce50c1d049341c.bindPopup(popup_e7ce4b0cb7724bd1f568545545e4532d)
         ;
 
         
     
     
-                marker_e6337ca0a295f133a83a1e9e49046781.setIcon(icon_67d771df512e64f49b2b316df009f69b);
+                marker_28f70726efd82076d7ce50c1d049341c.setIcon(icon_cfcab86b03113d3b6242013626e5f89d);
             
     
-            var marker_037e0d781466b2f0d559ba92cd3a4d37 = L.marker(
+            var marker_45c24f758d16929fe50c8b080dbacc81 = L.marker(
                 [-0.19399, -78.50632],
                 {
 }
-            ).addTo(feature_group_9bce079449926bffd1ee91347fdb8af0);
+            ).addTo(feature_group_8369abc7604cc1963056578d6c2da00d);
         
     
-            var icon_f522dab2e3e1889d11fcb63468fbf3c4 = L.AwesomeMarkers.icon(
+            var icon_a4392aaa97dacca810a33c67b4923fc2 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;red&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4312,34 +4309,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_b217aeb68ba54b374775c1f1952ce2bb = L.popup({
+        var popup_ade57998dfe51c7bdaa80abe9e39eabb = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_268c39fc7afde58340fa3ad41ee69956 = $(`&lt;div id=&quot;html_268c39fc7afde58340fa3ad41ee69956&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Nuevo&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2b5be27f-745d-4701-a2e4-a6916caaa61f.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_b217aeb68ba54b374775c1f1952ce2bb.setContent(html_268c39fc7afde58340fa3ad41ee69956);
+                var html_c679d2ba8e02a46d2f91f8d21ebf1f47 = $(`&lt;div id=&quot;html_c679d2ba8e02a46d2f91f8d21ebf1f47&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Nuevo&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2b5be27f-745d-4701-a2e4-a6916caaa61f.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_ade57998dfe51c7bdaa80abe9e39eabb.setContent(html_c679d2ba8e02a46d2f91f8d21ebf1f47);
             
         
 
-        marker_037e0d781466b2f0d559ba92cd3a4d37.bindPopup(popup_b217aeb68ba54b374775c1f1952ce2bb)
+        marker_45c24f758d16929fe50c8b080dbacc81.bindPopup(popup_ade57998dfe51c7bdaa80abe9e39eabb)
         ;
 
         
     
     
-                marker_037e0d781466b2f0d559ba92cd3a4d37.setIcon(icon_f522dab2e3e1889d11fcb63468fbf3c4);
+                marker_45c24f758d16929fe50c8b080dbacc81.setIcon(icon_a4392aaa97dacca810a33c67b4923fc2);
             
     
-            var marker_0c94b8d51f70aa85ad32268bbb8fa4c8 = L.marker(
+            var marker_ff0d1a8a32a7eeafe566a44b740f8638 = L.marker(
                 [-0.19399, -78.50632],
                 {
 }
-            ).addTo(feature_group_9bce079449926bffd1ee91347fdb8af0);
+            ).addTo(feature_group_8369abc7604cc1963056578d6c2da00d);
         
     
-            var icon_189920e7acc2227ffc1c3bb316717a0f = L.AwesomeMarkers.icon(
+            var icon_ce85dcc7fc0467c39ec024504b06fa60 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;red&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4350,34 +4347,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_a5ce51a00e62561876548620adbcbc08 = L.popup({
+        var popup_36320d05118a4d9268e8df223f819e6b = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_6b1d796bca94e4648eaf5f8acb361517 = $(`&lt;div id=&quot;html_6b1d796bca94e4648eaf5f8acb361517&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Nuevo&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/58977cbb-bb87-4cf0-b2a0-0292a70cb244.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_a5ce51a00e62561876548620adbcbc08.setContent(html_6b1d796bca94e4648eaf5f8acb361517);
+                var html_1c38da4fcd48894ca8e61b04a4bb68a4 = $(`&lt;div id=&quot;html_1c38da4fcd48894ca8e61b04a4bb68a4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Nuevo&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/58977cbb-bb87-4cf0-b2a0-0292a70cb244.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_36320d05118a4d9268e8df223f819e6b.setContent(html_1c38da4fcd48894ca8e61b04a4bb68a4);
             
         
 
-        marker_0c94b8d51f70aa85ad32268bbb8fa4c8.bindPopup(popup_a5ce51a00e62561876548620adbcbc08)
+        marker_ff0d1a8a32a7eeafe566a44b740f8638.bindPopup(popup_36320d05118a4d9268e8df223f819e6b)
         ;
 
         
     
     
-                marker_0c94b8d51f70aa85ad32268bbb8fa4c8.setIcon(icon_189920e7acc2227ffc1c3bb316717a0f);
+                marker_ff0d1a8a32a7eeafe566a44b740f8638.setIcon(icon_ce85dcc7fc0467c39ec024504b06fa60);
             
     
-            var marker_dc0f4d101f3ea56aeb9d62ae71880ca8 = L.marker(
+            var marker_9115542987a9941c9e0faaad57789b26 = L.marker(
                 [-0.1962, -78.507],
                 {
 }
-            ).addTo(feature_group_9bce079449926bffd1ee91347fdb8af0);
+            ).addTo(feature_group_8369abc7604cc1963056578d6c2da00d);
         
     
-            var icon_eefca005484df470135be11e3f11f3f9 = L.AwesomeMarkers.icon(
+            var icon_2388d56a4f7dfd4b899fad15dcd16990 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;red&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4388,43 +4385,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_eb96f2d782f089e2ede33759121f9bcd = L.popup({
+        var popup_665c491b2deaa164078d459eaa0f8fc1 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_ceba012702f8ecd5011c9ae7afb86d07 = $(`&lt;div id=&quot;html_ceba012702f8ecd5011c9ae7afb86d07&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Hueco profundo en la calzada de La Gasca&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/ec47633b-b91d-434b-9399-71093079213b.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_eb96f2d782f089e2ede33759121f9bcd.setContent(html_ceba012702f8ecd5011c9ae7afb86d07);
+                var html_f13a98f2863e2e85e322d0b9b788419b = $(`&lt;div id=&quot;html_f13a98f2863e2e85e322d0b9b788419b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; bache&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Hueco profundo en la calzada de La Gasca&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/ec47633b-b91d-434b-9399-71093079213b.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_665c491b2deaa164078d459eaa0f8fc1.setContent(html_f13a98f2863e2e85e322d0b9b788419b);
             
         
 
-        marker_dc0f4d101f3ea56aeb9d62ae71880ca8.bindPopup(popup_eb96f2d782f089e2ede33759121f9bcd)
+        marker_9115542987a9941c9e0faaad57789b26.bindPopup(popup_665c491b2deaa164078d459eaa0f8fc1)
         ;
 
         
     
     
-                marker_dc0f4d101f3ea56aeb9d62ae71880ca8.setIcon(icon_eefca005484df470135be11e3f11f3f9);
+                marker_9115542987a9941c9e0faaad57789b26.setIcon(icon_2388d56a4f7dfd4b899fad15dcd16990);
             
     
-            feature_group_9bce079449926bffd1ee91347fdb8af0.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_8369abc7604cc1963056578d6c2da00d.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_0dee1bff9c114723ca3fb61f3c992480 = L.featureGroup(
+            var feature_group_7df8f2170dbe79a22555d8f1335e611e = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_06def182d4cf2584653a2d4eb84f13b5 = L.marker(
+            var marker_f005db4ac045cfcc46d19934289a1c14 = L.marker(
                 [0.330789, -78.216234],
                 {
 }
-            ).addTo(feature_group_0dee1bff9c114723ca3fb61f3c992480);
+            ).addTo(feature_group_7df8f2170dbe79a22555d8f1335e611e);
         
     
-            var icon_355a3d8040d18fa44cb168b9ef8447fe = L.AwesomeMarkers.icon(
+            var icon_7e1e0bd95ac30830cd6ba5b4be450b38 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;darkgreen&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4435,34 +4432,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_09976f457e1e7ecba6fb13c84635936b = L.popup({
+        var popup_a43c00820c523933de2560a8006c8feb = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_9f2f68973ca3d59735dab5ce7a88a2ee = $(`&lt;div id=&quot;html_9f2f68973ca3d59735dab5ce7a88a2ee&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; asdfasdfasdf&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/69870242-8ffe-41c1-9395-ebcc58e4f73f.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_09976f457e1e7ecba6fb13c84635936b.setContent(html_9f2f68973ca3d59735dab5ce7a88a2ee);
+                var html_8cc4e998090784c1c9ec16d8319dd15d = $(`&lt;div id=&quot;html_8cc4e998090784c1c9ec16d8319dd15d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; asdfasdfasdf&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/69870242-8ffe-41c1-9395-ebcc58e4f73f.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_a43c00820c523933de2560a8006c8feb.setContent(html_8cc4e998090784c1c9ec16d8319dd15d);
             
         
 
-        marker_06def182d4cf2584653a2d4eb84f13b5.bindPopup(popup_09976f457e1e7ecba6fb13c84635936b)
+        marker_f005db4ac045cfcc46d19934289a1c14.bindPopup(popup_a43c00820c523933de2560a8006c8feb)
         ;
 
         
     
     
-                marker_06def182d4cf2584653a2d4eb84f13b5.setIcon(icon_355a3d8040d18fa44cb168b9ef8447fe);
+                marker_f005db4ac045cfcc46d19934289a1c14.setIcon(icon_7e1e0bd95ac30830cd6ba5b4be450b38);
             
     
-            var marker_ec5018e31751fa94717804dd89ab245a = L.marker(
+            var marker_3be96e905512cbd98c4630f7f2fc7717 = L.marker(
                 [-0.19706, -78.48954],
                 {
 }
-            ).addTo(feature_group_0dee1bff9c114723ca3fb61f3c992480);
+            ).addTo(feature_group_7df8f2170dbe79a22555d8f1335e611e);
         
     
-            var icon_6d04e6a7330fa47b201722e18c1672d1 = L.AwesomeMarkers.icon(
+            var icon_34984fd6b5f8a9009470370a6a425701 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;darkgreen&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4473,34 +4470,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_b0d8857d4ca656420703d14aad3512fd = L.popup({
+        var popup_ccbab1469d0d2c542f62673342393197 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_a3e63ce15688df1bbfc287ba2eaf1539 = $(`&lt;div id=&quot;html_a3e63ce15688df1bbfc287ba2eaf1539&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Conr&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/54f41280-98fc-41b5-af0d-ca1722bb547e.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_b0d8857d4ca656420703d14aad3512fd.setContent(html_a3e63ce15688df1bbfc287ba2eaf1539);
+                var html_615c09289e869d8b86ee967cb26fd0da = $(`&lt;div id=&quot;html_615c09289e869d8b86ee967cb26fd0da&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Conr&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/54f41280-98fc-41b5-af0d-ca1722bb547e.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_ccbab1469d0d2c542f62673342393197.setContent(html_615c09289e869d8b86ee967cb26fd0da);
             
         
 
-        marker_ec5018e31751fa94717804dd89ab245a.bindPopup(popup_b0d8857d4ca656420703d14aad3512fd)
+        marker_3be96e905512cbd98c4630f7f2fc7717.bindPopup(popup_ccbab1469d0d2c542f62673342393197)
         ;
 
         
     
     
-                marker_ec5018e31751fa94717804dd89ab245a.setIcon(icon_6d04e6a7330fa47b201722e18c1672d1);
+                marker_3be96e905512cbd98c4630f7f2fc7717.setIcon(icon_34984fd6b5f8a9009470370a6a425701);
             
     
-            var marker_e414a9046fa549bca7ad0dfb378103e6 = L.marker(
+            var marker_8800a94ceb78ecd17f023e53ac0d4b88 = L.marker(
                 [-0.1849, -78.4849],
                 {
 }
-            ).addTo(feature_group_0dee1bff9c114723ca3fb61f3c992480);
+            ).addTo(feature_group_7df8f2170dbe79a22555d8f1335e611e);
         
     
-            var icon_bb6f2c2bb17547ccded259a03d8ae16a = L.AwesomeMarkers.icon(
+            var icon_4d6bca23b846341babbe65bd8d5d57f6 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;darkgreen&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4511,43 +4508,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_159df65a218604fc1fd11b04027a3b1a = L.popup({
+        var popup_6158541ad9daf3d095f200d8647c8c2c = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_98d019ce306f98b445e89b97e0250c75 = $(`&lt;div id=&quot;html_98d019ce306f98b445e89b97e0250c75&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; �rbol ca�do obstruye paso en parque La Carolina&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/4497fbe0-e68d-479e-978d-c2fc67e0844d.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_159df65a218604fc1fd11b04027a3b1a.setContent(html_98d019ce306f98b445e89b97e0250c75);
+                var html_649f2028c078f9f84ae529f33acd88c4 = $(`&lt;div id=&quot;html_649f2028c078f9f84ae529f33acd88c4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; arbol_caido&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; �rbol ca�do obstruye paso en parque La Carolina&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/4497fbe0-e68d-479e-978d-c2fc67e0844d.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_6158541ad9daf3d095f200d8647c8c2c.setContent(html_649f2028c078f9f84ae529f33acd88c4);
             
         
 
-        marker_e414a9046fa549bca7ad0dfb378103e6.bindPopup(popup_159df65a218604fc1fd11b04027a3b1a)
+        marker_8800a94ceb78ecd17f023e53ac0d4b88.bindPopup(popup_6158541ad9daf3d095f200d8647c8c2c)
         ;
 
         
     
     
-                marker_e414a9046fa549bca7ad0dfb378103e6.setIcon(icon_bb6f2c2bb17547ccded259a03d8ae16a);
+                marker_8800a94ceb78ecd17f023e53ac0d4b88.setIcon(icon_4d6bca23b846341babbe65bd8d5d57f6);
             
     
-            feature_group_0dee1bff9c114723ca3fb61f3c992480.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_7df8f2170dbe79a22555d8f1335e611e.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_397299e31620e37f2c120c13b0b9ed0d = L.featureGroup(
+            var feature_group_64d2f02a002b9974212c57ee4d20d773 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_bb7e5516c8d71d1bd477392cfadc8918 = L.marker(
+            var marker_45a94998c69e364d7db5a0c243bd0a95 = L.marker(
                 [-0.19399, -78.50632],
                 {
 }
-            ).addTo(feature_group_397299e31620e37f2c120c13b0b9ed0d);
+            ).addTo(feature_group_64d2f02a002b9974212c57ee4d20d773);
         
     
-            var icon_58f36d967bcfdfc814acaf0a30dae112 = L.AwesomeMarkers.icon(
+            var icon_36a88bae8770515d37a95499279e8667 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;gray&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4558,34 +4555,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_ba925cd90294d1910bfca8dc731fc250 = L.popup({
+        var popup_0fbb6b51e766ec992a9ab4cce81c731e = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_83143529f713fa143bcb992b54ea5826 = $(`&lt;div id=&quot;html_83143529f713fa143bcb992b54ea5826&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; hello&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/c558f216-57b5-4131-96d6-f0b95bc58cb2.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_ba925cd90294d1910bfca8dc731fc250.setContent(html_83143529f713fa143bcb992b54ea5826);
+                var html_045b60908023b7d382c109aa3d453f1b = $(`&lt;div id=&quot;html_045b60908023b7d382c109aa3d453f1b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; hello&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/c558f216-57b5-4131-96d6-f0b95bc58cb2.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_0fbb6b51e766ec992a9ab4cce81c731e.setContent(html_045b60908023b7d382c109aa3d453f1b);
             
         
 
-        marker_bb7e5516c8d71d1bd477392cfadc8918.bindPopup(popup_ba925cd90294d1910bfca8dc731fc250)
+        marker_45a94998c69e364d7db5a0c243bd0a95.bindPopup(popup_0fbb6b51e766ec992a9ab4cce81c731e)
         ;
 
         
     
     
-                marker_bb7e5516c8d71d1bd477392cfadc8918.setIcon(icon_58f36d967bcfdfc814acaf0a30dae112);
+                marker_45a94998c69e364d7db5a0c243bd0a95.setIcon(icon_36a88bae8770515d37a95499279e8667);
             
     
-            var marker_d9132771221aba015b0f6655ad57bad9 = L.marker(
+            var marker_77507ca0542d191573a1cae6e14f9f60 = L.marker(
                 [-0.20231, -78.50156],
                 {
 }
-            ).addTo(feature_group_397299e31620e37f2c120c13b0b9ed0d);
+            ).addTo(feature_group_64d2f02a002b9974212c57ee4d20d773);
         
     
-            var icon_21f7f19001aded7e870f6eaafa8b5e0e = L.AwesomeMarkers.icon(
+            var icon_4d51b61b25eca1e3f47a9e999bf54595 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;gray&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4596,34 +4593,34 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_680f5c58130c729ae7b5a36dcbca9827 = L.popup({
+        var popup_e0642748c9dcbbe3f1749d35e82142d9 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_ec4ea4886c80ae5e1d29193bf422ea7c = $(`&lt;div id=&quot;html_ec4ea4886c80ae5e1d29193bf422ea7c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/6fc0d449-3876-4110-9b46-ac4aa91c95ea.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_680f5c58130c729ae7b5a36dcbca9827.setContent(html_ec4ea4886c80ae5e1d29193bf422ea7c);
+                var html_f4fc1ebcedd6ee1d55dfb0748eca0b4e = $(`&lt;div id=&quot;html_f4fc1ebcedd6ee1d55dfb0748eca0b4e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/6fc0d449-3876-4110-9b46-ac4aa91c95ea.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_e0642748c9dcbbe3f1749d35e82142d9.setContent(html_f4fc1ebcedd6ee1d55dfb0748eca0b4e);
             
         
 
-        marker_d9132771221aba015b0f6655ad57bad9.bindPopup(popup_680f5c58130c729ae7b5a36dcbca9827)
+        marker_77507ca0542d191573a1cae6e14f9f60.bindPopup(popup_e0642748c9dcbbe3f1749d35e82142d9)
         ;
 
         
     
     
-                marker_d9132771221aba015b0f6655ad57bad9.setIcon(icon_21f7f19001aded7e870f6eaafa8b5e0e);
+                marker_77507ca0542d191573a1cae6e14f9f60.setIcon(icon_4d51b61b25eca1e3f47a9e999bf54595);
             
     
-            var marker_395ed1f833b43deaff1ccf7d23c0fc83 = L.marker(
+            var marker_0958c5e41a2d2c8ad2bebe132ea36ce1 = L.marker(
                 [-0.1081, -78.5109],
                 {
 }
-            ).addTo(feature_group_397299e31620e37f2c120c13b0b9ed0d);
+            ).addTo(feature_group_64d2f02a002b9974212c57ee4d20d773);
         
     
-            var icon_493474f060d761fc13517b8e1dd422d8 = L.AwesomeMarkers.icon(
+            var icon_2c5e537146b22acf7da8ce001782849b = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;gray&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4634,43 +4631,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_57ceaed6edd5e2a745690598e9d86fea = L.popup({
+        var popup_bbe1ea4e03db8dd8a104b219a51c74a5 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_a0c225c93871acb6b6ed7d569cd9b7ba = $(`&lt;div id=&quot;html_a0c225c93871acb6b6ed7d569cd9b7ba&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor quemado abandonado en la v�a&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/e0e3bf35-6002-4594-b022-b0185e711da4.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_57ceaed6edd5e2a745690598e9d86fea.setContent(html_a0c225c93871acb6b6ed7d569cd9b7ba);
+                var html_4b04e31928b43fa53afe2996b018f6fc = $(`&lt;div id=&quot;html_4b04e31928b43fa53afe2996b018f6fc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; otro&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Contenedor quemado abandonado en la v�a&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/e0e3bf35-6002-4594-b022-b0185e711da4.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_bbe1ea4e03db8dd8a104b219a51c74a5.setContent(html_4b04e31928b43fa53afe2996b018f6fc);
             
         
 
-        marker_395ed1f833b43deaff1ccf7d23c0fc83.bindPopup(popup_57ceaed6edd5e2a745690598e9d86fea)
+        marker_0958c5e41a2d2c8ad2bebe132ea36ce1.bindPopup(popup_bbe1ea4e03db8dd8a104b219a51c74a5)
         ;
 
         
     
     
-                marker_395ed1f833b43deaff1ccf7d23c0fc83.setIcon(icon_493474f060d761fc13517b8e1dd422d8);
+                marker_0958c5e41a2d2c8ad2bebe132ea36ce1.setIcon(icon_2c5e537146b22acf7da8ce001782849b);
             
     
-            feature_group_397299e31620e37f2c120c13b0b9ed0d.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_64d2f02a002b9974212c57ee4d20d773.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_769cbfdf88acffc9afaf3913a8ed0083 = L.featureGroup(
+            var feature_group_a4829c96680cb1d4808a29a4a719e254 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_69f49330e5b15eb262c090a1cf8db0e1 = L.marker(
+            var marker_165909bb84c8f90da3526627f55bd18c = L.marker(
                 [-0.0783, -78.4742],
                 {
 }
-            ).addTo(feature_group_769cbfdf88acffc9afaf3913a8ed0083);
+            ).addTo(feature_group_a4829c96680cb1d4808a29a4a719e254);
         
     
-            var icon_cb54960b29d322c9a94638951e8e8554 = L.AwesomeMarkers.icon(
+            var icon_3c4e5a0e5e27aed06bb5a8ac6ae4194f = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;darkpurple&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4681,43 +4678,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_2a4a7c05bbbef1367e5083b296f022be = L.popup({
+        var popup_53f561aad2d0157cfd0f0f47fe2e1c56 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_9bfd10aec0dc802e22aadae7dcf7180e = $(`&lt;div id=&quot;html_9bfd10aec0dc802e22aadae7dcf7180e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; cable_suelto&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Cable el�ctrico colgando sobre la vereda&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2ba6084c-fda8-441d-8493-b1e89f277381.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_2a4a7c05bbbef1367e5083b296f022be.setContent(html_9bfd10aec0dc802e22aadae7dcf7180e);
+                var html_4dfc6e2237783c2019c7b55af7ca991e = $(`&lt;div id=&quot;html_4dfc6e2237783c2019c7b55af7ca991e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; cable_suelto&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Cable el�ctrico colgando sobre la vereda&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/2ba6084c-fda8-441d-8493-b1e89f277381.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_53f561aad2d0157cfd0f0f47fe2e1c56.setContent(html_4dfc6e2237783c2019c7b55af7ca991e);
             
         
 
-        marker_69f49330e5b15eb262c090a1cf8db0e1.bindPopup(popup_2a4a7c05bbbef1367e5083b296f022be)
+        marker_165909bb84c8f90da3526627f55bd18c.bindPopup(popup_53f561aad2d0157cfd0f0f47fe2e1c56)
         ;
 
         
     
     
-                marker_69f49330e5b15eb262c090a1cf8db0e1.setIcon(icon_cb54960b29d322c9a94638951e8e8554);
+                marker_165909bb84c8f90da3526627f55bd18c.setIcon(icon_3c4e5a0e5e27aed06bb5a8ac6ae4194f);
             
     
-            feature_group_769cbfdf88acffc9afaf3913a8ed0083.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_a4829c96680cb1d4808a29a4a719e254.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_1c0ff577a0f1e889f053e712d54f724b = L.featureGroup(
+            var feature_group_2f64143a7375ec7b06de95293d247cf5 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_caac7a247c92ef878f12479cc6429767 = L.marker(
+            var marker_9bf398bf0e06a5db5e2fa267e0bbc0c9 = L.marker(
                 [-0.2974, -78.5613],
                 {
 }
-            ).addTo(feature_group_1c0ff577a0f1e889f053e712d54f724b);
+            ).addTo(feature_group_2f64143a7375ec7b06de95293d247cf5);
         
     
-            var icon_52228fdc2da2942e9fb39d7ce6a4eff9 = L.AwesomeMarkers.icon(
+            var icon_4907f93a0cbe04a92b81fbe419f7efa7 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;cadetblue&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4728,43 +4725,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_3127a0b7c2e1c8c4f72bd3919e3cdd3c = L.popup({
+        var popup_b8e6c84807ca49f91c58397706535943 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_d12830d316c0b53cabdd25b54b530d45 = $(`&lt;div id=&quot;html_d12830d316c0b53cabdd25b54b530d45&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; alcantarilla&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Alcantarilla sin tapa representa peligro vehicular&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/1ff37f47-b4e4-4f0f-85bc-577b048f2dd0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_3127a0b7c2e1c8c4f72bd3919e3cdd3c.setContent(html_d12830d316c0b53cabdd25b54b530d45);
+                var html_29fcf11061d88f1220086e7430e33f72 = $(`&lt;div id=&quot;html_29fcf11061d88f1220086e7430e33f72&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; alcantarilla&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Alcantarilla sin tapa representa peligro vehicular&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/1ff37f47-b4e4-4f0f-85bc-577b048f2dd0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_b8e6c84807ca49f91c58397706535943.setContent(html_29fcf11061d88f1220086e7430e33f72);
             
         
 
-        marker_caac7a247c92ef878f12479cc6429767.bindPopup(popup_3127a0b7c2e1c8c4f72bd3919e3cdd3c)
+        marker_9bf398bf0e06a5db5e2fa267e0bbc0c9.bindPopup(popup_b8e6c84807ca49f91c58397706535943)
         ;
 
         
     
     
-                marker_caac7a247c92ef878f12479cc6429767.setIcon(icon_52228fdc2da2942e9fb39d7ce6a4eff9);
+                marker_9bf398bf0e06a5db5e2fa267e0bbc0c9.setIcon(icon_4907f93a0cbe04a92b81fbe419f7efa7);
             
     
-            feature_group_1c0ff577a0f1e889f053e712d54f724b.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_2f64143a7375ec7b06de95293d247cf5.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_eacd75259669995f4395aac4e0f20311 = L.featureGroup(
+            var feature_group_1ad225692794777657a9ea5f5217f069 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_8786a3e27818d1dbb86403a7f43defef = L.marker(
+            var marker_506c190da9f47a63fd8f580c47462be8 = L.marker(
                 [-0.2021, -78.4941],
                 {
 }
-            ).addTo(feature_group_eacd75259669995f4395aac4e0f20311);
+            ).addTo(feature_group_1ad225692794777657a9ea5f5217f069);
         
     
-            var icon_7717d624f13332e137315b580eacbc05 = L.AwesomeMarkers.icon(
+            var icon_26e850c0926665807621fd9c558d1199 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;purple&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4775,43 +4772,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_f3e763fa09d3a2e22d38514ee18ab64f = L.popup({
+        var popup_dac40db98e52b1b406c6ea6b70949c2c = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_46026269a223b68274c344f188b8e837 = $(`&lt;div id=&quot;html_46026269a223b68274c344f188b8e837&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; semaforo&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Sem�foro apagado en cruce de Av. Col�n y 10 de Agosto&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/bb2ac768-bc69-46cd-9e13-1a2c590c81f9.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_f3e763fa09d3a2e22d38514ee18ab64f.setContent(html_46026269a223b68274c344f188b8e837);
+                var html_cd5210e1a9e3df9071c4df24f20746a2 = $(`&lt;div id=&quot;html_cd5210e1a9e3df9071c4df24f20746a2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; semaforo&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Sem�foro apagado en cruce de Av. Col�n y 10 de Agosto&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/bb2ac768-bc69-46cd-9e13-1a2c590c81f9.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_dac40db98e52b1b406c6ea6b70949c2c.setContent(html_cd5210e1a9e3df9071c4df24f20746a2);
             
         
 
-        marker_8786a3e27818d1dbb86403a7f43defef.bindPopup(popup_f3e763fa09d3a2e22d38514ee18ab64f)
+        marker_506c190da9f47a63fd8f580c47462be8.bindPopup(popup_dac40db98e52b1b406c6ea6b70949c2c)
         ;
 
         
     
     
-                marker_8786a3e27818d1dbb86403a7f43defef.setIcon(icon_7717d624f13332e137315b580eacbc05);
+                marker_506c190da9f47a63fd8f580c47462be8.setIcon(icon_26e850c0926665807621fd9c558d1199);
             
     
-            feature_group_eacd75259669995f4395aac4e0f20311.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_1ad225692794777657a9ea5f5217f069.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_eff0448ea79487d64e67d5151ee170e0 = L.featureGroup(
+            var feature_group_dc0717945d727b34ba6c21965a22f766 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_1163c8709395bafe1c3dfb5eae13d49e = L.marker(
+            var marker_0ec5e1025613fb9a24d8f2de02545e6b = L.marker(
                 [-0.162, -78.466],
                 {
 }
-            ).addTo(feature_group_eff0448ea79487d64e67d5151ee170e0);
+            ).addTo(feature_group_dc0717945d727b34ba6c21965a22f766);
         
     
-            var icon_b21576a0df7eecfb240fa66e7c25cec5 = L.AwesomeMarkers.icon(
+            var icon_2eb854b7c1db1b66edd2805aa2eb41b8 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;blue&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4822,43 +4819,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_e1e494312f14963773acb49f597bb460 = L.popup({
+        var popup_9cf1f20578ae3d26128926d1fcb98669 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_2c680b3374878c0440cd72c0e5c51121 = $(`&lt;div id=&quot;html_2c680b3374878c0440cd72c0e5c51121&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; acera_rota&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Acera agrietada, peligro para peatones&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/3fc0ce48-dde5-4a32-95f5-3a6f4a9c4ffc.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_e1e494312f14963773acb49f597bb460.setContent(html_2c680b3374878c0440cd72c0e5c51121);
+                var html_8afad9aa6e96b613f3e45dce1f69bb22 = $(`&lt;div id=&quot;html_8afad9aa6e96b613f3e45dce1f69bb22&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; acera_rota&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Acera agrietada, peligro para peatones&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/3fc0ce48-dde5-4a32-95f5-3a6f4a9c4ffc.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_9cf1f20578ae3d26128926d1fcb98669.setContent(html_8afad9aa6e96b613f3e45dce1f69bb22);
             
         
 
-        marker_1163c8709395bafe1c3dfb5eae13d49e.bindPopup(popup_e1e494312f14963773acb49f597bb460)
+        marker_0ec5e1025613fb9a24d8f2de02545e6b.bindPopup(popup_9cf1f20578ae3d26128926d1fcb98669)
         ;
 
         
     
     
-                marker_1163c8709395bafe1c3dfb5eae13d49e.setIcon(icon_b21576a0df7eecfb240fa66e7c25cec5);
+                marker_0ec5e1025613fb9a24d8f2de02545e6b.setIcon(icon_2eb854b7c1db1b66edd2805aa2eb41b8);
             
     
-            feature_group_eff0448ea79487d64e67d5151ee170e0.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_dc0717945d727b34ba6c21965a22f766.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_08fe7096d238834575012e5667aaa4d4 = L.featureGroup(
+            var feature_group_660edd8ab9181acc4755d2d1dde8f4cf = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_cbfc95fbcfa07e3126b935827cf9ff4c = L.marker(
+            var marker_bed249a3174f521b14383b1bf9087de3 = L.marker(
                 [-0.3219, -78.5532],
                 {
 }
-            ).addTo(feature_group_08fe7096d238834575012e5667aaa4d4);
+            ).addTo(feature_group_660edd8ab9181acc4755d2d1dde8f4cf);
         
     
-            var icon_84342bf3d576c1b368ce728c46b7ff4b = L.AwesomeMarkers.icon(
+            var icon_60e6453cb8f7c96618ed361683ba0162 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;orange&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4869,43 +4866,43 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_edb15de25773bb9cc993a6d0b16f507a = L.popup({
+        var popup_62042a525c8e7ad26f469a9106e7c795 = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_6888f5cd01c5aadd72d98aec6bd20de9 = $(`&lt;div id=&quot;html_6888f5cd01c5aadd72d98aec6bd20de9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; luminaria&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Poste de luz no enciende desde hace d�as&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/47656e78-5adf-48b9-99f7-6c46af350237.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_edb15de25773bb9cc993a6d0b16f507a.setContent(html_6888f5cd01c5aadd72d98aec6bd20de9);
+                var html_71b9db8c9f1d3c1a324615c8f938b3eb = $(`&lt;div id=&quot;html_71b9db8c9f1d3c1a324615c8f938b3eb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; luminaria&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Poste de luz no enciende desde hace d�as&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/47656e78-5adf-48b9-99f7-6c46af350237.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_62042a525c8e7ad26f469a9106e7c795.setContent(html_71b9db8c9f1d3c1a324615c8f938b3eb);
             
         
 
-        marker_cbfc95fbcfa07e3126b935827cf9ff4c.bindPopup(popup_edb15de25773bb9cc993a6d0b16f507a)
+        marker_bed249a3174f521b14383b1bf9087de3.bindPopup(popup_62042a525c8e7ad26f469a9106e7c795)
         ;
 
         
     
     
-                marker_cbfc95fbcfa07e3126b935827cf9ff4c.setIcon(icon_84342bf3d576c1b368ce728c46b7ff4b);
+                marker_bed249a3174f521b14383b1bf9087de3.setIcon(icon_60e6453cb8f7c96618ed361683ba0162);
             
     
-            feature_group_08fe7096d238834575012e5667aaa4d4.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_660edd8ab9181acc4755d2d1dde8f4cf.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var feature_group_e145893c43d28fe0326d029b19f76638 = L.featureGroup(
+            var feature_group_9ef8d73dd3984399f8b1093edacf2738 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_eada830b145abb3ab9b2bb16d48ac322 = L.marker(
+            var marker_fd2e0cc907f85dd7aa9d62cbaf9d1c5b = L.marker(
                 [-0.2178, -78.5034],
                 {
 }
-            ).addTo(feature_group_e145893c43d28fe0326d029b19f76638);
+            ).addTo(feature_group_9ef8d73dd3984399f8b1093edacf2738);
         
     
-            var icon_8d362a60e496473877a54a3cf7e193d5 = L.AwesomeMarkers.icon(
+            var icon_0e07c5ebba7dc1ea2bef93470c00f772 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;green&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -4916,54 +4913,54 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
             );
         
     
-        var popup_01a2b22762d662f6c9e484c472081057 = L.popup({
+        var popup_27d9315a280ba3cda6ec26637d5a59dd = L.popup({
   &quot;maxWidth&quot;: 250,
 });
 
         
             
-                var html_7f35ed507a3aab4a1d57d84eeac5435d = $(`&lt;div id=&quot;html_7f35ed507a3aab4a1d57d84eeac5435d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; basura&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Basura acumulada en la entrada del parque El Ejido&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/5050dd94-5142-4e34-864c-d16695f0d2e0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
-                popup_01a2b22762d662f6c9e484c472081057.setContent(html_7f35ed507a3aab4a1d57d84eeac5435d);
+                var html_f267349c54dcf7c52a758700f1953ae8 = $(`&lt;div id=&quot;html_f267349c54dcf7c52a758700f1953ae8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;     &lt;b&gt;Categoría:&lt;/b&gt; basura&lt;br&gt;     &lt;b&gt;Estado:&lt;/b&gt; pendiente&lt;br&gt;     &lt;b&gt;Descripción:&lt;/b&gt; Basura acumulada en la entrada del parque El Ejido&lt;br&gt;     &lt;img src=&#39;https://qfujnnksyobhowmxpiaf.supabase.co/storage/v1/object/public/reportes-fotos/5050dd94-5142-4e34-864c-d16695f0d2e0.jpg&#39; width=&#39;180&#39;&gt;&lt;/div&gt;`)[0];
+                popup_27d9315a280ba3cda6ec26637d5a59dd.setContent(html_f267349c54dcf7c52a758700f1953ae8);
             
         
 
-        marker_eada830b145abb3ab9b2bb16d48ac322.bindPopup(popup_01a2b22762d662f6c9e484c472081057)
+        marker_fd2e0cc907f85dd7aa9d62cbaf9d1c5b.bindPopup(popup_27d9315a280ba3cda6ec26637d5a59dd)
         ;
 
         
     
     
-                marker_eada830b145abb3ab9b2bb16d48ac322.setIcon(icon_8d362a60e496473877a54a3cf7e193d5);
+                marker_fd2e0cc907f85dd7aa9d62cbaf9d1c5b.setIcon(icon_0e07c5ebba7dc1ea2bef93470c00f772);
             
     
-            feature_group_e145893c43d28fe0326d029b19f76638.addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            feature_group_9ef8d73dd3984399f8b1093edacf2738.addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var layer_control_feacba5a937f975043d5539c70564f3d_layers = {
+            var layer_control_12efcaf99489256333b13d2034bad5db_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_ccbe60d1e0da79f81ab7fd1cd630ab0f,
+                    &quot;openstreetmap&quot; : tile_layer_62c00e860393a373fa0521c4de69dc05,
                 },
                 overlays :  {
-                    &quot;Bache&quot; : feature_group_9bce079449926bffd1ee91347fdb8af0,
-                    &quot;Arbol_caido&quot; : feature_group_0dee1bff9c114723ca3fb61f3c992480,
-                    &quot;Otro&quot; : feature_group_397299e31620e37f2c120c13b0b9ed0d,
-                    &quot;Cable_suelto&quot; : feature_group_769cbfdf88acffc9afaf3913a8ed0083,
-                    &quot;Alcantarilla&quot; : feature_group_1c0ff577a0f1e889f053e712d54f724b,
-                    &quot;Semaforo&quot; : feature_group_eacd75259669995f4395aac4e0f20311,
-                    &quot;Acera_rota&quot; : feature_group_eff0448ea79487d64e67d5151ee170e0,
-                    &quot;Luminaria&quot; : feature_group_08fe7096d238834575012e5667aaa4d4,
-                    &quot;Basura&quot; : feature_group_e145893c43d28fe0326d029b19f76638,
+                    &quot;Bache&quot; : feature_group_8369abc7604cc1963056578d6c2da00d,
+                    &quot;Arbol_caido&quot; : feature_group_7df8f2170dbe79a22555d8f1335e611e,
+                    &quot;Otro&quot; : feature_group_64d2f02a002b9974212c57ee4d20d773,
+                    &quot;Cable_suelto&quot; : feature_group_a4829c96680cb1d4808a29a4a719e254,
+                    &quot;Alcantarilla&quot; : feature_group_2f64143a7375ec7b06de95293d247cf5,
+                    &quot;Semaforo&quot; : feature_group_1ad225692794777657a9ea5f5217f069,
+                    &quot;Acera_rota&quot; : feature_group_dc0717945d727b34ba6c21965a22f766,
+                    &quot;Luminaria&quot; : feature_group_660edd8ab9181acc4755d2d1dde8f4cf,
+                    &quot;Basura&quot; : feature_group_9ef8d73dd3984399f8b1093edacf2738,
                 },
             };
-            let layer_control_feacba5a937f975043d5539c70564f3d = L.control.layers(
-                layer_control_feacba5a937f975043d5539c70564f3d_layers.base_layers,
-                layer_control_feacba5a937f975043d5539c70564f3d_layers.overlays,
+            let layer_control_12efcaf99489256333b13d2034bad5db = L.control.layers(
+                layer_control_12efcaf99489256333b13d2034bad5db_layers.base_layers,
+                layer_control_12efcaf99489256333b13d2034bad5db_layers.overlays,
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;collapsed&quot;: false,
   &quot;autoZIndex&quot;: true,
 }
-            ).addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            ).addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
 
         
     
@@ -4974,16 +4971,16 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
   &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;,
   &quot;forceSeparateButton&quot;: false,
 }
-            ).addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            ).addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
         
     
-            var locate_control_2a7bc1c6b059859e09dcb17af158b190 = L.control.locate(
+            var locate_control_1a535916e7c374cd039c46af6b159a8c = L.control.locate(
                 {}
-            ).addTo(map_84ca5ad1d63489fc75f06255e57c6e85);
+            ).addTo(map_88f74a5ea1708dba0d0cf91be18a4666);
             
         
     
-            var mouse_position_bba063f4edec6085407c7d77ad695f25 = new L.Control.MousePosition(
+            var mouse_position_c5b422a29bdf08802447dd6b1a9c482f = new L.Control.MousePosition(
                 {
   &quot;position&quot;: &quot;bottomright&quot;,
   &quot;separator&quot;: &quot; : &quot;,
@@ -4993,11 +4990,11 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
   &quot;prefix&quot;: &quot;&quot;,
 }
             );
-            mouse_position_bba063f4edec6085407c7d77ad695f25.options[&quot;latFormatter&quot;] =
+            mouse_position_c5b422a29bdf08802447dd6b1a9c482f.options[&quot;latFormatter&quot;] =
                 undefined;
-            mouse_position_bba063f4edec6085407c7d77ad695f25.options[&quot;lngFormatter&quot;] =
+            mouse_position_c5b422a29bdf08802447dd6b1a9c482f.options[&quot;lngFormatter&quot;] =
                 undefined;
-            map_84ca5ad1d63489fc75f06255e57c6e85.addControl(mouse_position_bba063f4edec6085407c7d77ad695f25);
+            map_88f74a5ea1708dba0d0cf91be18a4666.addControl(mouse_position_c5b422a29bdf08802447dd6b1a9c482f);
         
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
